@@ -222,6 +222,7 @@ Partial Class POS
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "POS"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "POS"
         Me.ResumeLayout(False)
         Me.PerformLayout()

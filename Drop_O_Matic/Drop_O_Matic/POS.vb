@@ -92,7 +92,10 @@
 
 
     Private Sub Button7_Click(sender As Object, e As EventArgs) Handles Button7.Click
-
+        ValidateForm.Label1.Text = (Me.EmployeeName.Text())
+        ValidateForm.Label2.Text = ("Apply Credits to")
+        ValidateForm.Label3.Text = (Me.CustomerName.Text())
+        ValidateForm.Label4.Text = (Me.CustomerNumber.Text())
         If AddAmount.Text = Nothing Then
             MessageBox.Show("Please Apply Credit")
         Else
