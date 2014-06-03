@@ -167,9 +167,17 @@
     </None>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\1401774117_arrow-right-01.png" />
+  </ItemGroup>
   <ItemGroup>
     <None Include="Resources\glass.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1401774114_arrow-left-01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Gambling_and_slot_machine_icons-07-512.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
