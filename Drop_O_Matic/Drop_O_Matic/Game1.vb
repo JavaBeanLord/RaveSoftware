@@ -30,7 +30,7 @@
         TextBox5.Text = 0.5
         TextBox7.Text = TextBox7.Text - TextBox5.Text
 
-
+        PlaySpinFile()
         If TextBox8.Text = JackPot.TextBox3.Text Then
             MessageBox.Show("You Hit $25.00 JackPot")
 
@@ -42,7 +42,9 @@
 
         End If
 
-        PlayBackgroundSoundFile()
+
+
+
     End Sub
 
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
@@ -105,8 +107,8 @@
             TextBox6.Text = TextBox6.Text + 30 * TextBox5.Text
         Else
             Label1.Text = "BUST"
-            Dim audio2 As New AudioFile("C:\Users\Admin1\Desktop\Sounds\GameOver.mp3")
-            audio2.Play()
+
+
         End If
 
         Button1.Enabled = True
@@ -126,7 +128,13 @@
 
     End Sub
 
-    Sub PlayBackgroundSoundFile()
-        My.Computer.Audio.Play("C:\Users\Admin1\Desktop\Sounds\Spin.wav")
+    Sub PlaySpinFile()
+        My.Computer.Audio.Play(My.Resources.spin, AudioPlayMode.Background)
+    End Sub
+
+
+    Public Sub slotplaysound()
+        Dim audio2 As New AudioFile("C:\Users\Admin1\Desktop\Sounds\GameOver.mp3")
+        audio2.Play()
     End Sub
 End Class
