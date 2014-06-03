@@ -38,14 +38,13 @@ Partial Class POS
         Me.EmployeeName = New System.Windows.Forms.RichTextBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.ClearAddAmount = New System.Windows.Forms.Button()
+        Me.Button8 = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'CustomerName
         '
-        Me.CustomerName.Enabled = False
         Me.CustomerName.Location = New System.Drawing.Point(15, 104)
         Me.CustomerName.Name = "CustomerName"
-        Me.CustomerName.ReadOnly = True
         Me.CustomerName.Size = New System.Drawing.Size(219, 47)
         Me.CustomerName.TabIndex = 0
         Me.CustomerName.Text = ""
@@ -188,12 +187,22 @@ Partial Class POS
         Me.ClearAddAmount.Text = "Clear"
         Me.ClearAddAmount.UseVisualStyleBackColor = True
         '
+        'Button8
+        '
+        Me.Button8.Location = New System.Drawing.Point(35, 252)
+        Me.Button8.Name = "Button8"
+        Me.Button8.Size = New System.Drawing.Size(167, 55)
+        Me.Button8.TabIndex = 18
+        Me.Button8.Text = "Search"
+        Me.Button8.UseVisualStyleBackColor = True
+        '
         'POS
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.WindowFrame
         Me.ClientSize = New System.Drawing.Size(588, 319)
+        Me.Controls.Add(Me.Button8)
         Me.Controls.Add(Me.ClearAddAmount)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
@@ -210,6 +219,8 @@ Partial Class POS
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.CustomerName)
+        Me.MaximizeBox = False
+        Me.MinimizeBox = False
         Me.Name = "POS"
         Me.Text = "POS"
         Me.ResumeLayout(False)
@@ -232,4 +243,5 @@ Partial Class POS
     Friend WithEvents EmployeeName As System.Windows.Forms.RichTextBox
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents ClearAddAmount As System.Windows.Forms.Button
+    Friend WithEvents Button8 As System.Windows.Forms.Button
 End Class

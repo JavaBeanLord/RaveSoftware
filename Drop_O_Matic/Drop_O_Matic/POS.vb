@@ -112,4 +112,9 @@
     Private Sub ClearAddAmount_Click(sender As Object, e As EventArgs) Handles ClearAddAmount.Click
         AddAmount.Text = ("")
     End Sub
+
+    Private Sub EmployeeName_TextChanged(sender As Object, e As EventArgs) Handles EmployeeName.TextChanged
+        EmployeeName.Text = Login.TextBox1.Text()
+
+    End Sub
 End Class

@@ -26,21 +26,28 @@ Partial Class ValidateForm
         Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.TextBox4 = New System.Windows.Forms.TextBox()
+        Me.ValidateYes = New System.Windows.Forms.Button()
+        Me.ValidateNo = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'TextBox1
         '
-        Me.TextBox1.BackColor = System.Drawing.SystemColors.Window
-        Me.TextBox1.Location = New System.Drawing.Point(12, 64)
+        Me.TextBox1.BackColor = System.Drawing.SystemColors.WindowFrame
+        Me.TextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TextBox1.Cursor = System.Windows.Forms.Cursors.Arrow
+        Me.TextBox1.Location = New System.Drawing.Point(13, 31)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.ReadOnly = True
-        Me.TextBox1.Size = New System.Drawing.Size(317, 20)
+        Me.TextBox1.Size = New System.Drawing.Size(317, 13)
         Me.TextBox1.TabIndex = 1
         Me.TextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'TextBox2
         '
-        Me.TextBox2.Location = New System.Drawing.Point(12, 90)
+        Me.TextBox2.BackColor = System.Drawing.SystemColors.WindowFrame
+        Me.TextBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.TextBox2.Cursor = System.Windows.Forms.Cursors.Arrow
+        Me.TextBox2.Location = New System.Drawing.Point(13, 50)
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.Size = New System.Drawing.Size(317, 20)
         Me.TextBox2.TabIndex = 2
@@ -48,8 +55,11 @@ Partial Class ValidateForm
         '
         'TextBox3
         '
+        Me.TextBox3.BackColor = System.Drawing.SystemColors.WindowFrame
+        Me.TextBox3.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TextBox3.Cursor = System.Windows.Forms.Cursors.Arrow
         Me.TextBox3.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox3.Location = New System.Drawing.Point(13, 123)
+        Me.TextBox3.Location = New System.Drawing.Point(12, 76)
         Me.TextBox3.Multiline = True
         Me.TextBox3.Name = "TextBox3"
         Me.TextBox3.Size = New System.Drawing.Size(316, 62)
@@ -58,19 +68,44 @@ Partial Class ValidateForm
         '
         'TextBox4
         '
-        Me.TextBox4.BackColor = System.Drawing.SystemColors.Window
+        Me.TextBox4.BackColor = System.Drawing.SystemColors.WindowFrame
+        Me.TextBox4.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TextBox4.Cursor = System.Windows.Forms.Cursors.Arrow
+        Me.TextBox4.HideSelection = False
         Me.TextBox4.Location = New System.Drawing.Point(12, 12)
         Me.TextBox4.Name = "TextBox4"
         Me.TextBox4.ReadOnly = True
-        Me.TextBox4.Size = New System.Drawing.Size(317, 20)
+        Me.TextBox4.Size = New System.Drawing.Size(317, 13)
         Me.TextBox4.TabIndex = 4
         Me.TextBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'ValidateYes
+        '
+        Me.ValidateYes.Location = New System.Drawing.Point(219, 144)
+        Me.ValidateYes.Name = "ValidateYes"
+        Me.ValidateYes.Size = New System.Drawing.Size(75, 46)
+        Me.ValidateYes.TabIndex = 6
+        Me.ValidateYes.Text = "Yes"
+        Me.ValidateYes.UseVisualStyleBackColor = True
+        '
+        'ValidateNo
+        '
+        Me.ValidateNo.Location = New System.Drawing.Point(52, 144)
+        Me.ValidateNo.Name = "ValidateNo"
+        Me.ValidateNo.Size = New System.Drawing.Size(75, 46)
+        Me.ValidateNo.TabIndex = 7
+        Me.ValidateNo.Text = "No"
+        Me.ValidateNo.UseVisualStyleBackColor = True
         '
         'ValidateForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.SystemColors.WindowFrame
         Me.ClientSize = New System.Drawing.Size(352, 202)
+        Me.ControlBox = False
+        Me.Controls.Add(Me.ValidateNo)
+        Me.Controls.Add(Me.ValidateYes)
         Me.Controls.Add(Me.TextBox4)
         Me.Controls.Add(Me.TextBox3)
         Me.Controls.Add(Me.TextBox2)
@@ -87,4 +122,6 @@ Partial Class ValidateForm
     Friend WithEvents TextBox2 As System.Windows.Forms.TextBox
     Friend WithEvents TextBox3 As System.Windows.Forms.TextBox
     Friend WithEvents TextBox4 As System.Windows.Forms.TextBox
+    Friend WithEvents ValidateYes As System.Windows.Forms.Button
+    Friend WithEvents ValidateNo As System.Windows.Forms.Button
 End Class
