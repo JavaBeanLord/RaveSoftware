@@ -30,4 +30,21 @@
         TextBox1.ReadOnly = True
 
     End Sub
+
+    Private Sub ValidateYes_Click(sender As Object, e As EventArgs) Handles ValidateYes.Click
+        Me.Hide()
+        MessageBox.Show("Accepted")
+        POS.AddAmount.Text = ("")
+        POS.CustomerName.Text = ("")
+        POS.CustomerNumber.Text = ("")
+        Me.Close()
+
+    End Sub
+
+    Private Sub ValidateNo_Click(sender As Object, e As EventArgs) Handles ValidateNo.Click
+        Me.Hide()
+        POS.Show()
+
+
+    End Sub
 End Class
