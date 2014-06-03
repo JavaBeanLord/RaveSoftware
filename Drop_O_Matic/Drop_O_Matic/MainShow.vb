@@ -31,7 +31,7 @@
 
     Private Sub BetaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles BetaToolStripMenuItem.Click
         AdminLogin.Show()
-
+        AdminLogin.ComboBox1.Text = ("Games")
 
     End Sub
 
@@ -47,6 +47,12 @@
 
     Private Sub AboutMeToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AboutMeToolStripMenuItem.Click
         AboutMe.Show()
+
+    End Sub
+
+    Private Sub JackPotToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles JackPotToolStripMenuItem.Click
+        AdminLogin.Show()
+        AdminLogin.ComboBox1.Text = ("JackPot")
 
     End Sub
 End Class

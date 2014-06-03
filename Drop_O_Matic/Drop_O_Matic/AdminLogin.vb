@@ -29,6 +29,19 @@
             End If
         End If
 
+        If ComboBox1.Text = ("JackPot") Then
+            If TextBox1.Text = Nothing Then
+                MessageBox.Show("Please Type A Password")
+
+            ElseIf TextBox1.Text = My.Settings.FullControlAdmin Then
+                JackPot.Show()
+                TextBox1.Text = ("")
+                Me.Hide()
+            Else
+                MessageBox.Show("Seems Your Password is Wrong!")
+            End If
+        End If
+
 
 
 
@@ -43,6 +56,7 @@
 
         ComboBox1.Items.Add("Games")
         ComboBox1.Items.Add("POS")
+        ComboBox1.Items.Add("JackPot")
 
     End Sub
 End Class

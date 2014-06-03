@@ -31,6 +31,7 @@ Partial Class AdminLogin
         '
         Me.TextBox1.Location = New System.Drawing.Point(99, 12)
         Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.TextBox1.Size = New System.Drawing.Size(134, 20)
         Me.TextBox1.TabIndex = 0
         '

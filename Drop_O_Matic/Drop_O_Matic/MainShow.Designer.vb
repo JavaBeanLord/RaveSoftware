@@ -32,6 +32,7 @@ Partial Class MainShow
         Me.HelpToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.RemoteSupportToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AboutMeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.JackPotToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -59,7 +60,7 @@ Partial Class MainShow
         '
         'ToolsToolStripMenuItem
         '
-        Me.ToolsToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AdminControlToolStripMenuItem, Me.BetaToolStripMenuItem, Me.POSToolStripMenuItem})
+        Me.ToolsToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AdminControlToolStripMenuItem, Me.BetaToolStripMenuItem, Me.POSToolStripMenuItem, Me.JackPotToolStripMenuItem})
         Me.ToolsToolStripMenuItem.Name = "ToolsToolStripMenuItem"
         Me.ToolsToolStripMenuItem.Size = New System.Drawing.Size(48, 20)
         Me.ToolsToolStripMenuItem.Text = "Tools"
@@ -101,6 +102,12 @@ Partial Class MainShow
         Me.AboutMeToolStripMenuItem.Size = New System.Drawing.Size(160, 22)
         Me.AboutMeToolStripMenuItem.Text = "About Me"
         '
+        'JackPotToolStripMenuItem
+        '
+        Me.JackPotToolStripMenuItem.Name = "JackPotToolStripMenuItem"
+        Me.JackPotToolStripMenuItem.Size = New System.Drawing.Size(153, 22)
+        Me.JackPotToolStripMenuItem.Text = "JackPot"
+        '
         'MainShow
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -127,4 +134,5 @@ Partial Class MainShow
     Friend WithEvents AboutMeToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents BetaToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents POSToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents JackPotToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 End Class
