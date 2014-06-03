@@ -15,16 +15,29 @@
         Dim rnd2 = New Random()
         Dim MidPot = rnd2.Next(9999)
         Dim rnd3 = New Random()
-        Dim SmallPot = rnd3.Next(999)
+        Dim SmallPot = rnd3.Next(9)
 
         TextBox1.Text = BigPot
         TextBox2.Text = MidPot
         TextBox3.Text = SmallPot
 
+        Timer1.Enabled = False
+        Timer2.Enabled = True
 
 
 
+    End Sub
 
+    Private Sub Timer2_Tick(sender As Object, e As EventArgs) Handles Timer2.Tick
+        Dim rnd1 = New Random()
+        Dim BigPot = rnd1.Next(99999)
+        Dim rnd2 = New Random()
+        Dim MidPot = rnd2.Next(9999)
+        Dim rnd3 = New Random()
+        Dim SmallPot = rnd3.Next(999)
 
+        TextBox1.Text = BigPot
+        TextBox2.Text = MidPot
+        TextBox3.Text = SmallPot
     End Sub
 End Class

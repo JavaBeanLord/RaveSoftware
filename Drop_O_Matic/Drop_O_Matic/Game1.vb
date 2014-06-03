@@ -3,23 +3,46 @@
     Public Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         TextBox4.Text = ("")
         Label1.Text = ("")
+
+        ''JackPot Round
+        Dim Jrnd = New Random()
+        Dim SmallJackPot = Jrnd.Next(9)
+        ''First Slot Round
         Dim rnd1 = New Random()
         Dim WOne = rnd1.Next(7)
+        ''2nd Slot Round
         Dim rnd2 = New Random()
         Dim WTwo = rnd2.Next(13)
+        ''3rd Slot Round
         Dim rnd3 = New Random()
         Dim WThree = rnd3.Next(19)
+        ''Turn Timer1 One
         Timer1.Enabled = True
+
         TextBox1.Text = (WOne)
         TextBox2.Text = (WTwo)
         TextBox3.Text = (WThree)
+        TextBox8.Text = (SmallJackPot)
 
 
         ' PictureBox1.Location = New Point(12, 189)
 
         TextBox5.Text = 0.5
         TextBox7.Text = TextBox7.Text - TextBox5.Text
-        TextBox6.Text = (0)
+
+
+        If TextBox8.Text = JackPot.TextBox3.Text Then
+            MessageBox.Show("You Hit $25.00 JackPot")
+
+            Dim SmallPostChange = New Random()
+            Dim SmallPot = SmallPostChange.Next(9)
+
+            JackPot.TextBox3.Text = SmallPot
+        Else
+
+        End If
+
+        PlayBackgroundSoundFile()
     End Sub
 
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
@@ -80,9 +103,10 @@
         If TextBox4.Text = ("000") Then
             Label1.Text = "WINNER"
             TextBox6.Text = TextBox6.Text + 30 * TextBox5.Text
-
         Else
             Label1.Text = "BUST"
+            Dim audio2 As New AudioFile("C:\Users\Admin1\Desktop\Sounds\GameOver.mp3")
+            audio2.Play()
         End If
 
         Button1.Enabled = True
@@ -100,5 +124,9 @@
 
     Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles TextBox1.TextChanged
 
+    End Sub
+
+    Sub PlayBackgroundSoundFile()
+        My.Computer.Audio.Play("C:\Users\Admin1\Desktop\Sounds\Spin.wav")
     End Sub
 End Class

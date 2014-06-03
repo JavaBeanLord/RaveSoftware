@@ -32,6 +32,7 @@ Partial Class JackPot
         Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.Timer2 = New System.Windows.Forms.Timer(Me.components)
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -107,7 +108,10 @@ Partial Class JackPot
         '
         'Timer1
         '
-        Me.Timer1.Interval = 5000
+        '
+        'Timer2
+        '
+        Me.Timer2.Interval = 5184000
         '
         'JackPot
         '
@@ -141,4 +145,5 @@ Partial Class JackPot
     Friend WithEvents TextBox2 As System.Windows.Forms.TextBox
     Friend WithEvents TextBox3 As System.Windows.Forms.TextBox
     Friend WithEvents Timer1 As System.Windows.Forms.Timer
+    Friend WithEvents Timer2 As System.Windows.Forms.Timer
 End Class

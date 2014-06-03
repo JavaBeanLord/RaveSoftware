@@ -82,6 +82,7 @@
     <Compile Include="AdminLogin.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="AudioFile.vb" />
     <Compile Include="Game1.Designer.vb">
       <DependentUpon>Game1.vb</DependentUpon>
     </Compile>
