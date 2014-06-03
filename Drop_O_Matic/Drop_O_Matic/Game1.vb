@@ -96,4 +96,9 @@
         TextBox6.Text = (0)
         TextBox7.Text = (100)
     End Sub
+
+
+    Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles TextBox1.TextChanged
+
+    End Sub
 End Class
