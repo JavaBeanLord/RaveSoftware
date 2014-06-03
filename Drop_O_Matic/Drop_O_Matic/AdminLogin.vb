@@ -7,7 +7,7 @@
                 MessageBox.Show("Please Type A Password")
 
             ElseIf TextBox1.Text = My.Settings.FullControlAdmin Then
-                Beta.Show()
+                Games.Show()
                 TextBox1.Text = ("")
                 Me.Hide()
             Else
