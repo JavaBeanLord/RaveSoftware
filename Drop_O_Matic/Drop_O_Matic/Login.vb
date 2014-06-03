@@ -19,6 +19,7 @@
             TextBox2.Text = ("")
             Me.Hide()
             LoginNow.Enabled = False
+
         Else
             MessageBox.Show("Seems Your PassWord Or UserName is Wrong!" & vbNewLine & " Please Try Again...")
             TextBox2.Text = ("")
