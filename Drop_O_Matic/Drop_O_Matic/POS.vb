@@ -92,10 +92,10 @@
 
 
     Private Sub Button7_Click(sender As Object, e As EventArgs) Handles Button7.Click
-        ValidateForm.Label1.Text = (Me.EmployeeName.Text())
+        ValidateForm.Label1.Text = ("User:" & Me.EmployeeName.Text())
         ValidateForm.Label2.Text = ("Apply Credits to")
-        ValidateForm.Label3.Text = (Me.CustomerName.Text())
-        ValidateForm.Label4.Text = (Me.CustomerNumber.Text())
+        ValidateForm.Label3.Text = ("Name:" & Me.CustomerName.Text())
+        ValidateForm.Label4.Text = ("ID:" & Me.CustomerNumber.Text())
         If AddAmount.Text = Nothing Then
             MessageBox.Show("Please Apply Credit")
         Else
@@ -120,6 +120,10 @@
 
     Private Sub EmployeeName_TextChanged(sender As Object, e As EventArgs) Handles EmployeeName.TextChanged
         EmployeeName.Text = Login.TextBox1.Text()
+
+    End Sub
+
+    Private Sub Button9_Click(sender As Object, e As EventArgs) Handles Button9.Click
 
     End Sub
 End Class

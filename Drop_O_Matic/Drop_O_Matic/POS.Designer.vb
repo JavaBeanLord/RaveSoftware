@@ -39,20 +39,21 @@ Partial Class POS
         Me.Label4 = New System.Windows.Forms.Label()
         Me.ClearAddAmount = New System.Windows.Forms.Button()
         Me.Button8 = New System.Windows.Forms.Button()
+        Me.Button9 = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'CustomerName
         '
-        Me.CustomerName.Location = New System.Drawing.Point(15, 104)
+        Me.CustomerName.Location = New System.Drawing.Point(12, 91)
         Me.CustomerName.Name = "CustomerName"
-        Me.CustomerName.Size = New System.Drawing.Size(219, 47)
+        Me.CustomerName.Size = New System.Drawing.Size(223, 47)
         Me.CustomerName.TabIndex = 0
         Me.CustomerName.Text = ""
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(15, 88)
+        Me.Label1.Location = New System.Drawing.Point(9, 75)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(82, 13)
         Me.Label1.TabIndex = 1
@@ -61,7 +62,7 @@ Partial Class POS
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(9, 166)
+        Me.Label2.Location = New System.Drawing.Point(9, 141)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(84, 13)
         Me.Label2.TabIndex = 3
@@ -135,10 +136,10 @@ Partial Class POS
         '
         'CustomerNumber
         '
-        Me.CustomerNumber.Location = New System.Drawing.Point(12, 182)
+        Me.CustomerNumber.Location = New System.Drawing.Point(15, 157)
         Me.CustomerNumber.Multiline = True
         Me.CustomerNumber.Name = "CustomerNumber"
-        Me.CustomerNumber.Size = New System.Drawing.Size(219, 47)
+        Me.CustomerNumber.Size = New System.Drawing.Size(220, 47)
         Me.CustomerNumber.TabIndex = 12
         '
         'Button7
@@ -153,7 +154,7 @@ Partial Class POS
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(15, 9)
+        Me.Label3.Location = New System.Drawing.Point(9, 9)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(84, 13)
         Me.Label3.TabIndex = 15
@@ -162,10 +163,10 @@ Partial Class POS
         'EmployeeName
         '
         Me.EmployeeName.Enabled = False
-        Me.EmployeeName.Location = New System.Drawing.Point(15, 25)
+        Me.EmployeeName.Location = New System.Drawing.Point(12, 25)
         Me.EmployeeName.Name = "EmployeeName"
         Me.EmployeeName.ReadOnly = True
-        Me.EmployeeName.Size = New System.Drawing.Size(219, 47)
+        Me.EmployeeName.Size = New System.Drawing.Size(223, 47)
         Me.EmployeeName.TabIndex = 14
         Me.EmployeeName.Text = ""
         '
@@ -189,12 +190,21 @@ Partial Class POS
         '
         'Button8
         '
-        Me.Button8.Location = New System.Drawing.Point(35, 252)
+        Me.Button8.Location = New System.Drawing.Point(15, 235)
         Me.Button8.Name = "Button8"
-        Me.Button8.Size = New System.Drawing.Size(167, 55)
+        Me.Button8.Size = New System.Drawing.Size(105, 51)
         Me.Button8.TabIndex = 18
         Me.Button8.Text = "Search"
         Me.Button8.UseVisualStyleBackColor = True
+        '
+        'Button9
+        '
+        Me.Button9.Location = New System.Drawing.Point(130, 235)
+        Me.Button9.Name = "Button9"
+        Me.Button9.Size = New System.Drawing.Size(105, 51)
+        Me.Button9.TabIndex = 19
+        Me.Button9.Text = "Button9"
+        Me.Button9.UseVisualStyleBackColor = True
         '
         'POS
         '
@@ -202,6 +212,7 @@ Partial Class POS
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.WindowFrame
         Me.ClientSize = New System.Drawing.Size(588, 319)
+        Me.Controls.Add(Me.Button9)
         Me.Controls.Add(Me.Button8)
         Me.Controls.Add(Me.ClearAddAmount)
         Me.Controls.Add(Me.Label4)
@@ -245,4 +256,5 @@ Partial Class POS
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents ClearAddAmount As System.Windows.Forms.Button
     Friend WithEvents Button8 As System.Windows.Forms.Button
+    Friend WithEvents Button9 As System.Windows.Forms.Button
 End Class
