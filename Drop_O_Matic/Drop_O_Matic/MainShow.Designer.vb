@@ -29,16 +29,17 @@ Partial Class MainShow
         Me.AdminControlToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.BetaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.POSToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.JackPotToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.HelpToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.RemoteSupportToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AboutMeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.JackPotToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.TestSoftwareToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'MenuStrip1
         '
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem, Me.ToolsToolStripMenuItem, Me.HelpToolStripMenuItem})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem, Me.ToolsToolStripMenuItem, Me.HelpToolStripMenuItem, Me.TestSoftwareToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Size = New System.Drawing.Size(466, 24)
@@ -83,6 +84,12 @@ Partial Class MainShow
         Me.POSToolStripMenuItem.Size = New System.Drawing.Size(153, 22)
         Me.POSToolStripMenuItem.Text = "POS"
         '
+        'JackPotToolStripMenuItem
+        '
+        Me.JackPotToolStripMenuItem.Name = "JackPotToolStripMenuItem"
+        Me.JackPotToolStripMenuItem.Size = New System.Drawing.Size(153, 22)
+        Me.JackPotToolStripMenuItem.Text = "JackPot"
+        '
         'HelpToolStripMenuItem
         '
         Me.HelpToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.RemoteSupportToolStripMenuItem, Me.AboutMeToolStripMenuItem})
@@ -102,11 +109,11 @@ Partial Class MainShow
         Me.AboutMeToolStripMenuItem.Size = New System.Drawing.Size(160, 22)
         Me.AboutMeToolStripMenuItem.Text = "About Me"
         '
-        'JackPotToolStripMenuItem
+        'TestSoftwareToolStripMenuItem
         '
-        Me.JackPotToolStripMenuItem.Name = "JackPotToolStripMenuItem"
-        Me.JackPotToolStripMenuItem.Size = New System.Drawing.Size(153, 22)
-        Me.JackPotToolStripMenuItem.Text = "JackPot"
+        Me.TestSoftwareToolStripMenuItem.Name = "TestSoftwareToolStripMenuItem"
+        Me.TestSoftwareToolStripMenuItem.Size = New System.Drawing.Size(92, 20)
+        Me.TestSoftwareToolStripMenuItem.Text = "Test_Software"
         '
         'MainShow
         '
@@ -135,4 +142,5 @@ Partial Class MainShow
     Friend WithEvents BetaToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents POSToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents JackPotToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents TestSoftwareToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 End Class

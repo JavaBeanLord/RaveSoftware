@@ -55,4 +55,9 @@
         AdminLogin.ComboBox1.Text = ("JackPot")
 
     End Sub
+
+    Private Sub TestSoftwareToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles TestSoftwareToolStripMenuItem.Click
+        TestForm.Show()
+
+    End Sub
 End Class
