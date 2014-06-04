@@ -133,7 +133,6 @@
         Else
             ''Search data base for number & retrieve data to display on "Cash Out" Form
             CashOutForm.Show()
-            Me.Hide()
             CashOutForm.Label1.Text = (EmployeeName.Text())
             CashOutForm.Label2.Text = (CustomerName.Text())
             CashOutForm.Label3.Text = ("ID: " & CustomerNumber.Text())
@@ -154,7 +153,7 @@
     End Sub
 
     Private Sub Button8_Click(sender As Object, e As EventArgs) Handles Button8.Click
-
+        Searchform.Show()
 
     End Sub
 End Class
