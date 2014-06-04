@@ -31,7 +31,6 @@ Public Class ValidateForm
         Catch ex As Exception
             ''Show DataBase Error in MessageBox
             MessageBox.Show(ex.Message & "Had To Update Name Test")
-            ServerConnect.Open()
             Dim ServerUpdate As String
             ServerUpdate = "UPDATE JackPot SET [SmallJackPot] = '" & POS.CustomerName.Text & "' WHERE ID = " & POS.CustomerNumber.Text & ";"
             ServerCommand = New OleDbCommand(ServerUpdate, ServerConnect)
