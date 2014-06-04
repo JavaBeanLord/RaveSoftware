@@ -81,38 +81,28 @@ Public Class TestForm
     End Sub
 
     Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
-        Dim cmd As New OleDbCommand
-
-        Dim dr As OleDbDataReader
-
-        Dim da As New OleDbDataAdapter
-
-        Dim ds As New DataSet
 
         con.Open()
 
-        Try
+        Dim da As New OleDb.OleDbDataAdapter("SELECT ID as [ID], " & _
+                                             "SmallJackPot as [Small JackPot],MidJackPot as [Mid JackPot],LargeJackPot as [Large JackPot]" & _
+                                             "FROM JackPot ORDER BY ID", con)
+                                           
 
-            cmd = New OleDbCommand("select object from Table1 where predicate=title", con)
+        Dim dt As New DataTable
+        'fill data to datatable
+        da.Fill(dt)
 
-            da = New OleDbDataAdapter(cmd)
+        'offer data in data table into datagridview
+        Me.dgvData.DataSource = dt
 
-            da.Fill(ds, "Table1")
-
-
-
-
+        'close connection
+        con.Close()
 
 
-        Catch ex As Exception
 
-            MsgBox(ex.ToString())
-
-        Finally
-
-            con.Close()
-
-        End Try
 
     End Sub
+
+
 End Class
