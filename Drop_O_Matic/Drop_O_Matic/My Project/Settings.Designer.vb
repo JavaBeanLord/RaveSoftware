@@ -113,6 +113,18 @@ Namespace My
                 Me("FullControlAdmin") = value
             End Set
         End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+        Public Property DataBasePath() As String
+            Get
+                Return CType(Me("DataBasePath"),String)
+            End Get
+            Set
+                Me("DataBasePath") = value
+            End Set
+        End Property
     End Class
 End Namespace
 

@@ -121,11 +121,17 @@
   <data name="Gambling_and_slot_machine_icons-07-512" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Gambling_and_slot_machine_icons-07-512.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Wtwo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Wtwo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="spin" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\spin.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Wthree" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Wthree.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="1401774114_arrow-left-01" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\1401774114_arrow-left-01.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Wtwo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Wtwo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="glass" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\glass.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -136,10 +142,7 @@
   <data name="Wone" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Wone.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Wthree" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Wthree.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="spin" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\spin.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="freash" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\freash.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

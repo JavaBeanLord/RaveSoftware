@@ -279,6 +279,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\spin.wav" />
+    <None Include="Resources\freash.png" />
     <Content Include="Sounds\spin.wav" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />

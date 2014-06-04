@@ -60,4 +60,10 @@
         TestForm.Show()
 
     End Sub
+
+    Private Sub DataBaseToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DataBaseToolStripMenuItem.Click
+        AdminLogin.Show()
+        AdminLogin.ComboBox1.Text = ("DataBase")
+        AdminLogin.ComboBox1.Items.Add("DataBase")
+    End Sub
 End Class

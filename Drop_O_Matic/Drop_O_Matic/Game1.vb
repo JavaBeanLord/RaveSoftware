@@ -6,7 +6,7 @@
 
         ''JackPot Round
         Dim Jrnd = New Random()
-        Dim SmallJackPot = Jrnd.Next(9)
+        Dim SmallJackPot = Jrnd.Next(999)
         ''First Slot Round
         Dim rnd1 = New Random()
         Dim WOne = rnd1.Next(7)
@@ -121,6 +121,8 @@
     Private Sub Game1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         TextBox6.Text = (0)
         TextBox7.Text = (100)
+        Label1.Visible = False
+
     End Sub
 
 

@@ -17,5 +17,8 @@
     <Setting Name="FullControlAdmin" Type="System.String" Scope="User">
       <Value Profile="(Default)">zonecomputers</Value>
     </Setting>
+    <Setting Name="DataBasePath" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
   </Settings>
 </SettingsFile>

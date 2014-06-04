@@ -1,6 +1,6 @@
 ﻿Imports System.Data.OleDb
 Public Class TestForm
-    Dim con As New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Admin1\Documents\GitHub\RaveSoftware\Drop_O_Matic\Drop_O_Matic\DataBase\DB.mdb;")
+    Dim con As New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" & My.Settings.DataBasePath.ToString)
     Dim cmd As New OleDbCommand
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
 
@@ -20,7 +20,8 @@ Public Class TestForm
             con.Close()
             MessageBox.Show("DataBase Found & Closed")
         Catch ex As Exception
-            MessageBox.Show("No DataBase Found!")
+
+            MessageBox.Show(ex.Message)
 
         End Try
     End Sub
@@ -29,7 +30,7 @@ Public Class TestForm
 
         Dim Table1_ As String = "Table1"
         Dim query As String = "SELECT * FROM " & Table1_
-        Dim MDBConnString_ As String = ("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=\\WIN-ISS7E12NGDJ\Users\Administrator.WIN-ISS7E12NGDJ\Documents\Game\DataBase\DB.mdb;")
+        Dim MDBConnString_ As String = ("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" & My.Settings.DataBasePath.ToString)
         Dim ds As New DataSet
         Dim cnn As OleDbConnection = New OleDbConnection(MDBConnString_)
         cnn.Open()
@@ -46,5 +47,9 @@ Public Class TestForm
             Dim NextListItem As New ListViewItem(Item)
             TextBox2.Text = (NextListItem).ToString
         Next
+    End Sub
+
+    Private Sub TestForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
     End Sub
 End Class

@@ -15,7 +15,7 @@
         Dim rnd2 = New Random()
         Dim MidPot = rnd2.Next(9999)
         Dim rnd3 = New Random()
-        Dim SmallPot = rnd3.Next(9)
+        Dim SmallPot = rnd3.Next(999)
 
         TextBox1.Text = BigPot
         TextBox2.Text = MidPot

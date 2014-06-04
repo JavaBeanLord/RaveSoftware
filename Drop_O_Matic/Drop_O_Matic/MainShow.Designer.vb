@@ -33,7 +33,9 @@ Partial Class MainShow
         Me.HelpToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.RemoteSupportToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AboutMeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.DataBaseToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.TestSoftwareToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -92,7 +94,7 @@ Partial Class MainShow
         '
         'HelpToolStripMenuItem
         '
-        Me.HelpToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.RemoteSupportToolStripMenuItem, Me.AboutMeToolStripMenuItem})
+        Me.HelpToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.RemoteSupportToolStripMenuItem, Me.AboutMeToolStripMenuItem, Me.DataBaseToolStripMenuItem})
         Me.HelpToolStripMenuItem.Name = "HelpToolStripMenuItem"
         Me.HelpToolStripMenuItem.Size = New System.Drawing.Size(44, 20)
         Me.HelpToolStripMenuItem.Text = "Help"
@@ -109,11 +111,21 @@ Partial Class MainShow
         Me.AboutMeToolStripMenuItem.Size = New System.Drawing.Size(160, 22)
         Me.AboutMeToolStripMenuItem.Text = "About Me"
         '
+        'DataBaseToolStripMenuItem
+        '
+        Me.DataBaseToolStripMenuItem.Name = "DataBaseToolStripMenuItem"
+        Me.DataBaseToolStripMenuItem.Size = New System.Drawing.Size(160, 22)
+        Me.DataBaseToolStripMenuItem.Text = "DataBase"
+        '
         'TestSoftwareToolStripMenuItem
         '
         Me.TestSoftwareToolStripMenuItem.Name = "TestSoftwareToolStripMenuItem"
         Me.TestSoftwareToolStripMenuItem.Size = New System.Drawing.Size(92, 20)
         Me.TestSoftwareToolStripMenuItem.Text = "Test_Software"
+        '
+        'OpenFileDialog1
+        '
+        Me.OpenFileDialog1.FileName = "OpenFileDialog1"
         '
         'MainShow
         '
@@ -143,4 +155,6 @@ Partial Class MainShow
     Friend WithEvents POSToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents JackPotToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents TestSoftwareToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents DataBaseToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents OpenFileDialog1 As System.Windows.Forms.OpenFileDialog
 End Class

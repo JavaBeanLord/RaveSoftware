@@ -4,6 +4,8 @@
         TextBox1.Text = My.Settings.HurryLogin.ToString
         TextBox2.Text = My.Settings.UserPassword.ToString
         AdminControl()
+        TextBox3.Enabled = False
+        TextBox3.Text = My.Settings.DataBasePath
 
 
     End Sub
@@ -83,4 +85,8 @@
 
 
 
+    Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
+        TextBox3.Text = My.Settings.DataBasePath
+
+    End Sub
 End Class
