@@ -13,7 +13,7 @@
         Dim DollarString As String
         DollarString = FormatCurrency(OneDollar, , )
         AddAmount.Text = DollarString
-
+        Entry.Text = ("100")
 
 
     End Sub
@@ -23,7 +23,7 @@
         Dim FiveDollarString As String
         FiveDollarString = FormatCurrency(FiveDollar, , )
         AddAmount.Text = FiveDollarString
-
+        Entry.Text = ("500")
     End Sub
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
@@ -31,7 +31,7 @@
         Dim TenDollarString As String
         TenDollarString = FormatCurrency(TenDollar, , )
         AddAmount.Text = TenDollarString
-
+        Entry.Text = ("1000")
 
     End Sub
 
@@ -40,6 +40,7 @@
         Dim TwentyDollarString As String
         TwentyDollarString = FormatCurrency(TwentyDollar, , )
         AddAmount.Text = TwentyDollarString
+        Entry.Text = ("2000")
     End Sub
 
     Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
@@ -47,6 +48,7 @@
         Dim FiftyDollarString As String
         FiftyDollarString = FormatCurrency(FiftyDollar, , )
         AddAmount.Text = FiftyDollarString
+        Entry.Text = ("5000")
     End Sub
 
     Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
@@ -54,6 +56,7 @@
         Dim HundredDollarString As String
         HundredDollarString = FormatCurrency(HundredDollar, , )
         AddAmount.Text = HundredDollarString
+        Entry.Text = ("10000")
     End Sub
 
     Private Sub POS_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -93,7 +96,7 @@
 
     Private Sub Button7_Click(sender As Object, e As EventArgs) Handles Button7.Click
         ValidateForm.Label1.Text = (Me.EmployeeName.Text())
-        ValidateForm.Label2.Text = ("Apply Credits to")
+        ValidateForm.Label2.Text = ("Apply Credits: " & Me.AddAmount.Text.ToString)
         ValidateForm.Label3.Text = ("Name:" & Me.CustomerName.Text())
         ValidateForm.Label4.Text = ("ID:" & Me.CustomerNumber.Text())
         If AddAmount.Text = Nothing Then
@@ -132,6 +135,11 @@
 
     Private Sub CloseToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CloseToolStripMenuItem.Click
         Me.Close()
+
+    End Sub
+
+    Private Sub Entry_TextChanged(sender As Object, e As EventArgs) Handles Entry.TextChanged
+        Entry.Enabled = False
 
     End Sub
 End Class

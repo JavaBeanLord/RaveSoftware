@@ -44,6 +44,8 @@ Partial Class POS
         Me.FileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ReportsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CloseToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.Entry = New System.Windows.Forms.TextBox()
+        Me.Label5 = New System.Windows.Forms.Label()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -240,6 +242,22 @@ Partial Class POS
         Me.CloseToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.CloseToolStripMenuItem.Text = "Close"
         '
+        'Entry
+        '
+        Me.Entry.Location = New System.Drawing.Point(305, 99)
+        Me.Entry.Name = "Entry"
+        Me.Entry.Size = New System.Drawing.Size(240, 20)
+        Me.Entry.TabIndex = 21
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Location = New System.Drawing.Point(260, 101)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(39, 13)
+        Me.Label5.TabIndex = 22
+        Me.Label5.Text = "Entries"
+        '
         'POS
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -247,6 +265,8 @@ Partial Class POS
         Me.BackColor = System.Drawing.SystemColors.ControlDark
         Me.ClientSize = New System.Drawing.Size(560, 319)
         Me.ControlBox = False
+        Me.Controls.Add(Me.Label5)
+        Me.Controls.Add(Me.Entry)
         Me.Controls.Add(Me.CashOut)
         Me.Controls.Add(Me.Button8)
         Me.Controls.Add(Me.ClearAddAmount)
@@ -301,4 +321,6 @@ Partial Class POS
     Friend WithEvents FileToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ReportsToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents CloseToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents Entry As System.Windows.Forms.TextBox
+    Friend WithEvents Label5 As System.Windows.Forms.Label
 End Class

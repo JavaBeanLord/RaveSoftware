@@ -8,24 +8,35 @@ Public Class ValidateForm
 
 
     Private Sub ValidateYes_Click(sender As Object, e As EventArgs) Handles ValidateYes.Click
-     
-        'Dim ServerConnet As DataBase Connect
-        Dim ServerConnect As New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" & My.Settings.DataBasePath.ToString)
-        'Dim ServerCommant As DataBase Connect
-        Dim ServerCommand As New OleDbCommand
-        'Open DataBase
-        ServerConnect.Open()
-        ServerCommand.Connection = ServerConnect
-        'Insert Data in DataBase
-        ServerCommand.CommandText = "INSERT INTO Leadss(S_No,Contact_Person,Mobile_No,Email_Id," & _
-                      "Description,First_Follow_Up,Remarks,L_Date,Alternate_no) VALUES " & _
-                      "(?, ?, ?, ?, ?, ?, ?, ?, ?)"
 
+        Try
+            'Dim ServerConnet As DataBase Connect
+            Dim ServerConnect As New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" & My.Settings.DataBasePath.ToString)
 
+            'Dim ServerCommant As DataBase Connect
+            Dim ServerCommand As New OleDbCommand
 
+            'Open DataBase
+            ServerConnect.Open()
+            ServerCommand.Connection = ServerConnect
+
+            'Insert Data in DataBase
+            ServerCommand.CommandText = "INSERT INTO Table1(ID, CName, CAmount) " & _
+            " VALUES(" & POS.CustomerNumber.Text & ",'" & POS.CustomerName.Text & "','" & _
+             POS.Entry.Text & "')"
+            ''End of Insert Data in DataBase
+
+            ServerCommand.ExecuteNonQuery()
+            ServerConnect.Close()
+
+        Catch ex As Exception
+            ''Show DataBase Error in MessageBox
+            MessageBox.Show(ex.Message)
+        End Try
 
         'Hide ValidateForm
         Me.Hide()
+
         'Show MessageBox
         MessageBox.Show("Accepted")
 
