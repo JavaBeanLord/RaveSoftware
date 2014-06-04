@@ -95,9 +95,10 @@
 
 
     Private Sub Button7_Click(sender As Object, e As EventArgs) Handles Button7.Click
-        ValidateForm.Label1.Text = (Me.EmployeeName.Text())
-        ValidateForm.Label2.Text = ("Apply Credits: " & Me.AddAmount.Text.ToString)
-        ValidateForm.Label3.Text = ("Name:" & Me.CustomerName.Text())
+        ValidateForm.Label5.Text = ("Entries:" & Me.Entry.Text())
+        ValidateForm.Label1.Text = (Me.EmployeeName.Text() & ",")
+        ValidateForm.Label2.Text = ("Apply Credits to ")
+        ValidateForm.Label3.Text = (Me.CustomerName.Text()) & "                   " & Me.AddAmount.Text.ToString
         ValidateForm.Label4.Text = ("ID:" & Me.CustomerNumber.Text())
         If AddAmount.Text = Nothing Then
             MessageBox.Show("Please Apply Credit")
@@ -127,10 +128,14 @@
     End Sub
 
     Private Sub Button9_Click(sender As Object, e As EventArgs) Handles CashOut.Click
-        CashOutForm.Show()
-        Me.Hide()
-
-
+        If Me.CustomerNumber.Text = Nothing Then
+            MessageBox.Show("Please Insert Customer Number")
+        Else
+            ''Search data base for number & retrieve data to display on "Cash Out" Form
+            CashOutForm.Show()
+            Me.Hide()
+            CashOutForm.Label1.Text = (Me.CustomerName.Text())
+        End If
     End Sub
 
     Private Sub CloseToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CloseToolStripMenuItem.Click
@@ -140,6 +145,11 @@
 
     Private Sub Entry_TextChanged(sender As Object, e As EventArgs) Handles Entry.TextChanged
         Entry.Enabled = False
+
+    End Sub
+
+    Private Sub Button8_Click(sender As Object, e As EventArgs) Handles Button8.Click
+
 
     End Sub
 End Class

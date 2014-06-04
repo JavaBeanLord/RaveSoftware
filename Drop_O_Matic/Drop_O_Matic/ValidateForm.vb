@@ -3,7 +3,6 @@ Public Class ValidateForm
 
     Private Sub ValidateForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
-
     End Sub
 
 
@@ -28,7 +27,8 @@ Public Class ValidateForm
 
             ServerCommand.ExecuteNonQuery()
             ServerConnect.Close()
-
+            'Show MessageBox
+            MessageBox.Show("Accepted")
         Catch ex As Exception
             ''Show DataBase Error in MessageBox
             MessageBox.Show(ex.Message)
@@ -36,16 +36,11 @@ Public Class ValidateForm
 
         'Hide ValidateForm
         Me.Hide()
-
-        'Show MessageBox
-        MessageBox.Show("Accepted")
-
         'Clear POS Cluster
         POS.Entry.Text = ("")
         POS.AddAmount.Text = ("")
         POS.CustomerName.Text = ("")
         POS.CustomerNumber.Text = ("")
-
         'Close Validate Form
         Me.Close()
     End Sub
@@ -53,7 +48,13 @@ Public Class ValidateForm
     Private Sub ValidateNo_Click(sender As Object, e As EventArgs) Handles ValidateNo.Click
         Me.Hide()
         POS.Show()
+    End Sub
 
+    Private Sub Label5_Click(sender As Object, e As EventArgs) Handles Label5.Click
+
+    End Sub
+
+    Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click
 
     End Sub
 End Class
