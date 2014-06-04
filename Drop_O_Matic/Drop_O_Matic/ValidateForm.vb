@@ -1,5 +1,10 @@
 ﻿Imports System.Data.OleDb
 Public Class ValidateForm
+    'Dim ServerConnet As DataBase Connect
+    Dim ServerConnect As New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" & My.Settings.DataBasePath.ToString)
+
+    'Dim ServerCommant As DataBase Connect
+    Dim ServerCommand As New OleDbCommand
 
     Private Sub ValidateForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
@@ -9,12 +14,6 @@ Public Class ValidateForm
     Private Sub ValidateYes_Click(sender As Object, e As EventArgs) Handles ValidateYes.Click
 
         Try
-            'Dim ServerConnet As DataBase Connect
-            Dim ServerConnect As New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" & My.Settings.DataBasePath.ToString)
-
-            'Dim ServerCommant As DataBase Connect
-            Dim ServerCommand As New OleDbCommand
-
             'Open DataBase
             ServerConnect.Open()
             ServerCommand.Connection = ServerConnect
@@ -31,7 +30,16 @@ Public Class ValidateForm
             MessageBox.Show("Accepted")
         Catch ex As Exception
             ''Show DataBase Error in MessageBox
-            MessageBox.Show(ex.Message)
+            MessageBox.Show(ex.Message & "Had To Update Name Test")
+            ServerConnect.Open()
+            Dim ServerUpdate As String
+            ServerUpdate = "UPDATE JackPot SET [SmallJackPot] = '" & POS.CustomerName.Text & "' WHERE ID = " & POS.CustomerNumber.Text & ";"
+            ServerCommand = New OleDbCommand(ServerUpdate, ServerConnect)
+            MessageBox.Show("Name Updated To: " & POS.CustomerName.Text)
+            ''End of Insert Data in DataBase
+
+            ServerCommand.ExecuteNonQuery()
+            ServerConnect.Close()
         End Try
 
         'Hide ValidateForm

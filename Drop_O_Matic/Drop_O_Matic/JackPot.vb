@@ -1,43 +1,48 @@
-﻿Public Class JackPot
+﻿Imports System.Data.OleDb
+Public Class JackPot
+    Dim ServerConnect As New OleDb.OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" & My.Settings.DataBasePath.ToString)
+    Dim ServerCommand As New OleDb.OleDbCommand()
 
     Private Sub JackPot_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
         TextBox1.Enabled = False
         TextBox2.Enabled = False
         TextBox3.Enabled = False
-
         Timer1.Enabled = True
+        Timer2.Enabled = True
 
     End Sub
 
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
-        Dim rnd1 = New Random()
-        Dim BigPot = rnd1.Next(99999)
-        Dim rnd2 = New Random()
-        Dim MidPot = rnd2.Next(9999)
-        Dim rnd3 = New Random()
-        Dim SmallPot = rnd3.Next(999)
+        Dim IDNumber As String
+        IDNumber = ("1")
 
-        TextBox1.Text = BigPot
-        TextBox2.Text = MidPot
-        TextBox3.Text = SmallPot
+        ServerConnect.Open()
 
-        Timer1.Enabled = False
-        Timer2.Enabled = True
+        Dim ServerUpdate As String
+        ServerUpdate = "UPDATE JackPot SET [SmallJackPot] = '" & TextBox3.Text & "' WHERE ID = " & IDNumber & ";"
+        ServerCommand = New OleDbCommand(ServerUpdate, ServerConnect)
+        Try
 
+            ServerCommand.ExecuteNonQuery()
+            Timer1.Enabled = False
 
+        Catch ex As Exception
+            MsgBox("Could not perform this task because " & ex.Message, MsgBoxStyle.Exclamation, "Error")
+        End Try
+
+        ServerCommand = Nothing
+        ServerConnect.Close()
 
     End Sub
 
+   
     Private Sub Timer2_Tick(sender As Object, e As EventArgs) Handles Timer2.Tick
-        Dim rnd1 = New Random()
-        Dim BigPot = rnd1.Next(99999)
-        Dim rnd2 = New Random()
-        Dim MidPot = rnd2.Next(9999)
-        Dim rnd3 = New Random()
-        Dim SmallPot = rnd3.Next(999)
+        Dim RandomSmall = New Random()
+        Dim SmallJackPot = RandomSmall.Next(999)
 
-        TextBox1.Text = BigPot
-        TextBox2.Text = MidPot
-        TextBox3.Text = SmallPot
+        TextBox3.Text = SmallJackPot.ToString
+
+        Timer2.Enabled = False
     End Sub
 End Class

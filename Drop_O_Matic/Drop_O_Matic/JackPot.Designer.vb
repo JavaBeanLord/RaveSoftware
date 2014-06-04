@@ -108,10 +108,10 @@ Partial Class JackPot
         '
         'Timer1
         '
+        Me.Timer1.Interval = 500
         '
         'Timer2
         '
-        Me.Timer2.Interval = 5184000
         '
         'JackPot
         '

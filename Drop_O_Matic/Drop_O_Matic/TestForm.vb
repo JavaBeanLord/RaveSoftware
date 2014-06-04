@@ -49,7 +49,70 @@ Public Class TestForm
         Next
     End Sub
 
+   
+    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
+
+        Dim con As New OleDb.OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" & My.Settings.DataBasePath.ToString)
+        Dim sqlCmd As New OleDb.OleDbCommand()
+
+        con.Open()
+        Dim sqlUpdate As String
+        Dim sqlUpdatePass As DialogResult
+        sqlUpdate = "UPDATE JackPot SET [SmallJackPot] = '" & TextBox3.Text & "' WHERE ID = " & TextBox4.Text & ";"
+        sqlCmd = New OleDbCommand(sqlUpdate, con)
+        Try
+            sqlUpdatePass = MessageBox.Show("Are you sure to save this changes?", "Save changes?", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+            If sqlUpdatePass = vbYes Then
+                sqlCmd.ExecuteNonQuery()
+                MsgBox("Changes are now saved", MsgBoxStyle.Information, "New password has been set.")
+                Me.Hide()
+            Else
+                Exit Sub
+            End If
+        Catch ex As Exception
+            MsgBox("Could not perform this task because " & ex.Message, MsgBoxStyle.Exclamation, "Error")
+        End Try
+        sqlCmd = Nothing
+        con.Close()
+    End Sub
+
     Private Sub TestForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+    End Sub
+
+    Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
+        Dim cmd As New OleDbCommand
+
+        Dim dr As OleDbDataReader
+
+        Dim da As New OleDbDataAdapter
+
+        Dim ds As New DataSet
+
+        con.Open()
+
+        Try
+
+            cmd = New OleDbCommand("select object from Table1 where predicate=title", con)
+
+            da = New OleDbDataAdapter(cmd)
+
+            da.Fill(ds, "Table1")
+
+
+
+
+
+
+        Catch ex As Exception
+
+            MsgBox(ex.ToString())
+
+        Finally
+
+            con.Close()
+
+        End Try
 
     End Sub
 End Class
