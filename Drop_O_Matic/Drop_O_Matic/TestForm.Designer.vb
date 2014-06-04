@@ -114,7 +114,7 @@ Partial Class TestForm
         '
         'Button5
         '
-        Me.Button5.Location = New System.Drawing.Point(153, 299)
+        Me.Button5.Location = New System.Drawing.Point(322, 345)
         Me.Button5.Name = "Button5"
         Me.Button5.Size = New System.Drawing.Size(75, 23)
         Me.Button5.TabIndex = 9
@@ -129,7 +129,7 @@ Partial Class TestForm
         Me.dgvData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvData.Location = New System.Drawing.Point(12, 201)
         Me.dgvData.Name = "dgvData"
-        Me.dgvData.Size = New System.Drawing.Size(578, 138)
+        Me.dgvData.Size = New System.Drawing.Size(385, 138)
         Me.dgvData.TabIndex = 10
         '
         'Button6
@@ -143,7 +143,7 @@ Partial Class TestForm
         '
         'TextBox5
         '
-        Me.TextBox5.Location = New System.Drawing.Point(255, 66)
+        Me.TextBox5.Location = New System.Drawing.Point(254, 66)
         Me.TextBox5.Name = "TextBox5"
         Me.TextBox5.Size = New System.Drawing.Size(113, 20)
         Me.TextBox5.TabIndex = 12
@@ -152,7 +152,7 @@ Partial Class TestForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(604, 380)
+        Me.ClientSize = New System.Drawing.Size(409, 380)
         Me.Controls.Add(Me.TextBox5)
         Me.Controls.Add(Me.Button6)
         Me.Controls.Add(Me.dgvData)
