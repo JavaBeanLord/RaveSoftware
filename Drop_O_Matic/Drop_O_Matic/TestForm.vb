@@ -99,7 +99,7 @@ Public Class TestForm
         'close connection
         con.Close()
 
-        Dim info As String
+
 
 
 

@@ -19,10 +19,10 @@
         ''Turn Timer1 One
         Timer1.Enabled = True
 
-        TextBox1.Text = (WOne)
-        TextBox2.Text = (WTwo)
-        TextBox3.Text = (WThree)
-        TextBox8.Text = (SmallJackPot)
+        TextBox1.Text = (WOne).ToString
+        TextBox2.Text = (WTwo).ToString
+        TextBox3.Text = (WThree).ToString
+        TextBox8.Text = (SmallJackPot).ToString
 
 
         ' PictureBox1.Location = New Point(12, 189)
@@ -37,7 +37,7 @@
             Dim SmallPostChange = New Random()
             Dim SmallPot = SmallPostChange.Next(9)
 
-            JackPot.TextBox3.Text = SmallPot
+            JackPot.TextBox3.Text = SmallPot.ToString
         Else
 
         End If
@@ -119,8 +119,8 @@
     End Sub
 
     Private Sub Game1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        TextBox6.Text = (0)
-        TextBox7.Text = (100)
+        TextBox6.Text = (0).ToString
+        TextBox7.Text = (100).ToString
         Label1.Visible = False
 
     End Sub

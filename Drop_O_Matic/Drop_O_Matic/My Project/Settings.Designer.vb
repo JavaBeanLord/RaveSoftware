@@ -57,9 +57,9 @@ Namespace My
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.DefaultSettingValueAttribute("200")>  _
-        Public Property HurryLogin() As String
+        Public Property HurryLogin() As Integer
             Get
-                Return CType(Me("HurryLogin"),String)
+                Return CType(Me("HurryLogin"),Integer)
             End Get
             Set
                 Me("HurryLogin") = value

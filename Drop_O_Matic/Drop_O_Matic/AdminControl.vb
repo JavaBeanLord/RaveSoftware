@@ -11,11 +11,12 @@
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        If My.Settings.HurryLogin = TextBox1.Text Then
+       
+        If My.Settings.HurryLogin.ToString = TextBox1.Text Then
             MessageBox.Show("Your Login Time Is Already Set To: " & My.Settings.HurryLogin.ToString & vbNewLine & " Please Modify The Time To Save")
         Else
             My.Settings.HurryLogin = TextBox1.Text
-            TextBox1.Text = My.Settings.HurryLogin
+            TextBox1.Text = My.Settings.HurryLogin.ToString
             Login.LoginNow.Interval = TextBox1.Text
             MessageBox.Show("Saved Setting..." & vbNewLine & "Login Time Now " & TextBox1.Text)
         End If
