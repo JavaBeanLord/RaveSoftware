@@ -13,7 +13,13 @@ Public Class ValidateForm
         Dim ServerConnect As New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" & My.Settings.DataBasePath.ToString)
         'Dim ServerCommant As DataBase Connect
         Dim ServerCommand As New OleDbCommand
-
+        'Open DataBase
+        ServerConnect.Open()
+        ServerCommand.Connection = ServerConnect
+        'Insert Data in DataBase
+        ServerCommand.CommandText = "INSERT INTO Leadss(S_No,Contact_Person,Mobile_No,Email_Id," & _
+                      "Description,First_Follow_Up,Remarks,L_Date,Alternate_no) VALUES " & _
+                      "(?, ?, ?, ?, ?, ?, ?, ?, ?)"
 
 
 
