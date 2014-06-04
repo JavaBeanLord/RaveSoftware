@@ -40,11 +40,15 @@ Partial Class POS
         Me.ClearAddAmount = New System.Windows.Forms.Button()
         Me.Button8 = New System.Windows.Forms.Button()
         Me.CashOut = New System.Windows.Forms.Button()
+        Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
+        Me.FileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ReportsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'CustomerName
         '
-        Me.CustomerName.Location = New System.Drawing.Point(12, 91)
+        Me.CustomerName.Location = New System.Drawing.Point(15, 112)
         Me.CustomerName.Name = "CustomerName"
         Me.CustomerName.Size = New System.Drawing.Size(223, 47)
         Me.CustomerName.TabIndex = 0
@@ -53,7 +57,7 @@ Partial Class POS
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(9, 75)
+        Me.Label1.Location = New System.Drawing.Point(12, 96)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(82, 13)
         Me.Label1.TabIndex = 1
@@ -62,7 +66,7 @@ Partial Class POS
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(9, 141)
+        Me.Label2.Location = New System.Drawing.Point(12, 162)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(84, 13)
         Me.Label2.TabIndex = 3
@@ -70,7 +74,7 @@ Partial Class POS
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(260, 103)
+        Me.Button1.Location = New System.Drawing.Point(263, 124)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(90, 60)
         Me.Button1.TabIndex = 5
@@ -79,7 +83,7 @@ Partial Class POS
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(356, 103)
+        Me.Button2.Location = New System.Drawing.Point(359, 124)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(90, 60)
         Me.Button2.TabIndex = 6
@@ -88,7 +92,7 @@ Partial Class POS
         '
         'Button3
         '
-        Me.Button3.Location = New System.Drawing.Point(452, 103)
+        Me.Button3.Location = New System.Drawing.Point(455, 124)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(90, 60)
         Me.Button3.TabIndex = 7
@@ -97,7 +101,7 @@ Partial Class POS
         '
         'Button4
         '
-        Me.Button4.Location = New System.Drawing.Point(260, 169)
+        Me.Button4.Location = New System.Drawing.Point(263, 190)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(90, 60)
         Me.Button4.TabIndex = 8
@@ -106,7 +110,7 @@ Partial Class POS
         '
         'Button5
         '
-        Me.Button5.Location = New System.Drawing.Point(356, 169)
+        Me.Button5.Location = New System.Drawing.Point(359, 190)
         Me.Button5.Name = "Button5"
         Me.Button5.Size = New System.Drawing.Size(90, 60)
         Me.Button5.TabIndex = 9
@@ -115,7 +119,7 @@ Partial Class POS
         '
         'Button6
         '
-        Me.Button6.Location = New System.Drawing.Point(452, 169)
+        Me.Button6.Location = New System.Drawing.Point(455, 190)
         Me.Button6.Name = "Button6"
         Me.Button6.Size = New System.Drawing.Size(90, 60)
         Me.Button6.TabIndex = 10
@@ -127,7 +131,7 @@ Partial Class POS
         Me.AddAmount.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.AddAmount.Cursor = System.Windows.Forms.Cursors.Arrow
         Me.AddAmount.Font = New System.Drawing.Font("Arial Narrow", 24.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.AddAmount.Location = New System.Drawing.Point(260, 25)
+        Me.AddAmount.Location = New System.Drawing.Point(263, 46)
         Me.AddAmount.Multiline = True
         Me.AddAmount.Name = "AddAmount"
         Me.AddAmount.Size = New System.Drawing.Size(282, 47)
@@ -136,7 +140,7 @@ Partial Class POS
         '
         'CustomerNumber
         '
-        Me.CustomerNumber.Location = New System.Drawing.Point(15, 157)
+        Me.CustomerNumber.Location = New System.Drawing.Point(18, 178)
         Me.CustomerNumber.Multiline = True
         Me.CustomerNumber.Name = "CustomerNumber"
         Me.CustomerNumber.Size = New System.Drawing.Size(220, 47)
@@ -144,7 +148,7 @@ Partial Class POS
         '
         'Button7
         '
-        Me.Button7.Location = New System.Drawing.Point(391, 235)
+        Me.Button7.Location = New System.Drawing.Point(394, 256)
         Me.Button7.Name = "Button7"
         Me.Button7.Size = New System.Drawing.Size(151, 51)
         Me.Button7.TabIndex = 13
@@ -154,7 +158,7 @@ Partial Class POS
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(9, 9)
+        Me.Label3.Location = New System.Drawing.Point(12, 30)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(84, 13)
         Me.Label3.TabIndex = 15
@@ -163,7 +167,7 @@ Partial Class POS
         'EmployeeName
         '
         Me.EmployeeName.Enabled = False
-        Me.EmployeeName.Location = New System.Drawing.Point(12, 25)
+        Me.EmployeeName.Location = New System.Drawing.Point(15, 46)
         Me.EmployeeName.Name = "EmployeeName"
         Me.EmployeeName.ReadOnly = True
         Me.EmployeeName.Size = New System.Drawing.Size(223, 47)
@@ -173,7 +177,7 @@ Partial Class POS
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(257, 9)
+        Me.Label4.Location = New System.Drawing.Point(260, 30)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(92, 13)
         Me.Label4.TabIndex = 16
@@ -181,7 +185,7 @@ Partial Class POS
         '
         'ClearAddAmount
         '
-        Me.ClearAddAmount.Location = New System.Drawing.Point(260, 235)
+        Me.ClearAddAmount.Location = New System.Drawing.Point(263, 256)
         Me.ClearAddAmount.Name = "ClearAddAmount"
         Me.ClearAddAmount.Size = New System.Drawing.Size(125, 51)
         Me.ClearAddAmount.TabIndex = 17
@@ -190,7 +194,7 @@ Partial Class POS
         '
         'Button8
         '
-        Me.Button8.Location = New System.Drawing.Point(15, 235)
+        Me.Button8.Location = New System.Drawing.Point(18, 256)
         Me.Button8.Name = "Button8"
         Me.Button8.Size = New System.Drawing.Size(105, 51)
         Me.Button8.TabIndex = 18
@@ -199,19 +203,41 @@ Partial Class POS
         '
         'CashOut
         '
-        Me.CashOut.Location = New System.Drawing.Point(130, 235)
+        Me.CashOut.Location = New System.Drawing.Point(133, 256)
         Me.CashOut.Name = "CashOut"
         Me.CashOut.Size = New System.Drawing.Size(105, 51)
         Me.CashOut.TabIndex = 19
         Me.CashOut.Text = "Out"
         Me.CashOut.UseVisualStyleBackColor = True
         '
+        'MenuStrip1
+        '
+        Me.MenuStrip1.BackColor = System.Drawing.SystemColors.ButtonFace
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem, Me.ReportsToolStripMenuItem})
+        Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
+        Me.MenuStrip1.Name = "MenuStrip1"
+        Me.MenuStrip1.Size = New System.Drawing.Size(560, 24)
+        Me.MenuStrip1.TabIndex = 20
+        Me.MenuStrip1.Text = "MenuStrip1"
+        '
+        'FileToolStripMenuItem
+        '
+        Me.FileToolStripMenuItem.Name = "FileToolStripMenuItem"
+        Me.FileToolStripMenuItem.Size = New System.Drawing.Size(37, 20)
+        Me.FileToolStripMenuItem.Text = "File"
+        '
+        'ReportsToolStripMenuItem
+        '
+        Me.ReportsToolStripMenuItem.Name = "ReportsToolStripMenuItem"
+        Me.ReportsToolStripMenuItem.Size = New System.Drawing.Size(59, 20)
+        Me.ReportsToolStripMenuItem.Text = "Reports"
+        '
         'POS
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.SystemColors.WindowFrame
-        Me.ClientSize = New System.Drawing.Size(588, 319)
+        Me.BackColor = System.Drawing.SystemColors.ControlDark
+        Me.ClientSize = New System.Drawing.Size(560, 319)
         Me.ControlBox = False
         Me.Controls.Add(Me.CashOut)
         Me.Controls.Add(Me.Button8)
@@ -231,12 +257,16 @@ Partial Class POS
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.CustomerName)
+        Me.Controls.Add(Me.MenuStrip1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.MainMenuStrip = Me.MenuStrip1
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "POS"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "POS"
+        Me.MenuStrip1.ResumeLayout(False)
+        Me.MenuStrip1.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -259,4 +289,7 @@ Partial Class POS
     Friend WithEvents ClearAddAmount As System.Windows.Forms.Button
     Friend WithEvents Button8 As System.Windows.Forms.Button
     Friend WithEvents CashOut As System.Windows.Forms.Button
+    Friend WithEvents MenuStrip1 As System.Windows.Forms.MenuStrip
+    Friend WithEvents FileToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents ReportsToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 End Class
