@@ -99,10 +99,66 @@ Public Class TestForm
         'close connection
         con.Close()
 
+        Dim info As String
+
+
+
+
 
 
 
     End Sub
 
 
+    Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
+
+
+        Try
+
+
+
+            con.Open()
+
+            cmd = New OleDbCommand("SELECT SmallJackPot FROM JackPot WHERE compname = '" & TextBox5.Text & "'", con)
+
+            Dim oReader As OleDbDataReader
+            oReader = cmd.ExecuteReader()
+
+            If oReader.HasRows Then
+
+
+
+                Do While oReader.Read
+                    TextBox5.Text = oReader(1).ToString
+
+                Loop
+
+
+
+
+
+            Else
+
+                MsgBox("add new contact.")
+
+            End If
+
+
+        Catch myException As Exception
+
+
+
+            MsgBox("No Record Inserted" + myException.ToString())
+
+
+
+
+        Finally
+
+            con.Close()
+
+        End Try
+
+
+    End Sub
 End Class

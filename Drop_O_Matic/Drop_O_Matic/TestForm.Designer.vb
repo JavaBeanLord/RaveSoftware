@@ -33,6 +33,8 @@ Partial Class TestForm
         Me.TextBox4 = New System.Windows.Forms.TextBox()
         Me.Button5 = New System.Windows.Forms.Button()
         Me.dgvData = New System.Windows.Forms.DataGridView()
+        Me.Button6 = New System.Windows.Forms.Button()
+        Me.TextBox5 = New System.Windows.Forms.TextBox()
         CType(Me.dgvData, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -127,14 +129,32 @@ Partial Class TestForm
         Me.dgvData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvData.Location = New System.Drawing.Point(12, 201)
         Me.dgvData.Name = "dgvData"
-        Me.dgvData.Size = New System.Drawing.Size(236, 92)
+        Me.dgvData.Size = New System.Drawing.Size(578, 138)
         Me.dgvData.TabIndex = 10
+        '
+        'Button6
+        '
+        Me.Button6.Location = New System.Drawing.Point(254, 12)
+        Me.Button6.Name = "Button6"
+        Me.Button6.Size = New System.Drawing.Size(114, 48)
+        Me.Button6.TabIndex = 11
+        Me.Button6.Text = "Button6"
+        Me.Button6.UseVisualStyleBackColor = True
+        '
+        'TextBox5
+        '
+        Me.TextBox5.Location = New System.Drawing.Point(255, 66)
+        Me.TextBox5.Name = "TextBox5"
+        Me.TextBox5.Size = New System.Drawing.Size(113, 20)
+        Me.TextBox5.TabIndex = 12
         '
         'TestForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(262, 334)
+        Me.ClientSize = New System.Drawing.Size(604, 380)
+        Me.Controls.Add(Me.TextBox5)
+        Me.Controls.Add(Me.Button6)
         Me.Controls.Add(Me.dgvData)
         Me.Controls.Add(Me.Button5)
         Me.Controls.Add(Me.TextBox4)
@@ -164,4 +184,6 @@ Partial Class TestForm
     Friend WithEvents TextBox4 As System.Windows.Forms.TextBox
     Friend WithEvents Button5 As System.Windows.Forms.Button
     Friend WithEvents dgvData As System.Windows.Forms.DataGridView
+    Friend WithEvents Button6 As System.Windows.Forms.Button
+    Friend WithEvents TextBox5 As System.Windows.Forms.TextBox
 End Class
