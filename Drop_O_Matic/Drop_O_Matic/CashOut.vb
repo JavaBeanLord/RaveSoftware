@@ -9,4 +9,11 @@
 
 
     End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        ''Print Reciept
+        ''Deduct amount from database
+        Me.Hide()
+        POS.Show()
+    End Sub
 End Class

@@ -134,7 +134,12 @@
             ''Search data base for number & retrieve data to display on "Cash Out" Form
             CashOutForm.Show()
             Me.Hide()
-            CashOutForm.Label1.Text = (Me.CustomerName.Text())
+            CashOutForm.Label1.Text = (EmployeeName.Text())
+            CashOutForm.Label2.Text = (CustomerName.Text())
+            CashOutForm.Label3.Text = ("ID: " & CustomerNumber.Text())
+
+            CashOutForm.Label4.Text = ("Remaining Entries: ")
+            '' CashOutForm.Label5.Text=()
         End If
     End Sub
 

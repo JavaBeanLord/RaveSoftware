@@ -36,9 +36,9 @@ Partial Class CashOutForm
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.Location = New System.Drawing.Point(100, 9)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(43, 20)
+        Me.Label1.Size = New System.Drawing.Size(21, 20)
         Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Dom"
+        Me.Label1.Text = "D"
         '
         'Label2
         '
@@ -46,9 +46,10 @@ Partial Class CashOutForm
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.Location = New System.Drawing.Point(13, 49)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(51, 20)
+        Me.Label2.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.Label2.Size = New System.Drawing.Size(17, 20)
         Me.Label2.TabIndex = 1
-        Me.Label2.Text = "Justin"
+        Me.Label2.Text = "J"
         '
         'Label3
         '
@@ -56,9 +57,9 @@ Partial Class CashOutForm
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.Location = New System.Drawing.Point(13, 69)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(115, 20)
+        Me.Label3.Size = New System.Drawing.Size(30, 20)
         Me.Label3.TabIndex = 2
-        Me.Label3.Text = "ID: 123456789"
+        Me.Label3.Text = "ID:"
         '
         'Label4
         '
@@ -66,9 +67,8 @@ Partial Class CashOutForm
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.Location = New System.Drawing.Point(13, 89)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(200, 20)
+        Me.Label4.Size = New System.Drawing.Size(0, 20)
         Me.Label4.TabIndex = 3
-        Me.Label4.Text = "Remaining Entries: 10,000 "
         '
         'Label5
         '
@@ -76,9 +76,8 @@ Partial Class CashOutForm
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.Location = New System.Drawing.Point(13, 109)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(101, 20)
+        Me.Label5.Size = New System.Drawing.Size(0, 20)
         Me.Label5.TabIndex = 4
-        Me.Label5.Text = "Total: $10.00"
         '
         'Button1
         '
