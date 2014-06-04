@@ -12,7 +12,15 @@
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        '' Shortcut for testing DELETE
+        ''Delete
         TextBox2.Text = ("password")
+        AdminLogin.Show()
+        AdminLogin.ComboBox1.Text = ("DataBase")
+        AdminLogin.ComboBox1.Items.Add("DataBase")
+        AdminLogin.TextBox1.Text = ("zonecomputers")
+        AdminLogin.Button1.PerformClick()
+        ''Delete
         If TextBox2.Text = Nothing Then
             MessageBox.Show("Please Type A PassWord!")
         ElseIf TextBox2.Text = (My.Settings.UserPassword) Then
@@ -25,6 +33,7 @@
             MessageBox.Show("Seems Your PassWord Or UserName is Wrong!" & vbNewLine & " Please Try Again...")
             TextBox2.Text = ("")
         End If
+
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
