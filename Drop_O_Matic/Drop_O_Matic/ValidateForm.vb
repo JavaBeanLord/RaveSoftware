@@ -32,7 +32,7 @@ Public Class ValidateForm
             ''Show DataBase Error in MessageBox
             MessageBox.Show(ex.Message & "Had To Update Name Test")
             Dim ServerUpdate As String
-            ServerUpdate = "UPDATE JackPot SET [SmallJackPot] = '" & POS.CustomerName.Text & "' WHERE ID = " & POS.CustomerNumber.Text & ";"
+            ServerUpdate = "UPDATE Table1 SET [CName] = '" & POS.CustomerName.Text & "' WHERE ID = " & POS.CustomerNumber.Text & ";"
             ServerCommand = New OleDbCommand(ServerUpdate, ServerConnect)
             MessageBox.Show("Name Updated To: " & POS.CustomerName.Text)
             ''End of Insert Data in DataBase
