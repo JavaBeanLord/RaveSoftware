@@ -41,6 +41,7 @@ Public Class ValidateForm
         MessageBox.Show("Accepted")
 
         'Clear POS Cluster
+        POS.Entry.Text = ("")
         POS.AddAmount.Text = ("")
         POS.CustomerName.Text = ("")
         POS.CustomerNumber.Text = ("")
