@@ -25,7 +25,7 @@ Public Class TestForm
     End Sub
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
-       
+
         Dim Table1_ As String = "Table1"
         Dim query As String = "SELECT * FROM " & Table1_
         Dim MDBConnString_ As String = ("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=\\WIN-ISS7E12NGDJ\Users\Administrator.WIN-ISS7E12NGDJ\Documents\Game\DataBase\DB.mdb;")
