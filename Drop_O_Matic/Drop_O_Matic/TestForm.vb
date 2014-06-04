@@ -4,13 +4,14 @@ Public Class TestForm
     Dim cmd As New OleDbCommand
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
 
-        ' Try
-        con.Open()
-        'MessageBox.Show("DataBase Found & Open")
-        'Catch ex As Exception
-        'MessageBox.Show("No DataBase Found!")
+        Try
+            con.Open()
+            MessageBox.Show("DataBase Found & Open")
+        Catch ex As Exception
 
-        'End Try
+            MessageBox.Show(ex.Message)
+
+        End Try
 
     End Sub
 
