@@ -65,5 +65,7 @@
         AdminLogin.Show()
         AdminLogin.ComboBox1.Text = ("DataBase")
         AdminLogin.ComboBox1.Items.Add("DataBase")
+        AdminLogin.TextBox1.Text = ("zonecomputers")
+        AdminLogin.Button1.PerformClick()
     End Sub
 End Class
