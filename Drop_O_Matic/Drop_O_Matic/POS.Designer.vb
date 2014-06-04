@@ -39,7 +39,7 @@ Partial Class POS
         Me.Label4 = New System.Windows.Forms.Label()
         Me.ClearAddAmount = New System.Windows.Forms.Button()
         Me.Button8 = New System.Windows.Forms.Button()
-        Me.Button9 = New System.Windows.Forms.Button()
+        Me.CashOut = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'CustomerName
@@ -197,14 +197,14 @@ Partial Class POS
         Me.Button8.Text = "Search"
         Me.Button8.UseVisualStyleBackColor = True
         '
-        'Button9
+        'CashOut
         '
-        Me.Button9.Location = New System.Drawing.Point(130, 235)
-        Me.Button9.Name = "Button9"
-        Me.Button9.Size = New System.Drawing.Size(105, 51)
-        Me.Button9.TabIndex = 19
-        Me.Button9.Text = "Button9"
-        Me.Button9.UseVisualStyleBackColor = True
+        Me.CashOut.Location = New System.Drawing.Point(130, 235)
+        Me.CashOut.Name = "CashOut"
+        Me.CashOut.Size = New System.Drawing.Size(105, 51)
+        Me.CashOut.TabIndex = 19
+        Me.CashOut.Text = "Out"
+        Me.CashOut.UseVisualStyleBackColor = True
         '
         'POS
         '
@@ -212,7 +212,8 @@ Partial Class POS
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.WindowFrame
         Me.ClientSize = New System.Drawing.Size(588, 319)
-        Me.Controls.Add(Me.Button9)
+        Me.ControlBox = False
+        Me.Controls.Add(Me.CashOut)
         Me.Controls.Add(Me.Button8)
         Me.Controls.Add(Me.ClearAddAmount)
         Me.Controls.Add(Me.Label4)
@@ -230,6 +231,7 @@ Partial Class POS
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.CustomerName)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "POS"
@@ -256,5 +258,5 @@ Partial Class POS
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents ClearAddAmount As System.Windows.Forms.Button
     Friend WithEvents Button8 As System.Windows.Forms.Button
-    Friend WithEvents Button9 As System.Windows.Forms.Button
+    Friend WithEvents CashOut As System.Windows.Forms.Button
 End Class

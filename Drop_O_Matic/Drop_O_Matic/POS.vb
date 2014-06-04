@@ -92,7 +92,7 @@
 
 
     Private Sub Button7_Click(sender As Object, e As EventArgs) Handles Button7.Click
-        ValidateForm.Label1.Text = ("User:" & Me.EmployeeName.Text())
+        ValidateForm.Label1.Text = (Me.EmployeeName.Text())
         ValidateForm.Label2.Text = ("Apply Credits to")
         ValidateForm.Label3.Text = ("Name:" & Me.CustomerName.Text())
         ValidateForm.Label4.Text = ("ID:" & Me.CustomerNumber.Text())
@@ -119,11 +119,14 @@
     End Sub
 
     Private Sub EmployeeName_TextChanged(sender As Object, e As EventArgs) Handles EmployeeName.TextChanged
-        EmployeeName.Text = Login.TextBox1.Text()
-
+        '' EmployeeName.Text = Login.TextBox1.Text()
+        EmployeeName.Text = ("Dom")
     End Sub
 
-    Private Sub Button9_Click(sender As Object, e As EventArgs) Handles Button9.Click
+    Private Sub Button9_Click(sender As Object, e As EventArgs) Handles CashOut.Click
+        CashOutForm.Show()
+        Me.Hide()
+
 
     End Sub
 End Class

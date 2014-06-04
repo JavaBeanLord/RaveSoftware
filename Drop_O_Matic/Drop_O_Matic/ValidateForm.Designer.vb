@@ -52,50 +52,51 @@ Partial Class ValidateForm
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(138, 9)
+        Me.Label1.Location = New System.Drawing.Point(131, 9)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(66, 24)
+        Me.Label1.Size = New System.Drawing.Size(49, 24)
         Me.Label1.TabIndex = 8
-        Me.Label1.Text = "Label1"
+        Me.Label1.Text = "User"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Label2
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(118, 42)
+        Me.Label2.Location = New System.Drawing.Point(89, 50)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(86, 29)
+        Me.Label2.Size = New System.Drawing.Size(177, 29)
         Me.Label2.TabIndex = 9
-        Me.Label2.Text = "Label2"
+        Me.Label2.Text = "Apply credits to"
         Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Label3
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(138, 71)
+        Me.Label3.Location = New System.Drawing.Point(131, 79)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(66, 24)
+        Me.Label3.Size = New System.Drawing.Size(119, 24)
         Me.Label3.TabIndex = 10
-        Me.Label3.Text = "Label3"
+        Me.Label3.Text = "Name: Justin"
         Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Label4
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(138, 102)
+        Me.Label4.Location = New System.Drawing.Point(131, 103)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(66, 24)
+        Me.Label4.Size = New System.Drawing.Size(92, 24)
         Me.Label4.TabIndex = 11
-        Me.Label4.Text = "Label4"
+        Me.Label4.Text = "ID:123626"
         Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'ValidateForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.AutoSize = True
         Me.BackColor = System.Drawing.SystemColors.WindowFrame
         Me.ClientSize = New System.Drawing.Size(352, 202)
         Me.ControlBox = False
@@ -106,6 +107,8 @@ Partial Class ValidateForm
         Me.Controls.Add(Me.ValidateNo)
         Me.Controls.Add(Me.ValidateYes)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.MaximumSize = New System.Drawing.Size(368, 241)
+        Me.MinimumSize = New System.Drawing.Size(368, 241)
         Me.Name = "ValidateForm"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "ValidateForm"
