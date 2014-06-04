@@ -153,7 +153,6 @@
     End Sub
 
     Private Sub Button8_Click(sender As Object, e As EventArgs) Handles Button8.Click
-        Searchform.Show()
 
     End Sub
 End Class
