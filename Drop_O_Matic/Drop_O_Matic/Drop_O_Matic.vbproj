@@ -295,6 +295,10 @@
     <None Include="Resources\btn_start_down.png" />
     <None Include="Resources\reel.wav" />
     <None Include="Resources\symbol_7.png" />
+    <None Include="Resources\symbol_bell.png" />
+    <None Include="Resources\symbol_cherry.png" />
+    <None Include="Resources\symbol_melon.png" />
+    <None Include="Resources\Background1.png" />
     <Content Include="Sounds\spin.wav" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
