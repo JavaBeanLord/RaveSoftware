@@ -309,6 +309,9 @@
     <None Include="Resources\SmallLine3.png" />
     <None Include="Resources\SandDunesBackground.png" />
     <None Include="Resources\SandDunesBackground1.png" />
+    <None Include="Resources\Untitled.png" />
+    <None Include="Resources\Untitled1.png" />
+    <None Include="Resources\Untitled2.png" />
     <Content Include="Sounds\spin.wav" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
