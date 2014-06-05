@@ -299,6 +299,16 @@
     <None Include="Resources\symbol_cherry.png" />
     <None Include="Resources\symbol_melon.png" />
     <None Include="Resources\Background1.png" />
+    <None Include="Resources\line.png" />
+    <None Include="Resources\SmallLine.png" />
+    <None Include="Resources\LargeLine1111111111.png" />
+    <None Include="Resources\SmallLine1.png" />
+    <None Include="Resources\SmallLine2.png" />
+    <None Include="Resources\LineW.png" />
+    <None Include="Resources\UpperLeftV.png" />
+    <None Include="Resources\SmallLine3.png" />
+    <None Include="Resources\SandDunesBackground.png" />
+    <None Include="Resources\SandDunesBackground1.png" />
     <Content Include="Sounds\spin.wav" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />

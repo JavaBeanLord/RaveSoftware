@@ -18,19 +18,51 @@
 
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
         'Slot Cluster One
-        PictureBox2.Image = My.Resources.symbol_7
+        PictureBox2.Image = My.Resources.symbol_melon
         PictureBox3.Image = My.Resources.symbol_bell
         PictureBox4.Image = My.Resources.symbol_cherry
         PictureBox1.Enabled = False
+
+        PictureBox7.Image = My.Resources.symbol_cherry
+        PictureBox6.Image = My.Resources.symbol_melon
+        PictureBox5.Image = My.Resources.symbol_bell
+
+        PictureBox10.Image = My.Resources.symbol_bell
+        PictureBox9.Image = My.Resources.symbol_cherry
+        PictureBox8.Image = My.Resources.symbol_melon
+
+        PictureBox13.Image = My.Resources.symbol_melon
+        PictureBox12.Image = My.Resources.symbol_bell
+        PictureBox11.Image = My.Resources.symbol_cherry
+
+        PictureBox16.Image = My.Resources.symbol_cherry
+        PictureBox15.Image = My.Resources.symbol_melon
+        PictureBox14.Image = My.Resources.symbol_bell
 
         'timer clust
         Timer1.Enabled = False
         Timer2.Enabled = True
     End Sub
     Private Sub Timer2_Tick(sender As Object, e As EventArgs) Handles Timer2.Tick
-        PictureBox2.Image = My.Resources.symbol_melon
-        PictureBox3.Image = My.Resources.symbol_7
+        PictureBox2.Image = My.Resources.symbol_cherry
+        PictureBox3.Image = My.Resources.symbol_melon
         PictureBox4.Image = My.Resources.symbol_bell
+
+        PictureBox7.Image = My.Resources.symbol_bell
+        PictureBox6.Image = My.Resources.symbol_cherry
+        PictureBox5.Image = My.Resources.symbol_melon
+
+        PictureBox10.Image = My.Resources.symbol_melon
+        PictureBox9.Image = My.Resources.symbol_bell
+        PictureBox8.Image = My.Resources.symbol_cherry
+
+        PictureBox13.Image = My.Resources.symbol_cherry
+        PictureBox12.Image = My.Resources.symbol_melon
+        PictureBox11.Image = My.Resources.symbol_bell
+
+        PictureBox16.Image = My.Resources.symbol_bell
+        PictureBox15.Image = My.Resources.symbol_cherry
+        PictureBox14.Image = My.Resources.symbol_melon
 
         'timer cluster
         Timer2.Enabled = False
@@ -41,6 +73,22 @@
         PictureBox3.Image = My.Resources.symbol_cherry
         PictureBox4.Image = My.Resources.symbol_melon
 
+        PictureBox7.Image = My.Resources.symbol_melon
+        PictureBox6.Image = My.Resources.symbol_bell
+        PictureBox5.Image = My.Resources.symbol_cherry
+
+        PictureBox10.Image = My.Resources.symbol_cherry
+        PictureBox9.Image = My.Resources.symbol_melon
+        PictureBox8.Image = My.Resources.symbol_bell
+
+        PictureBox13.Image = My.Resources.symbol_bell
+        PictureBox12.Image = My.Resources.symbol_cherry
+        PictureBox11.Image = My.Resources.symbol_melon
+
+        PictureBox16.Image = My.Resources.symbol_melon
+        PictureBox15.Image = My.Resources.symbol_bell
+        PictureBox14.Image = My.Resources.symbol_cherry
+
         'timer cluster
         Timer3.Enabled = False
         Timer1.Enabled = True
@@ -48,8 +96,96 @@
 
     Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
         Timer1.Enabled = True
+        Timer4.Enabled = True
+        Timer5.Enabled = False
+        Timer6.Enabled = False
+
+        PictureBox3.Visible = True
+        PictureBox6.Visible = True
+        PictureBox9.Visible = True
+
+
     End Sub
 
   
 
+    Private Sub Timer4_Tick(sender As Object, e As EventArgs) Handles Timer4.Tick
+        ''First Slot Round
+        Dim rnd1 = New Random()
+        Dim WOne = rnd1.Next(My.Settings.WOnePayOut)
+        ''2nd Slot Round
+        Dim rnd2 = New Random()
+        Dim WTwo = rnd2.Next(My.Settings.WTwoPayOut)
+        ''3rd Slot Round
+        Dim rnd3 = New Random()
+        Dim WThree = rnd3.Next(My.Settings.WThreePayOut)
+
+
+
+
+        Timer1.Enabled = False
+        Timer2.Enabled = False
+        Timer3.Enabled = False
+
+
+        If WOne.ToString + WTwo.ToString + WThree.ToString = ("000") Then
+            Timer4.Enabled = False
+            PictureBox3.Image = My.Resources.symbol_7
+            PictureBox6.Image = My.Resources.symbol_7
+            PictureBox9.Image = My.Resources.symbol_7
+            TextBox1.Text = ("GameWin Numbers: " & WOne.ToString & WTwo.ToString & WThree.ToString)
+            Timer5.Enabled = True
+            Timer4.Enabled = False
+        Else
+            'Timer4.Enabled = False
+            TextBox1.Text = ("GameOver Numbers: " & WOne.ToString & WTwo.ToString & WThree.ToString)
+            Timer4.Enabled = False
+        End If
+
+        If WOne.ToString + WTwo.ToString + WThree.ToString = ("034") Then
+            Timer4.Enabled = False
+            PictureBox4.Image = My.Resources.symbol_7
+            PictureBox6.Image = My.Resources.symbol_7
+            PictureBox8.Image = My.Resources.symbol_7
+            TextBox1.Text = ("GameWin Numbers: " & WOne.ToString & WTwo.ToString & WThree.ToString)
+            Timer4.Enabled = False
+        Else
+            'Timer4.Enabled = False
+            TextBox1.Text = ("GameOver Numbers: " & WOne.ToString & WTwo.ToString & WThree.ToString)
+            Timer4.Enabled = False
+        End If
+
+        If WOne.ToString + WTwo.ToString + WThree.ToString = ("123") Then
+            Timer4.Enabled = False
+            PictureBox2.Image = My.Resources.symbol_7
+            PictureBox6.Image = My.Resources.symbol_7
+            PictureBox10.Image = My.Resources.symbol_7
+            TextBox1.Text = ("GameWin Numbers: " & WOne.ToString & WTwo.ToString & WThree.ToString)
+            Timer4.Enabled = False
+        Else
+            'Timer4.Enabled = False
+            TextBox1.Text = ("GameOver Numbers: " & WOne.ToString & WTwo.ToString & WThree.ToString)
+            Timer4.Enabled = False
+        End If
+
+
+        PictureBox1.Enabled = True
+
+    End Sub
+
+    Private Sub Timer5_Tick(sender As Object, e As EventArgs) Handles Timer5.Tick
+        PictureBox3.Visible = False
+        PictureBox6.Visible = False
+        PictureBox9.Visible = False
+        Timer5.Enabled = False
+        Timer6.Enabled = True
+    End Sub
+
+    Private Sub Timer6_Tick(sender As Object, e As EventArgs) Handles Timer6.Tick
+        PictureBox3.Visible = True
+        PictureBox6.Visible = True
+        PictureBox9.Visible = True
+        Timer6.Enabled = False
+        Timer5.Enabled = True
+    End Sub
 End Class

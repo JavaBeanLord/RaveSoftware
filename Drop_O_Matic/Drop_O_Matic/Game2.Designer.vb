@@ -42,6 +42,10 @@ Partial Class Game2
         Me.PictureBox16 = New System.Windows.Forms.PictureBox()
         Me.Timer2 = New System.Windows.Forms.Timer(Me.components)
         Me.Timer3 = New System.Windows.Forms.Timer(Me.components)
+        Me.Timer4 = New System.Windows.Forms.Timer(Me.components)
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.Timer5 = New System.Windows.Forms.Timer(Me.components)
+        Me.Timer6 = New System.Windows.Forms.Timer(Me.components)
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -64,7 +68,7 @@ Partial Class Game2
         '
         Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
         Me.PictureBox1.Image = Global.Drop_O_Matic.My.Resources.Resources.btn_start_default
-        Me.PictureBox1.Location = New System.Drawing.Point(680, 504)
+        Me.PictureBox1.Location = New System.Drawing.Point(878, 579)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(108, 76)
         Me.PictureBox1.TabIndex = 0
@@ -72,14 +76,15 @@ Partial Class Game2
         '
         'Timer1
         '
+        Me.Timer1.Interval = 110
         '
         'PictureBox2
         '
         Me.PictureBox2.BackColor = System.Drawing.Color.Transparent
         Me.PictureBox2.Image = Global.Drop_O_Matic.My.Resources.Resources.symbol_bell
-        Me.PictureBox2.Location = New System.Drawing.Point(61, 92)
+        Me.PictureBox2.Location = New System.Drawing.Point(75, 100)
         Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(113, 100)
+        Me.PictureBox2.Size = New System.Drawing.Size(113, 113)
         Me.PictureBox2.TabIndex = 1
         Me.PictureBox2.TabStop = False
         '
@@ -87,9 +92,9 @@ Partial Class Game2
         '
         Me.PictureBox3.BackColor = System.Drawing.Color.Transparent
         Me.PictureBox3.Image = Global.Drop_O_Matic.My.Resources.Resources.symbol_cherry
-        Me.PictureBox3.Location = New System.Drawing.Point(61, 198)
+        Me.PictureBox3.Location = New System.Drawing.Point(75, 219)
         Me.PictureBox3.Name = "PictureBox3"
-        Me.PictureBox3.Size = New System.Drawing.Size(113, 102)
+        Me.PictureBox3.Size = New System.Drawing.Size(113, 114)
         Me.PictureBox3.TabIndex = 2
         Me.PictureBox3.TabStop = False
         '
@@ -97,69 +102,69 @@ Partial Class Game2
         '
         Me.PictureBox4.BackColor = System.Drawing.Color.Transparent
         Me.PictureBox4.Image = Global.Drop_O_Matic.My.Resources.Resources.symbol_melon
-        Me.PictureBox4.Location = New System.Drawing.Point(61, 306)
+        Me.PictureBox4.Location = New System.Drawing.Point(75, 339)
         Me.PictureBox4.Name = "PictureBox4"
-        Me.PictureBox4.Size = New System.Drawing.Size(113, 107)
+        Me.PictureBox4.Size = New System.Drawing.Size(113, 117)
         Me.PictureBox4.TabIndex = 3
         Me.PictureBox4.TabStop = False
         '
         'PictureBox5
         '
         Me.PictureBox5.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox5.Image = Global.Drop_O_Matic.My.Resources.Resources.symbol_7
-        Me.PictureBox5.Location = New System.Drawing.Point(201, 306)
+        Me.PictureBox5.Image = Global.Drop_O_Matic.My.Resources.Resources.symbol_cherry
+        Me.PictureBox5.Location = New System.Drawing.Point(263, 339)
         Me.PictureBox5.Name = "PictureBox5"
-        Me.PictureBox5.Size = New System.Drawing.Size(113, 107)
+        Me.PictureBox5.Size = New System.Drawing.Size(113, 117)
         Me.PictureBox5.TabIndex = 6
         Me.PictureBox5.TabStop = False
         '
         'PictureBox6
         '
         Me.PictureBox6.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox6.Image = Global.Drop_O_Matic.My.Resources.Resources.symbol_7
-        Me.PictureBox6.Location = New System.Drawing.Point(201, 198)
+        Me.PictureBox6.Image = Global.Drop_O_Matic.My.Resources.Resources.symbol_bell
+        Me.PictureBox6.Location = New System.Drawing.Point(263, 219)
         Me.PictureBox6.Name = "PictureBox6"
-        Me.PictureBox6.Size = New System.Drawing.Size(113, 102)
+        Me.PictureBox6.Size = New System.Drawing.Size(113, 114)
         Me.PictureBox6.TabIndex = 5
         Me.PictureBox6.TabStop = False
         '
         'PictureBox7
         '
         Me.PictureBox7.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox7.Image = Global.Drop_O_Matic.My.Resources.Resources.symbol_7
-        Me.PictureBox7.Location = New System.Drawing.Point(201, 92)
+        Me.PictureBox7.Image = Global.Drop_O_Matic.My.Resources.Resources.symbol_melon
+        Me.PictureBox7.Location = New System.Drawing.Point(263, 100)
         Me.PictureBox7.Name = "PictureBox7"
-        Me.PictureBox7.Size = New System.Drawing.Size(113, 100)
+        Me.PictureBox7.Size = New System.Drawing.Size(113, 113)
         Me.PictureBox7.TabIndex = 4
         Me.PictureBox7.TabStop = False
         '
         'PictureBox8
         '
         Me.PictureBox8.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox8.Image = Global.Drop_O_Matic.My.Resources.Resources.symbol_7
-        Me.PictureBox8.Location = New System.Drawing.Point(343, 306)
+        Me.PictureBox8.Image = Global.Drop_O_Matic.My.Resources.Resources.symbol_bell
+        Me.PictureBox8.Location = New System.Drawing.Point(443, 339)
         Me.PictureBox8.Name = "PictureBox8"
-        Me.PictureBox8.Size = New System.Drawing.Size(113, 107)
+        Me.PictureBox8.Size = New System.Drawing.Size(113, 117)
         Me.PictureBox8.TabIndex = 9
         Me.PictureBox8.TabStop = False
         '
         'PictureBox9
         '
         Me.PictureBox9.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox9.Image = Global.Drop_O_Matic.My.Resources.Resources.symbol_7
-        Me.PictureBox9.Location = New System.Drawing.Point(343, 198)
+        Me.PictureBox9.Image = Global.Drop_O_Matic.My.Resources.Resources.symbol_melon
+        Me.PictureBox9.Location = New System.Drawing.Point(443, 219)
         Me.PictureBox9.Name = "PictureBox9"
-        Me.PictureBox9.Size = New System.Drawing.Size(113, 102)
+        Me.PictureBox9.Size = New System.Drawing.Size(113, 114)
         Me.PictureBox9.TabIndex = 8
         Me.PictureBox9.TabStop = False
         '
         'PictureBox10
         '
         Me.PictureBox10.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox10.Image = Global.Drop_O_Matic.My.Resources.Resources.symbol_7
-        Me.PictureBox10.Location = New System.Drawing.Point(343, 92)
+        Me.PictureBox10.Image = Global.Drop_O_Matic.My.Resources.Resources.symbol_cherry
+        Me.PictureBox10.Location = New System.Drawing.Point(443, 100)
         Me.PictureBox10.Name = "PictureBox10"
-        Me.PictureBox10.Size = New System.Drawing.Size(113, 100)
+        Me.PictureBox10.Size = New System.Drawing.Size(113, 113)
         Me.PictureBox10.TabIndex = 7
         Me.PictureBox10.TabStop = False
         '
@@ -167,19 +172,19 @@ Partial Class Game2
         '
         Me.PictureBox11.BackColor = System.Drawing.Color.Transparent
         Me.PictureBox11.Image = Global.Drop_O_Matic.My.Resources.Resources.symbol_melon
-        Me.PictureBox11.Location = New System.Drawing.Point(482, 306)
+        Me.PictureBox11.Location = New System.Drawing.Point(633, 339)
         Me.PictureBox11.Name = "PictureBox11"
-        Me.PictureBox11.Size = New System.Drawing.Size(113, 107)
+        Me.PictureBox11.Size = New System.Drawing.Size(113, 117)
         Me.PictureBox11.TabIndex = 12
         Me.PictureBox11.TabStop = False
         '
         'PictureBox12
         '
         Me.PictureBox12.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox12.Image = Global.Drop_O_Matic.My.Resources.Resources.symbol_7
-        Me.PictureBox12.Location = New System.Drawing.Point(482, 198)
+        Me.PictureBox12.Image = Global.Drop_O_Matic.My.Resources.Resources.symbol_cherry
+        Me.PictureBox12.Location = New System.Drawing.Point(633, 219)
         Me.PictureBox12.Name = "PictureBox12"
-        Me.PictureBox12.Size = New System.Drawing.Size(113, 102)
+        Me.PictureBox12.Size = New System.Drawing.Size(113, 114)
         Me.PictureBox12.TabIndex = 11
         Me.PictureBox12.TabStop = False
         '
@@ -187,54 +192,77 @@ Partial Class Game2
         '
         Me.PictureBox13.BackColor = System.Drawing.Color.Transparent
         Me.PictureBox13.Image = Global.Drop_O_Matic.My.Resources.Resources.symbol_bell
-        Me.PictureBox13.Location = New System.Drawing.Point(482, 92)
+        Me.PictureBox13.Location = New System.Drawing.Point(633, 100)
         Me.PictureBox13.Name = "PictureBox13"
-        Me.PictureBox13.Size = New System.Drawing.Size(113, 100)
+        Me.PictureBox13.Size = New System.Drawing.Size(113, 113)
         Me.PictureBox13.TabIndex = 10
         Me.PictureBox13.TabStop = False
         '
         'PictureBox14
         '
         Me.PictureBox14.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox14.Image = Global.Drop_O_Matic.My.Resources.Resources.symbol_7
-        Me.PictureBox14.Location = New System.Drawing.Point(623, 306)
+        Me.PictureBox14.Image = Global.Drop_O_Matic.My.Resources.Resources.symbol_cherry
+        Me.PictureBox14.Location = New System.Drawing.Point(823, 339)
         Me.PictureBox14.Name = "PictureBox14"
-        Me.PictureBox14.Size = New System.Drawing.Size(113, 107)
+        Me.PictureBox14.Size = New System.Drawing.Size(113, 117)
         Me.PictureBox14.TabIndex = 15
         Me.PictureBox14.TabStop = False
         '
         'PictureBox15
         '
         Me.PictureBox15.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox15.Image = Global.Drop_O_Matic.My.Resources.Resources.symbol_cherry
-        Me.PictureBox15.Location = New System.Drawing.Point(623, 198)
+        Me.PictureBox15.Image = Global.Drop_O_Matic.My.Resources.Resources.symbol_bell
+        Me.PictureBox15.Location = New System.Drawing.Point(823, 219)
         Me.PictureBox15.Name = "PictureBox15"
-        Me.PictureBox15.Size = New System.Drawing.Size(113, 102)
+        Me.PictureBox15.Size = New System.Drawing.Size(113, 114)
         Me.PictureBox15.TabIndex = 14
         Me.PictureBox15.TabStop = False
         '
         'PictureBox16
         '
         Me.PictureBox16.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox16.Image = Global.Drop_O_Matic.My.Resources.Resources.symbol_7
-        Me.PictureBox16.Location = New System.Drawing.Point(623, 92)
+        Me.PictureBox16.Image = Global.Drop_O_Matic.My.Resources.Resources.symbol_melon
+        Me.PictureBox16.Location = New System.Drawing.Point(823, 100)
         Me.PictureBox16.Name = "PictureBox16"
-        Me.PictureBox16.Size = New System.Drawing.Size(113, 100)
+        Me.PictureBox16.Size = New System.Drawing.Size(113, 113)
         Me.PictureBox16.TabIndex = 13
         Me.PictureBox16.TabStop = False
         '
         'Timer2
         '
+        Me.Timer2.Interval = 115
         '
         'Timer3
         '
+        Me.Timer3.Interval = 120
+        '
+        'Timer4
+        '
+        Me.Timer4.Interval = 3000
+        '
+        'TextBox1
+        '
+        Me.TextBox1.Enabled = False
+        Me.TextBox1.Location = New System.Drawing.Point(12, 12)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(172, 20)
+        Me.TextBox1.TabIndex = 16
+        '
+        'Timer5
+        '
+        Me.Timer5.Interval = 500
+        '
+        'Timer6
+        '
+        Me.Timer6.Interval = 500
         '
         'Game2
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackgroundImage = Global.Drop_O_Matic.My.Resources.Resources.Background1
-        Me.ClientSize = New System.Drawing.Size(800, 601)
+        Me.BackgroundImage = Global.Drop_O_Matic.My.Resources.Resources.SandDunesBackground1
+        Me.ClientSize = New System.Drawing.Size(998, 667)
+        Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.PictureBox14)
         Me.Controls.Add(Me.PictureBox15)
         Me.Controls.Add(Me.PictureBox16)
@@ -251,8 +279,8 @@ Partial Class Game2
         Me.Controls.Add(Me.PictureBox3)
         Me.Controls.Add(Me.PictureBox2)
         Me.Controls.Add(Me.PictureBox1)
-        Me.MaximumSize = New System.Drawing.Size(816, 640)
-        Me.MinimumSize = New System.Drawing.Size(816, 640)
+        Me.MaximumSize = New System.Drawing.Size(1040, 706)
+        Me.MinimumSize = New System.Drawing.Size(1014, 706)
         Me.Name = "Game2"
         Me.Text = "Game2"
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -272,6 +300,7 @@ Partial Class Game2
         CType(Me.PictureBox15, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox16, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
     Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
@@ -293,4 +322,8 @@ Partial Class Game2
     Friend WithEvents PictureBox16 As System.Windows.Forms.PictureBox
     Friend WithEvents Timer2 As System.Windows.Forms.Timer
     Friend WithEvents Timer3 As System.Windows.Forms.Timer
+    Friend WithEvents Timer4 As System.Windows.Forms.Timer
+    Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
+    Friend WithEvents Timer5 As System.Windows.Forms.Timer
+    Friend WithEvents Timer6 As System.Windows.Forms.Timer
 End Class

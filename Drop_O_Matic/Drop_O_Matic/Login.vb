@@ -15,11 +15,11 @@
         '' Shortcut for testing DELETE
         ''Delete
         TextBox2.Text = ("password")
-        AdminLogin.Show()
-        AdminLogin.ComboBox1.Text = ("DataBase")
-        AdminLogin.ComboBox1.Items.Add("DataBase")
-        AdminLogin.TextBox1.Text = ("zonecomputers")
-        AdminLogin.Button1.PerformClick()
+        'AdminLogin.Show()
+        ' AdminLogin.ComboBox1.Text = ("DataBase")
+        'AdminLogin.ComboBox1.Items.Add("DataBase")
+        ' AdminLogin.TextBox1.Text = ("zonecomputers")
+        ' AdminLogin.Button1.PerformClick()
         ''Delete
         If TextBox2.Text = Nothing Then
             MessageBox.Show("Please Type A PassWord!")

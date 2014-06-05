@@ -7,6 +7,26 @@
         TextBox3.Enabled = False
         TextBox3.Text = My.Settings.DataBasePath
 
+        ' TabControl2.Enabled = False
+
+        TrackBar1.Maximum = 7
+        TextBox4.Text = My.Settings.WOnePayOut.ToString
+        TrackBar1.Value = My.Settings.WOnePayOut
+        TrackBar2.Maximum = 13
+        TextBox5.Text = My.Settings.WTwoPayOut.ToString
+        TrackBar2.Value = My.Settings.WTwoPayOut
+        TrackBar3.Maximum = 19
+        TextBox6.Text = My.Settings.WThreePayOut.ToString
+        TrackBar3.Value = My.Settings.WThreePayOut
+        TrackBar4.Maximum = 25
+        TextBox7.Text = My.Settings.WFourPayOut.ToString
+        TrackBar4.Value = My.Settings.WFourPayOut
+        TrackBar5.Maximum = 31
+        TextBox8.Text = My.Settings.WFivePayOut.ToString
+        TrackBar5.Value = My.Settings.WFivePayOut
+
+        ToolTip1.SetToolTip(Me.PictureBox1, "Refreash DataBase " & vbNewLine & " File Path!")
+
 
     End Sub
 
@@ -88,6 +108,63 @@
 
     Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
         TextBox3.Text = My.Settings.DataBasePath
+
+    End Sub
+
+    Private Sub TrackBar1_Scroll(sender As Object, e As EventArgs) Handles TrackBar1.Scroll
+        TextBox4.Text = (TrackBar1.Value.ToString)
+    End Sub
+
+    Private Sub Save_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        My.Settings.WOnePayOut = TrackBar1.Value
+        My.Settings.WTwoPayOut = TrackBar2.Value
+        My.Settings.WThreePayOut = TrackBar3.Value
+
+        TrackBar1.Maximum = 7
+        TextBox4.Text = My.Settings.WOnePayOut.ToString
+        TrackBar1.Value = My.Settings.WOnePayOut
+        TrackBar2.Maximum = 13
+        TextBox5.Text = My.Settings.WTwoPayOut.ToString
+        TrackBar2.Value = My.Settings.WTwoPayOut
+        TrackBar3.Maximum = 19
+        TextBox6.Text = My.Settings.WThreePayOut.ToString
+        TrackBar3.Value = My.Settings.WThreePayOut
+        TrackBar4.Maximum = 25
+        TextBox7.Text = My.Settings.WFourPayOut.ToString
+        TrackBar4.Value = My.Settings.WFourPayOut
+        TrackBar5.Maximum = 31
+        TextBox8.Text = My.Settings.WFivePayOut.ToString
+        TrackBar5.Value = My.Settings.WFivePayOut
+
+    End Sub
+
+    Private Sub TrackBar2_Scroll(sender As Object, e As EventArgs) Handles TrackBar2.Scroll
+        TextBox5.Text = TrackBar2.Value.ToString
+    End Sub
+
+    Private Sub TrackBar3_Scroll(sender As Object, e As EventArgs) Handles TrackBar3.Scroll
+        TextBox6.Text = TrackBar3.Value.ToString
+    End Sub
+
+    Private Sub Cancel_Click(sender As Object, e As EventArgs) Handles Cancel.Click
+        TrackBar1.Value = My.Settings.WOnePayOut
+        TrackBar2.Value = My.Settings.WTwoPayOut
+        TrackBar3.Value = My.Settings.WThreePayOut
+
+        TextBox4.Text = (My.Settings.WOnePayOut.ToString)
+        TextBox5.Text = (My.Settings.WTwoPayOut.ToString)
+        TextBox6.Text = (My.Settings.WThreePayOut.ToString)
+
+        MessageBox.Show("Settings Cleared & Not Saved" & vbNewLine & "Thank You!")
+    End Sub
+
+    Private Sub TrackBar4_Scroll(sender As Object, e As EventArgs) Handles TrackBar4.Scroll
+        TextBox7.Text = TrackBar4.Value.ToString
+
+    End Sub
+
+    Private Sub TrackBar5_Scroll(sender As Object, e As EventArgs) Handles TrackBar5.Scroll
+        TextBox8.Text = TrackBar5.Value.ToString
 
     End Sub
 End Class

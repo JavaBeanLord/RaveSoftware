@@ -125,6 +125,66 @@ Namespace My
                 Me("DataBasePath") = value
             End Set
         End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("7")>  _
+        Public Property WOnePayOut() As Integer
+            Get
+                Return CType(Me("WOnePayOut"),Integer)
+            End Get
+            Set
+                Me("WOnePayOut") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("13")>  _
+        Public Property WTwoPayOut() As Integer
+            Get
+                Return CType(Me("WTwoPayOut"),Integer)
+            End Get
+            Set
+                Me("WTwoPayOut") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("19")>  _
+        Public Property WThreePayOut() As Integer
+            Get
+                Return CType(Me("WThreePayOut"),Integer)
+            End Get
+            Set
+                Me("WThreePayOut") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("25")>  _
+        Public Property WFourPayOut() As Integer
+            Get
+                Return CType(Me("WFourPayOut"),Integer)
+            End Get
+            Set
+                Me("WFourPayOut") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("31")>  _
+        Public Property WFivePayOut() As Integer
+            Get
+                Return CType(Me("WFivePayOut"),Integer)
+            End Get
+            Set
+                Me("WFivePayOut") = value
+            End Set
+        End Property
     End Class
 End Namespace
 
