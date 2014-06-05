@@ -23,4 +23,9 @@
         Game1.Show()
 
     End Sub
+
+    Private Sub PictureBox2_Click(sender As Object, e As EventArgs) Handles PictureBox2.Click
+        Game2.Show()
+
+    End Sub
 End Class

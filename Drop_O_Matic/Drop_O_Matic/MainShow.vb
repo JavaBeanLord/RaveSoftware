@@ -32,6 +32,7 @@
     Private Sub BetaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles BetaToolStripMenuItem.Click
         AdminLogin.Show()
         AdminLogin.ComboBox1.Text = ("Games")
+        Game2.Show()
 
     End Sub
 
