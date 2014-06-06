@@ -124,6 +124,12 @@
     <Compile Include="Game2.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="GameLoginScreen.Designer.vb">
+      <DependentUpon>GameLoginScreen.vb</DependentUpon>
+    </Compile>
+    <Compile Include="GameLoginScreen.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Games.Designer.vb">
       <DependentUpon>Games.vb</DependentUpon>
     </Compile>
@@ -210,6 +216,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Game2.resx">
       <DependentUpon>Game2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GameLoginScreen.resx">
+      <DependentUpon>GameLoginScreen.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Games.resx">
       <DependentUpon>Games.vb</DependentUpon>
@@ -321,11 +330,20 @@
     <None Include="Resources\Untitled.png" />
     <None Include="Resources\Untitled1.png" />
     <None Include="Resources\Untitled2.png" />
+    <None Include="Images\Raven Software images\Log in Page\1Login...png" />
+    <None Include="Images\Raven Software images\Log in Page\LoginButtonPressed.png" />
+    <None Include="Resources\TestLoginScreen.png" />
+    <None Include="Resources\Background2.png" />
+    <None Include="Resources\InputBar.png" />
+    <None Include="Resources\Button%28UnPressed%29.png" />
+    <None Include="Resources\Button%28Pressed%29.png" />
+    <None Include="Resources\Button%28UnPressed%291.png" />
+    <None Include="Resources\1Buttonpressed.png" />
+    <None Include="Resources\btn_bet_default.png" />
+    <None Include="Resources\btn_bet_down.png" />
     <Content Include="Sounds\spin.wav" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Images\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

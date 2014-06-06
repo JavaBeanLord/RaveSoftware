@@ -45,8 +45,12 @@
     Private Sub BetaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles BetaToolStripMenuItem.Click
         AdminLogin.Show()
         AdminLogin.ComboBox1.Text = ("Games")
-        Game2.Show()
-        Game2.MdiParent = Me
+        ' Game2.Show()
+        ' Game2.MdiParent = Me
+
+        GameLoginScreen.Show()
+        GameLoginScreen.MdiParent = Me
+
     End Sub
 
     Private Sub POSToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles POSToolStripMenuItem.Click
