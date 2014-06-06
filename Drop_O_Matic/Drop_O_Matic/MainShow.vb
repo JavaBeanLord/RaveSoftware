@@ -74,47 +74,46 @@
     End Sub
 
     Private Sub NEWS()
-        Dim Builder As New OleDb.OleDbConnectionStringBuilder With
-           {
-               .Provider = "Microsoft.ACE.OLEDB.12.0",
-               .DataSource = IO.Path.Combine(My.Settings.DataBasePath)
-           }
+        Try
+            Dim Builder As New OleDb.OleDbConnectionStringBuilder With
+               {
+                   .Provider = "Microsoft.ACE.OLEDB.12.0",
+                   .DataSource = IO.Path.Combine(My.Settings.DataBasePath)
+               }
 
-        Dim Names As New List(Of String)
+            Dim Names As New List(Of String)
 
-        Using cn As New OleDb.OleDbConnection With
-                {
-                    .ConnectionString = Builder.ConnectionString
-                }
+            Using cn As New OleDb.OleDbConnection With
+                    {
+                        .ConnectionString = Builder.ConnectionString
+                    }
 
-            Using cmd As New OleDb.OleDbCommand With {.Connection = cn}
-                cmd.CommandText = "SELECT News FROM News_Tb WHERE ID = 1"
+                Using cmd As New OleDb.OleDbCommand With {.Connection = cn}
+                    cmd.CommandText = "SELECT News FROM News_Tb WHERE ID = 1"
 
-                Try
                     cn.Open()
-                Catch ex As Exception
-                    MessageBox.Show(ex.ToString)
-                End Try
 
+                    Dim Reader As OleDb.OleDbDataReader = cmd.ExecuteReader
+                    If Reader.HasRows Then
+                        While Reader.Read
+                            Try
 
-                Dim Reader As OleDb.OleDbDataReader = cmd.ExecuteReader
+                                RichTextBox1.Text = (Reader.GetString(0).ToString)
+                            Catch ex As Exception
+                                RichTextBox1.Text = (ex.ToString)
+                            End Try
+                        End While
+                    End If
 
-                If Reader.HasRows Then
-                    While Reader.Read
-                        Try
+                    Reader.Close()
 
-                            RichTextBox1.Text = (Reader.GetString(0).ToString)
-                        Catch ex As Exception
-                            RichTextBox1.Text = (ex.ToString)
-                        End Try
-                    End While
-                End If
+                    Return
 
-                Reader.Close()
-
-                Return
-
+                End Using
             End Using
-        End Using
+        Catch ex As Exception
+            RichTextBox1.Text = ("Big DataBase Problem!")
+        End Try
+
     End Sub
 End Class
