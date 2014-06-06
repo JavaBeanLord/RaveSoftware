@@ -9,6 +9,12 @@ Public Class Game2
 
     Private Sub Game2_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         My.Computer.Audio.Play(My.Resources.reels, AudioPlayMode.BackgroundLoop)
+        Me.StartPosition = FormStartPosition.CenterParent
+        Me.StartPosition = FormStartPosition.CenterScreen
+
+        MainShow.ControlBox = False
+        MainShow.MainMenuStrip.Visible = False
+        MainShow.FormBorderStyle = Windows.Forms.FormBorderStyle.None
 
     End Sub
     Private Sub Game2_CLose(sender As Object, e As EventArgs) Handles MyBase.FormClosing
@@ -198,29 +204,32 @@ Public Class Game2
     End Sub
 
     Private Sub Jack_Pot()
+        Try
+            ''SmallJackPot PayOut
+            Dim SmallJackRandom = New Random()
+            Dim SmallJackPotNumber = SmallJackRandom.Next(My.Settings.SmallJackPot)
 
-        ''SmallJackPot PayOut
-        Dim SmallJackRandom = New Random()
-        Dim SmallJackPotNumber = SmallJackRandom.Next(My.Settings.SmallJackPot)
-
-        Using cn As New OleDbConnection(Builder.ConnectionString)
-            Using cmd As New OleDbCommand("SELECT SmallJackPot FROM JackPot WHERE SmallJackPot = ? AND ID = 1 ", cn)
-                cmd.Parameters.AddWithValue("SmallJackPot", SmallJackPotNumber)
-                Try
-                    cn.Open()
-                    Dim reader As OleDbDataReader = cmd.ExecuteReader
-                    If Not reader.HasRows Then
-                        MessageBox.Show(SmallJackPotNumber.ToString & "False")
-
-                    Else
-                        MessageBox.Show(SmallJackPotNumber.ToString & "True")
-                        JackPot.Timer1.Enabled = True
-                    End If
-                Catch ex As Exception
-                    MessageBox.Show(ex.ToString & "Login failed" & "Error")
-                End Try
+            Using cn As New OleDbConnection(Builder.ConnectionString)
+                Using cmd As New OleDbCommand("SELECT SmallJackPot FROM JackPot WHERE SmallJackPot = ? AND ID = 1 ", cn)
+                    cmd.Parameters.AddWithValue("SmallJackPot", SmallJackPotNumber)
+                    Try
+                        cn.Open()
+                        Dim reader As OleDbDataReader = cmd.ExecuteReader
+                        If Not reader.HasRows Then
+                            ''false you lose jackPot
+                        Else
+                            MessageBox.Show(SmallJackPotNumber.ToString & "Winner!")
+                            JackPot.Timer1.Enabled = True
+                        End If
+                    Catch ex As Exception
+                        MessageBox.Show(ex.ToString & "DataBase Connect " & " Error")
+                    End Try
+                End Using
             End Using
-        End Using
+        Catch ex As Exception
+            MessageBox.Show("Big Big Error!!")
+        End Try
+
     End Sub
 
 End Class

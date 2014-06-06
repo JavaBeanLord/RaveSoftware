@@ -1,6 +1,8 @@
 ﻿Public Class AdminControl
 
     Private Sub Form3_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Me.StartPosition = FormStartPosition.CenterParent
+
         TextBox1.Text = My.Settings.HurryLogin.ToString
         TextBox2.Text = My.Settings.UserPassword.ToString
         AdminControl()

@@ -30,13 +30,13 @@ Partial Class MainShow
         Me.BetaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.POSToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.JackPotToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.WebOnlyToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.HelpToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.RemoteSupportToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AboutMeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DataBaseToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.TestSoftwareToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
-        Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -45,7 +45,7 @@ Partial Class MainShow
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem, Me.ToolsToolStripMenuItem, Me.HelpToolStripMenuItem, Me.TestSoftwareToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(466, 24)
+        Me.MenuStrip1.Size = New System.Drawing.Size(631, 24)
         Me.MenuStrip1.TabIndex = 0
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -64,7 +64,7 @@ Partial Class MainShow
         '
         'ToolsToolStripMenuItem
         '
-        Me.ToolsToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AdminControlToolStripMenuItem, Me.BetaToolStripMenuItem, Me.POSToolStripMenuItem, Me.JackPotToolStripMenuItem})
+        Me.ToolsToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AdminControlToolStripMenuItem, Me.BetaToolStripMenuItem, Me.POSToolStripMenuItem, Me.JackPotToolStripMenuItem, Me.WebOnlyToolStripMenuItem})
         Me.ToolsToolStripMenuItem.Name = "ToolsToolStripMenuItem"
         Me.ToolsToolStripMenuItem.Size = New System.Drawing.Size(48, 20)
         Me.ToolsToolStripMenuItem.Text = "Tools"
@@ -92,6 +92,12 @@ Partial Class MainShow
         Me.JackPotToolStripMenuItem.Name = "JackPotToolStripMenuItem"
         Me.JackPotToolStripMenuItem.Size = New System.Drawing.Size(153, 22)
         Me.JackPotToolStripMenuItem.Text = "JackPot"
+        '
+        'WebOnlyToolStripMenuItem
+        '
+        Me.WebOnlyToolStripMenuItem.Name = "WebOnlyToolStripMenuItem"
+        Me.WebOnlyToolStripMenuItem.Size = New System.Drawing.Size(153, 22)
+        Me.WebOnlyToolStripMenuItem.Text = "WebOnly"
         '
         'HelpToolStripMenuItem
         '
@@ -128,28 +134,19 @@ Partial Class MainShow
         '
         Me.OpenFileDialog1.FileName = "OpenFileDialog1"
         '
-        'RichTextBox1
-        '
-        Me.RichTextBox1.Enabled = False
-        Me.RichTextBox1.Location = New System.Drawing.Point(13, 28)
-        Me.RichTextBox1.Name = "RichTextBox1"
-        Me.RichTextBox1.Size = New System.Drawing.Size(441, 165)
-        Me.RichTextBox1.TabIndex = 1
-        Me.RichTextBox1.Text = ""
-        '
         'MainShow
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(466, 205)
-        Me.Controls.Add(Me.RichTextBox1)
+        Me.BackColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.ClientSize = New System.Drawing.Size(631, 279)
+        Me.ControlBox = False
         Me.Controls.Add(Me.MenuStrip1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
+        Me.IsMdiContainer = True
         Me.MainMenuStrip = Me.MenuStrip1
-        Me.MaximumSize = New System.Drawing.Size(482, 244)
-        Me.MinimumSize = New System.Drawing.Size(482, 244)
         Me.Name = "MainShow"
-        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.WindowsDefaultBounds
         Me.Text = "Main"
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
@@ -171,5 +168,5 @@ Partial Class MainShow
     Friend WithEvents TestSoftwareToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents DataBaseToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents OpenFileDialog1 As System.Windows.Forms.OpenFileDialog
-    Friend WithEvents RichTextBox1 As System.Windows.Forms.RichTextBox
+    Friend WithEvents WebOnlyToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 End Class

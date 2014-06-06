@@ -188,6 +188,12 @@
     <Compile Include="ValidateForm.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="WebOnly.Designer.vb">
+      <DependentUpon>WebOnly.vb</DependentUpon>
+    </Compile>
+    <Compile Include="WebOnly.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="AboutMe.resx">
@@ -234,6 +240,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ValidateForm.resx">
       <DependentUpon>ValidateForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WebOnly.resx">
+      <DependentUpon>WebOnly.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

@@ -2,12 +2,23 @@
 
     Private Sub AdminControlToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AdminControlToolStripMenuItem.Click
         AdminControl.Show()
+        AdminControl.MdiParent = Me
+
+
+
+
+
+
     End Sub
 
     Private Sub Form2_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Login.ProgressBar1.Value = 100
-
         NEWS()
+        Me.WindowState = FormWindowState.Maximized
+        Me.FormBorderStyle = Windows.Forms.FormBorderStyle.None
+
+
+
     End Sub
 
     Private Sub Form2_Close(sender As Object, e As EventArgs) Handles MyBase.FormClosing
@@ -35,7 +46,7 @@
         AdminLogin.Show()
         AdminLogin.ComboBox1.Text = ("Games")
         Game2.Show()
-
+        Game2.MdiParent = Me
     End Sub
 
     Private Sub POSToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles POSToolStripMenuItem.Click
@@ -98,9 +109,9 @@
                         While Reader.Read
                             Try
 
-                                RichTextBox1.Text = (Reader.GetString(0).ToString)
+                                TestForm.TextBox1.Text = (Reader.GetString(0).ToString)
                             Catch ex As Exception
-                                RichTextBox1.Text = (ex.ToString)
+                                TestForm.TextBox1.Text = (ex.ToString)
                             End Try
                         End While
                     End If
@@ -112,8 +123,14 @@
                 End Using
             End Using
         Catch ex As Exception
-            RichTextBox1.Text = ("Big DataBase Problem!")
+            TestForm.TextBox1.Text = ("Big DataBase Problem!")
         End Try
 
+    End Sub
+
+
+    Private Sub WebOnlyToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles WebOnlyToolStripMenuItem.Click
+        WebOnly.Show()
+        WebOnly.MdiParent = Me
     End Sub
 End Class

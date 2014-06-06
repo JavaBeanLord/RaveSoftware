@@ -262,6 +262,7 @@ Partial Class Game2
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = Global.Drop_O_Matic.My.Resources.Resources.SandDunesBackground1
         Me.ClientSize = New System.Drawing.Size(998, 667)
+        Me.ControlBox = False
         Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.PictureBox14)
         Me.Controls.Add(Me.PictureBox15)
@@ -279,6 +280,7 @@ Partial Class Game2
         Me.Controls.Add(Me.PictureBox3)
         Me.Controls.Add(Me.PictureBox2)
         Me.Controls.Add(Me.PictureBox1)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.MaximumSize = New System.Drawing.Size(1040, 706)
         Me.MinimumSize = New System.Drawing.Size(1014, 706)
         Me.Name = "Game2"
