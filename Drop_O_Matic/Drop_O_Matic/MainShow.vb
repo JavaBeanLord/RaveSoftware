@@ -90,8 +90,12 @@
             Using cmd As New OleDb.OleDbCommand With {.Connection = cn}
                 cmd.CommandText = "SELECT News FROM News_Tb WHERE ID = 1"
 
+                Try
+                    cn.Open()
+                Catch ex As Exception
+                    MessageBox.Show(ex.ToString)
+                End Try
 
-                cn.Open()
 
                 Dim Reader As OleDb.OleDbDataReader = cmd.ExecuteReader
 
