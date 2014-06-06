@@ -185,6 +185,18 @@ Namespace My
                 Me("WFivePayOut") = value
             End Set
         End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("999")>  _
+        Public Property SmallJackPot() As Integer
+            Get
+                Return CType(Me("SmallJackPot"),Integer)
+            End Get
+            Set
+                Me("SmallJackPot") = value
+            End Set
+        End Property
     End Class
 End Namespace
 

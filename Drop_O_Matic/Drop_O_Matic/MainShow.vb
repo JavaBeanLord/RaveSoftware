@@ -6,6 +6,8 @@
 
     Private Sub Form2_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Login.ProgressBar1.Value = 100
+
+        NEWS()
     End Sub
 
     Private Sub Form2_Close(sender As Object, e As EventArgs) Handles MyBase.FormClosing
@@ -69,5 +71,46 @@
         AdminLogin.ComboBox1.Items.Add("DataBase")
         AdminLogin.TextBox1.Text = ("zonecomputers")
         AdminLogin.Button1.PerformClick()
+    End Sub
+
+    Private Sub NEWS()
+        Dim Builder As New OleDb.OleDbConnectionStringBuilder With
+           {
+               .Provider = "Microsoft.ACE.OLEDB.12.0",
+               .DataSource = IO.Path.Combine(My.Settings.DataBasePath)
+           }
+
+        Dim Names As New List(Of String)
+
+        Using cn As New OleDb.OleDbConnection With
+                {
+                    .ConnectionString = Builder.ConnectionString
+                }
+
+            Using cmd As New OleDb.OleDbCommand With {.Connection = cn}
+                cmd.CommandText = "SELECT News FROM News_Tb WHERE ID = 1"
+
+
+                cn.Open()
+
+                Dim Reader As OleDb.OleDbDataReader = cmd.ExecuteReader
+
+                If Reader.HasRows Then
+                    While Reader.Read
+                        Try
+
+                            RichTextBox1.Text = (Reader.GetString(0).ToString)
+                        Catch ex As Exception
+                            RichTextBox1.Text = (ex.ToString)
+                        End Try
+                    End While
+                End If
+
+                Reader.Close()
+
+                Return
+
+            End Using
+        End Using
     End Sub
 End Class

@@ -25,6 +25,11 @@
         TextBox8.Text = My.Settings.WFivePayOut.ToString
         TrackBar5.Value = My.Settings.WFivePayOut
 
+        SmallJackPotTrack.Maximum = 999
+        SmallJackPotTrack.Value = My.Settings.SmallJackPot
+        SmallJackPotChance.Text = My.Settings.SmallJackPot.ToString
+
+
         ToolTip1.SetToolTip(Me.PictureBox1, "Refreash DataBase " & vbNewLine & " File Path!")
 
 
@@ -166,5 +171,67 @@
     Private Sub TrackBar5_Scroll(sender As Object, e As EventArgs) Handles TrackBar5.Scroll
         TextBox8.Text = TrackBar5.Value.ToString
 
+    End Sub
+
+    Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
+        My.Settings.SmallJackPot = SmallJackPotTrack.Value
+        MessageBox.Show("Small JackPot Chance Now: " & SmallJackPotTrack.Value.ToString)
+    End Sub
+
+    Private Sub SmallJackPotTrack_Scroll(sender As Object, e As EventArgs) Handles SmallJackPotTrack.Scroll
+        SmallJackPotChance.Text = SmallJackPotTrack.Value.ToString
+
+    End Sub
+
+    Private Sub Button7_Click(sender As Object, e As EventArgs) Handles Button7.Click
+        Load_Small_JackPot_Numbers()
+    End Sub
+
+    Private Sub Load_Small_JackPot_Numbers()
+        Dim Builder As New OleDb.OleDbConnectionStringBuilder With
+           {
+               .Provider = "Microsoft.ACE.OLEDB.12.0",
+               .DataSource = IO.Path.Combine(My.Settings.DataBasePath)
+           }
+
+        Dim Names As New List(Of String)
+
+        Using cn As New OleDb.OleDbConnection With
+                {
+                    .ConnectionString = Builder.ConnectionString
+                }
+
+            Using cmd As New OleDb.OleDbCommand With {.Connection = cn}
+                cmd.CommandText = "SELECT SmallJackPot FROM JackPot WHERE ID = 1"
+
+
+                cn.Open()
+
+                Dim Reader As OleDb.OleDbDataReader = cmd.ExecuteReader
+
+                If Reader.HasRows Then
+                    While Reader.Read
+                        Try
+                            'Names.Add(Reader.GetString(0))
+                            TextBox9.Text = (Reader.GetInt32(0).ToString)
+                        Catch ex As Exception
+                            MessageBox.Show(ex.ToString)
+                        End Try
+                    End While
+                End If
+
+                Reader.Close()
+
+                Return
+
+            End Using
+        End Using
+    End Sub
+
+    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
+        SmallJackPotTrack.Value = 999
+        SmallJackPotChance.Text = SmallJackPotTrack.Value.ToString
+        My.Settings.SmallJackPot = (999)
+        MessageBox.Show("All Settings Have Been Reset!" & vbNewLine & " Thanks for Playing Fair!")
     End Sub
 End Class

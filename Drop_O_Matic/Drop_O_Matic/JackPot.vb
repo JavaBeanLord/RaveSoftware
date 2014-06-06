@@ -9,18 +9,22 @@ Public Class JackPot
         TextBox2.Enabled = False
         TextBox3.Enabled = False
         Timer1.Enabled = True
-        Timer2.Enabled = True
 
     End Sub
 
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
+        Dim RandomSmall = New Random()
+        Dim SmallJackPot = RandomSmall.Next(999)
+
+        TextBox3.Text = SmallJackPot.ToString
+
         Dim IDNumber As String
         IDNumber = ("1")
-
+        ServerConnect.Close()
         ServerConnect.Open()
 
         Dim ServerUpdate As String
-        ServerUpdate = "UPDATE JackPot SET [SmallJackPot] = '" & TextBox3.Text & "' WHERE ID = " & IDNumber & ";"
+        ServerUpdate = "UPDATE JackPot SET [SmallJackPot] = '" & SmallJackPot & "' WHERE ID = " & IDNumber & ";"
         ServerCommand = New OleDbCommand(ServerUpdate, ServerConnect)
         Try
 
@@ -37,12 +41,5 @@ Public Class JackPot
     End Sub
 
    
-    Private Sub Timer2_Tick(sender As Object, e As EventArgs) Handles Timer2.Tick
-        Dim RandomSmall = New Random()
-        Dim SmallJackPot = RandomSmall.Next(999)
 
-        TextBox3.Text = SmallJackPot.ToString
-
-        Timer2.Enabled = False
-    End Sub
 End Class

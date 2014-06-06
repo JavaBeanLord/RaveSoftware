@@ -1,4 +1,11 @@
-﻿Public Class Game2
+﻿Imports System.Data.OleDb
+Public Class Game2
+    Dim con As New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" & My.Settings.DataBasePath.ToString)
+    Private Builder As New OleDb.OleDbConnectionStringBuilder With _
+    { _
+        .Provider = "Microsoft.ACE.OLEDB.12.0", _
+        .DataSource = IO.Path.Combine(My.Settings.DataBasePath) _
+    }
 
     Private Sub Game2_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         My.Computer.Audio.Play(My.Resources.reels, AudioPlayMode.BackgroundLoop)
@@ -107,7 +114,7 @@
 
     End Sub
 
-  
+
 
     Private Sub Timer4_Tick(sender As Object, e As EventArgs) Handles Timer4.Tick
         ''First Slot Round
@@ -119,7 +126,6 @@
         ''3rd Slot Round
         Dim rnd3 = New Random()
         Dim WThree = rnd3.Next(My.Settings.WThreePayOut)
-
 
 
 
@@ -168,6 +174,8 @@
             Timer4.Enabled = False
         End If
 
+        Jack_Pot()
+        Timer4.Enabled = False
 
         PictureBox1.Enabled = True
 
@@ -188,4 +196,31 @@
         Timer6.Enabled = False
         Timer5.Enabled = True
     End Sub
+
+    Private Sub Jack_Pot()
+
+        ''SmallJackPot PayOut
+        Dim SmallJackRandom = New Random()
+        Dim SmallJackPotNumber = SmallJackRandom.Next(My.Settings.SmallJackPot)
+
+        Using cn As New OleDbConnection(Builder.ConnectionString)
+            Using cmd As New OleDbCommand("SELECT SmallJackPot FROM JackPot WHERE SmallJackPot = ? AND ID = 1 ", cn)
+                cmd.Parameters.AddWithValue("SmallJackPot", SmallJackPotNumber)
+                Try
+                    cn.Open()
+                    Dim reader As OleDbDataReader = cmd.ExecuteReader
+                    If Not reader.HasRows Then
+                        MessageBox.Show(SmallJackPotNumber.ToString & "False")
+
+                    Else
+                        MessageBox.Show(SmallJackPotNumber.ToString & "True")
+                        JackPot.Timer1.Enabled = True
+                    End If
+                Catch ex As Exception
+                    MessageBox.Show(ex.ToString & "Login failed" & "Error")
+                End Try
+            End Using
+        End Using
+    End Sub
+
 End Class

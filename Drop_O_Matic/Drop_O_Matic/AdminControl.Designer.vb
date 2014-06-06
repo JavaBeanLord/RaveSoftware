@@ -54,7 +54,20 @@ Partial Class AdminControl
         Me.TrackBar2 = New System.Windows.Forms.TrackBar()
         Me.TrackBar1 = New System.Windows.Forms.TrackBar()
         Me.TabPage6 = New System.Windows.Forms.TabPage()
+        Me.TabControl3 = New System.Windows.Forms.TabControl()
+        Me.TabPage7 = New System.Windows.Forms.TabPage()
+        Me.Button5 = New System.Windows.Forms.Button()
+        Me.Button4 = New System.Windows.Forms.Button()
+        Me.SmallJackPotChance = New System.Windows.Forms.TextBox()
+        Me.SmallJackPotTrack = New System.Windows.Forms.TrackBar()
+        Me.TabPage8 = New System.Windows.Forms.TabPage()
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
+        Me.TextBox9 = New System.Windows.Forms.TextBox()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.TextBox10 = New System.Windows.Forms.TextBox()
+        Me.Button6 = New System.Windows.Forms.Button()
+        Me.Button7 = New System.Windows.Forms.Button()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.TabPage3.SuspendLayout()
@@ -67,6 +80,10 @@ Partial Class AdminControl
         CType(Me.TrackBar3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TrackBar2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TrackBar1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.TabPage6.SuspendLayout()
+        Me.TabControl3.SuspendLayout()
+        Me.TabPage7.SuspendLayout()
+        CType(Me.SmallJackPotTrack, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'TabControl1
@@ -96,7 +113,7 @@ Partial Class AdminControl
         Me.TabPage1.Location = New System.Drawing.Point(4, 22)
         Me.TabPage1.Name = "TabPage1"
         Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage1.Size = New System.Drawing.Size(387, 214)
+        Me.TabPage1.Size = New System.Drawing.Size(455, 214)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Login Form Control"
         Me.TabPage1.UseVisualStyleBackColor = True
@@ -357,6 +374,7 @@ Partial Class AdminControl
         '
         'TabPage6
         '
+        Me.TabPage6.Controls.Add(Me.TabControl3)
         Me.TabPage6.Location = New System.Drawing.Point(4, 22)
         Me.TabPage6.Name = "TabPage6"
         Me.TabPage6.Padding = New System.Windows.Forms.Padding(3)
@@ -364,6 +382,131 @@ Partial Class AdminControl
         Me.TabPage6.TabIndex = 4
         Me.TabPage6.Text = "JackPot PayOut"
         Me.TabPage6.UseVisualStyleBackColor = True
+        '
+        'TabControl3
+        '
+        Me.TabControl3.Controls.Add(Me.TabPage7)
+        Me.TabControl3.Controls.Add(Me.TabPage8)
+        Me.TabControl3.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TabControl3.Location = New System.Drawing.Point(3, 3)
+        Me.TabControl3.Name = "TabControl3"
+        Me.TabControl3.SelectedIndex = 0
+        Me.TabControl3.Size = New System.Drawing.Size(449, 208)
+        Me.TabControl3.TabIndex = 0
+        '
+        'TabPage7
+        '
+        Me.TabPage7.Controls.Add(Me.Button7)
+        Me.TabPage7.Controls.Add(Me.Button6)
+        Me.TabPage7.Controls.Add(Me.TextBox10)
+        Me.TabPage7.Controls.Add(Me.Label5)
+        Me.TabPage7.Controls.Add(Me.Label4)
+        Me.TabPage7.Controls.Add(Me.TextBox9)
+        Me.TabPage7.Controls.Add(Me.Button5)
+        Me.TabPage7.Controls.Add(Me.Button4)
+        Me.TabPage7.Controls.Add(Me.SmallJackPotChance)
+        Me.TabPage7.Controls.Add(Me.SmallJackPotTrack)
+        Me.TabPage7.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage7.Name = "TabPage7"
+        Me.TabPage7.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage7.Size = New System.Drawing.Size(441, 182)
+        Me.TabPage7.TabIndex = 0
+        Me.TabPage7.Text = "Small Jack Pot"
+        Me.TabPage7.UseVisualStyleBackColor = True
+        '
+        'Button5
+        '
+        Me.Button5.Location = New System.Drawing.Point(360, 58)
+        Me.Button5.Name = "Button5"
+        Me.Button5.Size = New System.Drawing.Size(75, 20)
+        Me.Button5.TabIndex = 3
+        Me.Button5.Text = "Save"
+        Me.Button5.UseVisualStyleBackColor = True
+        '
+        'Button4
+        '
+        Me.Button4.Location = New System.Drawing.Point(257, 58)
+        Me.Button4.Name = "Button4"
+        Me.Button4.Size = New System.Drawing.Size(75, 20)
+        Me.Button4.TabIndex = 2
+        Me.Button4.Text = "Cancel"
+        Me.Button4.UseVisualStyleBackColor = True
+        '
+        'SmallJackPotChance
+        '
+        Me.SmallJackPotChance.Enabled = False
+        Me.SmallJackPotChance.Location = New System.Drawing.Point(7, 59)
+        Me.SmallJackPotChance.Name = "SmallJackPotChance"
+        Me.SmallJackPotChance.Size = New System.Drawing.Size(244, 20)
+        Me.SmallJackPotChance.TabIndex = 1
+        '
+        'SmallJackPotTrack
+        '
+        Me.SmallJackPotTrack.Location = New System.Drawing.Point(7, 7)
+        Me.SmallJackPotTrack.Name = "SmallJackPotTrack"
+        Me.SmallJackPotTrack.Size = New System.Drawing.Size(428, 45)
+        Me.SmallJackPotTrack.TabIndex = 0
+        '
+        'TabPage8
+        '
+        Me.TabPage8.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage8.Name = "TabPage8"
+        Me.TabPage8.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage8.Size = New System.Drawing.Size(441, 182)
+        Me.TabPage8.TabIndex = 1
+        Me.TabPage8.Text = "TabPage8"
+        Me.TabPage8.UseVisualStyleBackColor = True
+        '
+        'TextBox9
+        '
+        Me.TextBox9.Enabled = False
+        Me.TextBox9.Location = New System.Drawing.Point(18, 98)
+        Me.TextBox9.Name = "TextBox9"
+        Me.TextBox9.Size = New System.Drawing.Size(100, 20)
+        Me.TextBox9.TabIndex = 4
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(6, 82)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(88, 13)
+        Me.Label4.TabIndex = 5
+        Me.Label4.Text = "JackPotNumbers"
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Location = New System.Drawing.Point(126, 82)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(73, 13)
+        Me.Label5.TabIndex = 6
+        Me.Label5.Text = "JackPotValue"
+        '
+        'TextBox10
+        '
+        Me.TextBox10.Location = New System.Drawing.Point(138, 98)
+        Me.TextBox10.Name = "TextBox10"
+        Me.TextBox10.Size = New System.Drawing.Size(113, 20)
+        Me.TextBox10.TabIndex = 7
+        '
+        'Button6
+        '
+        Me.Button6.Location = New System.Drawing.Point(360, 98)
+        Me.Button6.Name = "Button6"
+        Me.Button6.Size = New System.Drawing.Size(75, 20)
+        Me.Button6.TabIndex = 8
+        Me.Button6.Text = "Save"
+        Me.Button6.UseVisualStyleBackColor = True
+        '
+        'Button7
+        '
+        Me.Button7.Location = New System.Drawing.Point(257, 98)
+        Me.Button7.Name = "Button7"
+        Me.Button7.Size = New System.Drawing.Size(75, 20)
+        Me.Button7.TabIndex = 9
+        Me.Button7.Text = "Load"
+        Me.Button7.UseVisualStyleBackColor = True
         '
         'AdminControl
         '
@@ -391,6 +534,11 @@ Partial Class AdminControl
         CType(Me.TrackBar3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TrackBar2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TrackBar1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.TabPage6.ResumeLayout(False)
+        Me.TabControl3.ResumeLayout(False)
+        Me.TabPage7.ResumeLayout(False)
+        Me.TabPage7.PerformLayout()
+        CType(Me.SmallJackPotTrack, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -426,4 +574,17 @@ Partial Class AdminControl
     Friend WithEvents Cancel As System.Windows.Forms.Button
     Friend WithEvents TabPage6 As System.Windows.Forms.TabPage
     Friend WithEvents ToolTip1 As System.Windows.Forms.ToolTip
+    Friend WithEvents TabControl3 As System.Windows.Forms.TabControl
+    Friend WithEvents TabPage7 As System.Windows.Forms.TabPage
+    Friend WithEvents Button5 As System.Windows.Forms.Button
+    Friend WithEvents Button4 As System.Windows.Forms.Button
+    Friend WithEvents SmallJackPotChance As System.Windows.Forms.TextBox
+    Friend WithEvents SmallJackPotTrack As System.Windows.Forms.TrackBar
+    Friend WithEvents TabPage8 As System.Windows.Forms.TabPage
+    Friend WithEvents Button7 As System.Windows.Forms.Button
+    Friend WithEvents Button6 As System.Windows.Forms.Button
+    Friend WithEvents TextBox10 As System.Windows.Forms.TextBox
+    Friend WithEvents Label5 As System.Windows.Forms.Label
+    Friend WithEvents Label4 As System.Windows.Forms.Label
+    Friend WithEvents TextBox9 As System.Windows.Forms.TextBox
 End Class
