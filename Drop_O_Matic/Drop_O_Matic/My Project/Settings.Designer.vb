@@ -197,6 +197,30 @@ Namespace My
                 Me("SmallJackPot") = value
             End Set
         End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("0")>  _
+        Public Property UserAmount() As Integer
+            Get
+                Return CType(Me("UserAmount"),Integer)
+            End Get
+            Set
+                Me("UserAmount") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("0")>  _
+        Public Property BetAmount() As Integer
+            Get
+                Return CType(Me("BetAmount"),Integer)
+            End Get
+            Set
+                Me("BetAmount") = value
+            End Set
+        End Property
     End Class
 End Namespace
 

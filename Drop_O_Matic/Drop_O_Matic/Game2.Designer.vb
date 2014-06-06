@@ -46,6 +46,9 @@ Partial Class Game2
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Timer5 = New System.Windows.Forms.Timer(Me.components)
         Me.Timer6 = New System.Windows.Forms.Timer(Me.components)
+        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.PictureBox17 = New System.Windows.Forms.PictureBox()
+        Me.TextBox3 = New System.Windows.Forms.TextBox()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -62,6 +65,7 @@ Partial Class Game2
         CType(Me.PictureBox14, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox15, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox16, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox17, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'PictureBox1
@@ -256,13 +260,41 @@ Partial Class Game2
         '
         Me.Timer6.Interval = 500
         '
+        'TextBox2
+        '
+        Me.TextBox2.Enabled = False
+        Me.TextBox2.Location = New System.Drawing.Point(12, 579)
+        Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.Size = New System.Drawing.Size(155, 20)
+        Me.TextBox2.TabIndex = 17
+        '
+        'PictureBox17
+        '
+        Me.PictureBox17.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox17.Image = Global.Drop_O_Matic.My.Resources.Resources.btn_bet_default
+        Me.PictureBox17.Location = New System.Drawing.Point(443, 598)
+        Me.PictureBox17.Name = "PictureBox17"
+        Me.PictureBox17.Size = New System.Drawing.Size(130, 57)
+        Me.PictureBox17.TabIndex = 18
+        Me.PictureBox17.TabStop = False
+        '
+        'TextBox3
+        '
+        Me.TextBox3.Location = New System.Drawing.Point(443, 572)
+        Me.TextBox3.Name = "TextBox3"
+        Me.TextBox3.Size = New System.Drawing.Size(130, 20)
+        Me.TextBox3.TabIndex = 19
+        '
         'Game2
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = Global.Drop_O_Matic.My.Resources.Resources.SandDunesBackground1
-        Me.ClientSize = New System.Drawing.Size(998, 667)
+        Me.ClientSize = New System.Drawing.Size(1014, 706)
         Me.ControlBox = False
+        Me.Controls.Add(Me.TextBox3)
+        Me.Controls.Add(Me.PictureBox17)
+        Me.Controls.Add(Me.TextBox2)
         Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.PictureBox14)
         Me.Controls.Add(Me.PictureBox15)
@@ -301,6 +333,7 @@ Partial Class Game2
         CType(Me.PictureBox14, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox15, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox16, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox17, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -328,4 +361,7 @@ Partial Class Game2
     Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
     Friend WithEvents Timer5 As System.Windows.Forms.Timer
     Friend WithEvents Timer6 As System.Windows.Forms.Timer
+    Friend WithEvents TextBox2 As System.Windows.Forms.TextBox
+    Friend WithEvents PictureBox17 As System.Windows.Forms.PictureBox
+    Friend WithEvents TextBox3 As System.Windows.Forms.TextBox
 End Class

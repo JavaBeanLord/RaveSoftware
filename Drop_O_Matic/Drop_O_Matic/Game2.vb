@@ -15,6 +15,9 @@ Public Class Game2
         MainShow.ControlBox = False
         MainShow.MainMenuStrip.Visible = False
         MainShow.FormBorderStyle = Windows.Forms.FormBorderStyle.None
+        TextBox2.Text = My.Settings.UserAmount.ToString
+
+        TextBox3.Text = My.Settings.BetAmount.ToString
 
     End Sub
     Private Sub Game2_CLose(sender As Object, e As EventArgs) Handles MyBase.FormClosing
@@ -116,6 +119,11 @@ Public Class Game2
         PictureBox3.Visible = True
         PictureBox6.Visible = True
         PictureBox9.Visible = True
+
+        My.Settings.UserAmount = My.Settings.UserAmount - My.Settings.BetAmount
+        TextBox2.Text = My.Settings.UserAmount.ToString
+
+        TextBox3.Enabled = False
 
 
     End Sub
@@ -232,4 +240,16 @@ Public Class Game2
 
     End Sub
 
+    Private Sub PictureBox17_Click(sender As Object, e As EventArgs) Handles PictureBox17.Click
+
+        If My.Settings.BetAmount < (500) Then
+            My.Settings.BetAmount = (My.Settings.BetAmount + (50))
+
+
+
+        ElseIf My.Settings.BetAmount = (500) Then
+            My.Settings.BetAmount = (0)
+        End If
+        TextBox3.Text = My.Settings.BetAmount.ToString
+    End Sub
 End Class
