@@ -22,6 +22,8 @@
 
             ElseIf TextBox1.Text = My.Settings.FullControlAdmin Then
                 POS.Show()
+                POS.MdiParent = MainShow
+
                 TextBox1.Text = ("")
                 Me.Hide()
             Else

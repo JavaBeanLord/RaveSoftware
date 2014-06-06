@@ -60,6 +60,11 @@
     End Sub
 
     Private Sub POS_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Me.StartPosition = FormStartPosition.CenterParent
+        Me.StartPosition = FormStartPosition.CenterScreen
+
+
+
         AddAmount.Enabled = False
         AddAmount.ReadOnly = True
         ''EmployeeName
@@ -70,9 +75,7 @@
         CustomerNumber.Text = ("123456789")
 
         ''Hide MainForm 
-        MainShow.Hide()
         Me.Focus()
-
     End Sub
 
     Public Sub POS_Close(sender As Object, e As EventArgs) Handles MyBase.FormClosing

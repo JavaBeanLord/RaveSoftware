@@ -71,6 +71,7 @@ Public Class GameLoginScreen
                             Load_User_Amount()
                             Game2.Show()
                             Game2.MdiParent = MainShow
+
                             Me.Hide()
 
                         End If
@@ -84,7 +85,7 @@ Public Class GameLoginScreen
         End Try
     End Sub
 
-    Private Sub Load_User_Amount()
+    Public Sub Load_User_Amount()
         Dim Builder As New OleDb.OleDbConnectionStringBuilder With
            {
                .Provider = "Microsoft.ACE.OLEDB.12.0",
@@ -111,6 +112,7 @@ Public Class GameLoginScreen
                         Try
                             'Names.Add(Reader.GetString(0))
                             My.Settings.UserAmount = (Reader.GetInt32(0))
+                            My.Settings.UserIDNumber = (TextBox1.Text)
                         Catch ex As Exception
                             MessageBox.Show(ex.ToString)
                         End Try

@@ -23,7 +23,6 @@ Partial Class GameLoginScreen
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -39,13 +38,6 @@ Partial Class GameLoginScreen
         Me.PictureBox1.Size = New System.Drawing.Size(220, 65)
         Me.PictureBox1.TabIndex = 1
         Me.PictureBox1.TabStop = False
-        '
-        'TextBox2
-        '
-        Me.TextBox2.Location = New System.Drawing.Point(243, 131)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox2.TabIndex = 2
         '
         'PictureBox2
         '
@@ -77,7 +69,6 @@ Partial Class GameLoginScreen
         Me.ClientSize = New System.Drawing.Size(800, 600)
         Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.PictureBox2)
-        Me.Controls.Add(Me.TextBox2)
         Me.Controls.Add(Me.PictureBox1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "GameLoginScreen"
@@ -89,7 +80,6 @@ Partial Class GameLoginScreen
 
     End Sub
     Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
-    Friend WithEvents TextBox2 As System.Windows.Forms.TextBox
     Friend WithEvents PictureBox2 As System.Windows.Forms.PictureBox
     Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
 End Class

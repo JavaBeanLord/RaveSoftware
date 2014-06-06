@@ -55,9 +55,12 @@
 
     Private Sub POSToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles POSToolStripMenuItem.Click
         AdminLogin.Show()
+        AdminLogin.MdiParent = Me
         AdminLogin.ComboBox1.Text = ("POS")
         AdminLogin.TextBox1.Text = ("zonecomputers")
         AdminLogin.Button1.PerformClick()
+
+
     End Sub
 
     Private Sub RemoteSupportToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RemoteSupportToolStripMenuItem.Click

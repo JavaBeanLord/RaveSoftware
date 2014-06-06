@@ -49,6 +49,8 @@ Partial Class Game2
         Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.PictureBox17 = New System.Windows.Forms.PictureBox()
         Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.Timer7 = New System.Windows.Forms.Timer(Me.components)
+        Me.PictureBox18 = New System.Windows.Forms.PictureBox()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -66,13 +68,14 @@ Partial Class Game2
         CType(Me.PictureBox15, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox16, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox17, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox18, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'PictureBox1
         '
         Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
         Me.PictureBox1.Image = Global.Drop_O_Matic.My.Resources.Resources.btn_start_default
-        Me.PictureBox1.Location = New System.Drawing.Point(878, 579)
+        Me.PictureBox1.Location = New System.Drawing.Point(882, 598)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(108, 76)
         Me.PictureBox1.TabIndex = 0
@@ -263,7 +266,7 @@ Partial Class Game2
         'TextBox2
         '
         Me.TextBox2.Enabled = False
-        Me.TextBox2.Location = New System.Drawing.Point(12, 579)
+        Me.TextBox2.Location = New System.Drawing.Point(12, 591)
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.Size = New System.Drawing.Size(155, 20)
         Me.TextBox2.TabIndex = 17
@@ -272,7 +275,7 @@ Partial Class Game2
         '
         Me.PictureBox17.BackColor = System.Drawing.Color.Transparent
         Me.PictureBox17.Image = Global.Drop_O_Matic.My.Resources.Resources.btn_bet_default
-        Me.PictureBox17.Location = New System.Drawing.Point(443, 598)
+        Me.PictureBox17.Location = New System.Drawing.Point(443, 617)
         Me.PictureBox17.Name = "PictureBox17"
         Me.PictureBox17.Size = New System.Drawing.Size(130, 57)
         Me.PictureBox17.TabIndex = 18
@@ -280,10 +283,24 @@ Partial Class Game2
         '
         'TextBox3
         '
-        Me.TextBox3.Location = New System.Drawing.Point(443, 572)
+        Me.TextBox3.Location = New System.Drawing.Point(443, 591)
         Me.TextBox3.Name = "TextBox3"
         Me.TextBox3.Size = New System.Drawing.Size(130, 20)
         Me.TextBox3.TabIndex = 19
+        '
+        'Timer7
+        '
+        Me.Timer7.Interval = 1000
+        '
+        'PictureBox18
+        '
+        Me.PictureBox18.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox18.Image = Global.Drop_O_Matic.My.Resources.Resources.CloseButton2
+        Me.PictureBox18.Location = New System.Drawing.Point(957, 0)
+        Me.PictureBox18.Name = "PictureBox18"
+        Me.PictureBox18.Size = New System.Drawing.Size(71, 61)
+        Me.PictureBox18.TabIndex = 20
+        Me.PictureBox18.TabStop = False
         '
         'Game2
         '
@@ -292,6 +309,7 @@ Partial Class Game2
         Me.BackgroundImage = Global.Drop_O_Matic.My.Resources.Resources.SandDunesBackground1
         Me.ClientSize = New System.Drawing.Size(1014, 706)
         Me.ControlBox = False
+        Me.Controls.Add(Me.PictureBox18)
         Me.Controls.Add(Me.TextBox3)
         Me.Controls.Add(Me.PictureBox17)
         Me.Controls.Add(Me.TextBox2)
@@ -334,6 +352,7 @@ Partial Class Game2
         CType(Me.PictureBox15, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox16, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox17, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox18, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -364,4 +383,6 @@ Partial Class Game2
     Friend WithEvents TextBox2 As System.Windows.Forms.TextBox
     Friend WithEvents PictureBox17 As System.Windows.Forms.PictureBox
     Friend WithEvents TextBox3 As System.Windows.Forms.TextBox
+    Friend WithEvents Timer7 As System.Windows.Forms.Timer
+    Friend WithEvents PictureBox18 As System.Windows.Forms.PictureBox
 End Class

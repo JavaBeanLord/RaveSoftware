@@ -17,7 +17,16 @@ Public Class Game2
         MainShow.FormBorderStyle = Windows.Forms.FormBorderStyle.None
         TextBox2.Text = My.Settings.UserAmount.ToString
 
+        GameLoginScreen.Load_User_Amount()
+
+
+
+        My.Settings.BetAmount = (50)
         TextBox3.Text = My.Settings.BetAmount.ToString
+
+
+
+
 
     End Sub
     Private Sub Game2_CLose(sender As Object, e As EventArgs) Handles MyBase.FormClosing
@@ -111,21 +120,52 @@ Public Class Game2
     End Sub
 
     Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
-        Timer1.Enabled = True
-        Timer4.Enabled = True
-        Timer5.Enabled = False
-        Timer6.Enabled = False
 
-        PictureBox3.Visible = True
-        PictureBox6.Visible = True
-        PictureBox9.Visible = True
+    
 
-        My.Settings.UserAmount = My.Settings.UserAmount - My.Settings.BetAmount
-        TextBox2.Text = My.Settings.UserAmount.ToString
+        If My.Settings.UserAmount = 0 Then
+
+            MessageBox.Show("You Broke!")
+            TextBox2.Text = My.Settings.UserAmount.ToString
+            VALUE_Timer()
+        Else
+            Timer1.Enabled = True
+            Timer4.Enabled = True
+            Timer5.Enabled = False
+            Timer6.Enabled = False
+
+            PictureBox3.Visible = True
+            PictureBox6.Visible = True
+            PictureBox9.Visible = True
+            My.Settings.UserAmount = My.Settings.UserAmount - My.Settings.BetAmount
+            TextBox2.Text = My.Settings.UserAmount.ToString
+            VALUE_Timer()
+        End If
+
+
 
         TextBox3.Enabled = False
 
 
+    End Sub
+
+    Private Sub VALUE_Timer()
+        Dim ServerConnect As New OleDb.OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" & My.Settings.DataBasePath.ToString)
+        Dim ServerCommand As New OleDb.OleDbCommand()
+        Dim ServerUpdate As String
+        ServerConnect.Open()
+        ServerUpdate = "UPDATE Table1 SET [CAmount] = '" & My.Settings.UserAmount & "' WHERE ID = " & My.Settings.UserIDNumber & ";"
+        ServerCommand = New OleDbCommand(ServerUpdate, ServerConnect)
+        Try
+
+            ServerCommand.ExecuteNonQuery()
+
+        Catch ex As Exception
+            MsgBox("Could not perform this task because " & ex.Message, MsgBoxStyle.Exclamation, "Error")
+        End Try
+
+        ServerCommand = Nothing
+        ServerConnect.Close()
     End Sub
 
 
@@ -251,5 +291,13 @@ Public Class Game2
             My.Settings.BetAmount = (0)
         End If
         TextBox3.Text = My.Settings.BetAmount.ToString
+    End Sub
+
+    Private Sub PictureBox18_Click(sender As Object, e As EventArgs) Handles PictureBox18.Click
+        Me.Close()
+        GameLoginScreen.Load_User_Amount()
+        GameLoginScreen.TextBox1.Text = ("")
+        GameLoginScreen.Show()
+
     End Sub
 End Class

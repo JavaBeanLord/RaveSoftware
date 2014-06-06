@@ -40,13 +40,13 @@ Partial Class POS
         Me.ClearAddAmount = New System.Windows.Forms.Button()
         Me.Button8 = New System.Windows.Forms.Button()
         Me.CashOut = New System.Windows.Forms.Button()
-        Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
+        Me.MenuStrip2 = New System.Windows.Forms.MenuStrip()
         Me.FileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CloseToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ReportsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Entry = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.MenuStrip1.SuspendLayout()
+        Me.MenuStrip2.SuspendLayout()
         Me.SuspendLayout()
         '
         'CustomerName
@@ -213,34 +213,34 @@ Partial Class POS
         Me.CashOut.Text = "Out"
         Me.CashOut.UseVisualStyleBackColor = True
         '
-        'MenuStrip1
+        'MenuStrip2
         '
-        Me.MenuStrip1.BackColor = System.Drawing.SystemColors.ButtonFace
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem, Me.ReportsToolStripMenuItem})
-        Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
-        Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(560, 24)
-        Me.MenuStrip1.TabIndex = 20
-        Me.MenuStrip1.Text = "MenuStrip1"
+        Me.MenuStrip2.BackColor = System.Drawing.SystemColors.ButtonFace
+        Me.MenuStrip2.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem, Me.ReportsToolStripMenuItem})
+        Me.MenuStrip2.Location = New System.Drawing.Point(0, 0)
+        Me.MenuStrip2.Name = "MenuStrip2"
+        Me.MenuStrip2.Size = New System.Drawing.Size(560, 24)
+        Me.MenuStrip2.TabIndex = 20
+        Me.MenuStrip2.Text = "MenuStrip1"
         '
         'FileToolStripMenuItem
         '
         Me.FileToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CloseToolStripMenuItem})
         Me.FileToolStripMenuItem.Name = "FileToolStripMenuItem"
-        Me.FileToolStripMenuItem.Size = New System.Drawing.Size(37, 20)
-        Me.FileToolStripMenuItem.Text = "File"
+        Me.FileToolStripMenuItem.Size = New System.Drawing.Size(71, 20)
+        Me.FileToolStripMenuItem.Text = "   POS File"
         '
         'CloseToolStripMenuItem
         '
         Me.CloseToolStripMenuItem.Name = "CloseToolStripMenuItem"
-        Me.CloseToolStripMenuItem.Size = New System.Drawing.Size(103, 22)
+        Me.CloseToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.CloseToolStripMenuItem.Text = "Close"
         '
         'ReportsToolStripMenuItem
         '
         Me.ReportsToolStripMenuItem.Name = "ReportsToolStripMenuItem"
-        Me.ReportsToolStripMenuItem.Size = New System.Drawing.Size(59, 20)
-        Me.ReportsToolStripMenuItem.Text = "Reports"
+        Me.ReportsToolStripMenuItem.Size = New System.Drawing.Size(96, 20)
+        Me.ReportsToolStripMenuItem.Text = "    POS Reports"
         '
         'Entry
         '
@@ -285,16 +285,16 @@ Partial Class POS
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.CustomerName)
-        Me.Controls.Add(Me.MenuStrip1)
+        Me.Controls.Add(Me.MenuStrip2)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
-        Me.MainMenuStrip = Me.MenuStrip1
+        Me.MainMenuStrip = Me.MenuStrip2
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "POS"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "POS"
-        Me.MenuStrip1.ResumeLayout(False)
-        Me.MenuStrip1.PerformLayout()
+        Me.MenuStrip2.ResumeLayout(False)
+        Me.MenuStrip2.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -317,7 +317,7 @@ Partial Class POS
     Friend WithEvents ClearAddAmount As System.Windows.Forms.Button
     Friend WithEvents Button8 As System.Windows.Forms.Button
     Friend WithEvents CashOut As System.Windows.Forms.Button
-    Friend WithEvents MenuStrip1 As System.Windows.Forms.MenuStrip
+    Friend WithEvents MenuStrip2 As System.Windows.Forms.MenuStrip
     Friend WithEvents FileToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ReportsToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents CloseToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem

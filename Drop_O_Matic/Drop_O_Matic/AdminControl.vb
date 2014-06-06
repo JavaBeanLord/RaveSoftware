@@ -2,6 +2,7 @@
 
     Private Sub Form3_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.StartPosition = FormStartPosition.CenterParent
+        Me.StartPosition = FormStartPosition.CenterScreen
 
         TextBox1.Text = My.Settings.HurryLogin.ToString
         TextBox2.Text = My.Settings.UserPassword.ToString

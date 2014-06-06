@@ -221,6 +221,18 @@ Namespace My
                 Me("BetAmount") = value
             End Set
         End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("1")>  _
+        Public Property UserIDNumber() As String
+            Get
+                Return CType(Me("UserIDNumber"),String)
+            End Get
+            Set
+                Me("UserIDNumber") = value
+            End Set
+        End Property
     End Class
 End Namespace
 
