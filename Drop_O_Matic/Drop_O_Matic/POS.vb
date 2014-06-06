@@ -63,7 +63,7 @@
         Me.StartPosition = FormStartPosition.CenterParent
         Me.StartPosition = FormStartPosition.CenterScreen
 
-
+      
 
         AddAmount.Enabled = False
         AddAmount.ReadOnly = True
@@ -145,7 +145,7 @@
         End If
     End Sub
 
-    Private Sub CloseToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CloseToolStripMenuItem.Click
+    Private Sub CloseToolStripMenuItem_Click(sender As Object, e As EventArgs)
         Me.Close()
 
     End Sub

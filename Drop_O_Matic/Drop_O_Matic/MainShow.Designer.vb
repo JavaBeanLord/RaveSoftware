@@ -42,10 +42,11 @@ Partial Class MainShow
         '
         'MenuStrip1
         '
+        Me.MenuStrip1.AutoSize = False
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem, Me.ToolsToolStripMenuItem, Me.HelpToolStripMenuItem, Me.TestSoftwareToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(631, 24)
+        Me.MenuStrip1.Size = New System.Drawing.Size(631, 35)
         Me.MenuStrip1.TabIndex = 0
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -53,7 +54,7 @@ Partial Class MainShow
         '
         Me.FileToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CloseToolStripMenuItem})
         Me.FileToolStripMenuItem.Name = "FileToolStripMenuItem"
-        Me.FileToolStripMenuItem.Size = New System.Drawing.Size(37, 20)
+        Me.FileToolStripMenuItem.Size = New System.Drawing.Size(37, 31)
         Me.FileToolStripMenuItem.Text = "File"
         '
         'CloseToolStripMenuItem
@@ -66,7 +67,7 @@ Partial Class MainShow
         '
         Me.ToolsToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AdminControlToolStripMenuItem, Me.BetaToolStripMenuItem, Me.POSToolStripMenuItem, Me.JackPotToolStripMenuItem, Me.WebOnlyToolStripMenuItem})
         Me.ToolsToolStripMenuItem.Name = "ToolsToolStripMenuItem"
-        Me.ToolsToolStripMenuItem.Size = New System.Drawing.Size(48, 20)
+        Me.ToolsToolStripMenuItem.Size = New System.Drawing.Size(48, 31)
         Me.ToolsToolStripMenuItem.Text = "Tools"
         '
         'AdminControlToolStripMenuItem
@@ -103,7 +104,7 @@ Partial Class MainShow
         '
         Me.HelpToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.RemoteSupportToolStripMenuItem, Me.AboutMeToolStripMenuItem, Me.DataBaseToolStripMenuItem})
         Me.HelpToolStripMenuItem.Name = "HelpToolStripMenuItem"
-        Me.HelpToolStripMenuItem.Size = New System.Drawing.Size(44, 20)
+        Me.HelpToolStripMenuItem.Size = New System.Drawing.Size(44, 31)
         Me.HelpToolStripMenuItem.Text = "Help"
         '
         'RemoteSupportToolStripMenuItem
@@ -127,7 +128,7 @@ Partial Class MainShow
         'TestSoftwareToolStripMenuItem
         '
         Me.TestSoftwareToolStripMenuItem.Name = "TestSoftwareToolStripMenuItem"
-        Me.TestSoftwareToolStripMenuItem.Size = New System.Drawing.Size(92, 20)
+        Me.TestSoftwareToolStripMenuItem.Size = New System.Drawing.Size(92, 31)
         Me.TestSoftwareToolStripMenuItem.Text = "Test_Software"
         '
         'OpenFileDialog1
@@ -139,9 +140,12 @@ Partial Class MainShow
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.BackgroundImage = Global.Drop_O_Matic.My.Resources.Resources.black_abstract_wood_clean_wallszone_1671501
+        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
         Me.ClientSize = New System.Drawing.Size(631, 279)
         Me.ControlBox = False
         Me.Controls.Add(Me.MenuStrip1)
+        Me.DoubleBuffered = True
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
         Me.IsMdiContainer = True
         Me.MainMenuStrip = Me.MenuStrip1
@@ -151,7 +155,6 @@ Partial Class MainShow
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
     Friend WithEvents MenuStrip1 As System.Windows.Forms.MenuStrip

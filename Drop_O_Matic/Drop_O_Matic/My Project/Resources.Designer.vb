@@ -113,6 +113,16 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
+        Friend ReadOnly Property black_abstract_wood_clean_wallszone_1671501() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("black-abstract-wood-clean-wallszone-1671501", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
         Friend ReadOnly Property btn_bet_default() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("btn_bet_default", resourceCulture)
@@ -236,6 +246,16 @@ Namespace My.Resources
         Friend ReadOnly Property InputBar() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("InputBar", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property Log_in_Screen___Red___Blue__() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("Log in Screen...Red...Blue..", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property

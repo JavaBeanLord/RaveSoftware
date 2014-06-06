@@ -10,13 +10,12 @@
 
 
     End Sub
-
+ 
     Private Sub Form2_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Login.ProgressBar1.Value = 100
         NEWS()
         Me.WindowState = FormWindowState.Maximized
         Me.FormBorderStyle = Windows.Forms.FormBorderStyle.None
-
 
 
     End Sub

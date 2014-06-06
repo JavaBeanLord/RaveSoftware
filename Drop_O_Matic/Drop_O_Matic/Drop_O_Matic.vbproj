@@ -353,6 +353,8 @@
     <None Include="Resources\CloseButton.png" />
     <None Include="Resources\CloseButton2.png" />
     <None Include="Resources\LogoTest1.png" />
+    <None Include="Images\Raven Software images\Log in Screen...Red...Blue...png" />
+    <None Include="Resources\black-abstract-wood-clean-wallszone-1671501.jpg" />
     <Content Include="Sounds\spin.wav" />
   </ItemGroup>
   <ItemGroup />
