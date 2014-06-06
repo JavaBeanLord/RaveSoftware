@@ -142,6 +142,12 @@
     <Compile Include="JackPot.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="loadingform.Designer.vb">
+      <DependentUpon>loadingform.vb</DependentUpon>
+    </Compile>
+    <Compile Include="loadingform.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Login.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -225,6 +231,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="JackPot.resx">
       <DependentUpon>JackPot.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="loadingform.resx">
+      <DependentUpon>loadingform.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.vb</DependentUpon>
@@ -343,6 +352,7 @@
     <None Include="Resources\btn_bet_down.png" />
     <None Include="Resources\CloseButton.png" />
     <None Include="Resources\CloseButton2.png" />
+    <None Include="Resources\LogoTest1.png" />
     <Content Include="Sounds\spin.wav" />
   </ItemGroup>
   <ItemGroup />

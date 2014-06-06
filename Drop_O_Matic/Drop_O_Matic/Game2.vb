@@ -1,14 +1,18 @@
 ﻿Imports System.Data.OleDb
 Public Class Game2
+
+#Region "CONNECT"
     Dim con As New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" & My.Settings.DataBasePath.ToString)
     Private Builder As New OleDb.OleDbConnectionStringBuilder With _
     { _
         .Provider = "Microsoft.ACE.OLEDB.12.0", _
         .DataSource = IO.Path.Combine(My.Settings.DataBasePath) _
     }
+#End Region
+
 
     Private Sub Game2_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        My.Computer.Audio.Play(My.Resources.reels, AudioPlayMode.BackgroundLoop)
+        'My.Computer.Audio.Play(My.Resources.reels, AudioPlayMode.BackgroundLoop)
         Me.StartPosition = FormStartPosition.CenterParent
         Me.StartPosition = FormStartPosition.CenterScreen
 
@@ -121,7 +125,7 @@ Public Class Game2
 
     Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
 
-    
+
 
         If My.Settings.UserAmount = 0 Then
 
@@ -196,6 +200,9 @@ Public Class Game2
             TextBox1.Text = ("GameWin Numbers: " & WOne.ToString & WTwo.ToString & WThree.ToString)
             Timer5.Enabled = True
             Timer4.Enabled = False
+            My.Settings.UserAmount = My.Settings.UserAmount + (100)
+            TextBox2.Text = My.Settings.UserAmount.ToString
+            VALUE_Timer()
         Else
             'Timer4.Enabled = False
             TextBox1.Text = ("GameOver Numbers: " & WOne.ToString & WTwo.ToString & WThree.ToString)

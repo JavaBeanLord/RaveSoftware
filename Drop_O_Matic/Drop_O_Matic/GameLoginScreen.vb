@@ -71,6 +71,7 @@ Public Class GameLoginScreen
                             Load_User_Amount()
                             Game2.Show()
                             Game2.MdiParent = MainShow
+                          
 
                             Me.Hide()
 
