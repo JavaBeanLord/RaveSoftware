@@ -93,78 +93,79 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AboutMe.Designer.vb">
+    <Compile Include="ProgramMods\DataBaseMod.vb" />
+    <Compile Include="ProgramStart\AboutMe.Designer.vb">
       <DependentUpon>AboutMe.vb</DependentUpon>
     </Compile>
-    <Compile Include="AboutMe.vb">
+    <Compile Include="ProgramStart\AboutMe.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AdminLogin.Designer.vb">
+    <Compile Include="ManagerTools\AdminLogin.Designer.vb">
       <DependentUpon>AdminLogin.vb</DependentUpon>
     </Compile>
-    <Compile Include="AdminLogin.vb">
+    <Compile Include="ManagerTools\AdminLogin.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AudioFile.vb" />
-    <Compile Include="CashOut.Designer.vb">
+    <Compile Include="Sounds\AudioFile.vb" />
+    <Compile Include="ManagerTools\CashOut.Designer.vb">
       <DependentUpon>CashOut.vb</DependentUpon>
     </Compile>
-    <Compile Include="CashOut.vb">
+    <Compile Include="ManagerTools\CashOut.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Game1.Designer.vb">
+    <Compile Include="Games\Game1.Designer.vb">
       <DependentUpon>Game1.vb</DependentUpon>
     </Compile>
-    <Compile Include="Game1.vb">
+    <Compile Include="Games\Game1.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Game2.Designer.vb">
+    <Compile Include="Games\Game2.Designer.vb">
       <DependentUpon>Game2.vb</DependentUpon>
     </Compile>
-    <Compile Include="Game2.vb">
+    <Compile Include="Games\Game2.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GameLoginScreen.Designer.vb">
+    <Compile Include="Games\GameLoginScreen.Designer.vb">
       <DependentUpon>GameLoginScreen.vb</DependentUpon>
     </Compile>
-    <Compile Include="GameLoginScreen.vb">
+    <Compile Include="Games\GameLoginScreen.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Games.Designer.vb">
+    <Compile Include="Games\Games.Designer.vb">
       <DependentUpon>Games.vb</DependentUpon>
     </Compile>
-    <Compile Include="Games.vb">
+    <Compile Include="Games\Games.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="JackPot.Designer.vb">
+    <Compile Include="JackPot\JackPot.Designer.vb">
       <DependentUpon>JackPot.vb</DependentUpon>
     </Compile>
-    <Compile Include="JackPot.vb">
+    <Compile Include="JackPot\JackPot.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="loadingform.Designer.vb">
+    <Compile Include="Games\loadingform.Designer.vb">
       <DependentUpon>loadingform.vb</DependentUpon>
     </Compile>
-    <Compile Include="loadingform.vb">
+    <Compile Include="Games\loadingform.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Login.vb">
+    <Compile Include="ManagerTools\Login.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Login.Designer.vb">
+    <Compile Include="ManagerTools\Login.Designer.vb">
       <DependentUpon>Login.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainShow.Designer.vb">
+    <Compile Include="ProgramStart\MainShow.Designer.vb">
       <DependentUpon>MainShow.vb</DependentUpon>
     </Compile>
-    <Compile Include="MainShow.vb">
+    <Compile Include="ProgramStart\MainShow.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AdminControl.Designer.vb">
+    <Compile Include="ManagerTools\AdminControl.Designer.vb">
       <DependentUpon>AdminControl.vb</DependentUpon>
     </Compile>
-    <Compile Include="AdminControl.vb">
+    <Compile Include="ManagerTools\AdminControl.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -182,66 +183,66 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="POS.Designer.vb">
+    <Compile Include="ManagerTools\POS.Designer.vb">
       <DependentUpon>POS.vb</DependentUpon>
     </Compile>
-    <Compile Include="POS.vb">
+    <Compile Include="ManagerTools\POS.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TestForm.Designer.vb">
+    <Compile Include="ProgramStart\TestForm.Designer.vb">
       <DependentUpon>TestForm.vb</DependentUpon>
     </Compile>
-    <Compile Include="TestForm.vb">
+    <Compile Include="ProgramStart\TestForm.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ValidateForm.Designer.vb">
+    <Compile Include="ManagerTools\ValidateForm.Designer.vb">
       <DependentUpon>ValidateForm.vb</DependentUpon>
     </Compile>
-    <Compile Include="ValidateForm.vb">
+    <Compile Include="ManagerTools\ValidateForm.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="WebOnly.Designer.vb">
+    <Compile Include="ManagerTools\WebOnly.Designer.vb">
       <DependentUpon>WebOnly.vb</DependentUpon>
     </Compile>
-    <Compile Include="WebOnly.vb">
+    <Compile Include="ManagerTools\WebOnly.vb">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="AboutMe.resx">
+    <EmbeddedResource Include="ProgramStart\AboutMe.resx">
       <DependentUpon>AboutMe.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AdminLogin.resx">
+    <EmbeddedResource Include="ManagerTools\AdminLogin.resx">
       <DependentUpon>AdminLogin.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CashOut.resx">
+    <EmbeddedResource Include="ManagerTools\CashOut.resx">
       <DependentUpon>CashOut.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Game1.resx">
+    <EmbeddedResource Include="Games\Game1.resx">
       <DependentUpon>Game1.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Game2.resx">
+    <EmbeddedResource Include="Games\Game2.resx">
       <DependentUpon>Game2.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GameLoginScreen.resx">
+    <EmbeddedResource Include="Games\GameLoginScreen.resx">
       <DependentUpon>GameLoginScreen.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Games.resx">
+    <EmbeddedResource Include="Games\Games.resx">
       <DependentUpon>Games.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="JackPot.resx">
+    <EmbeddedResource Include="JackPot\JackPot.resx">
       <DependentUpon>JackPot.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="loadingform.resx">
+    <EmbeddedResource Include="Games\loadingform.resx">
       <DependentUpon>loadingform.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Login.resx">
+    <EmbeddedResource Include="ManagerTools\Login.resx">
       <DependentUpon>Login.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MainShow.resx">
+    <EmbeddedResource Include="ProgramStart\MainShow.resx">
       <DependentUpon>MainShow.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AdminControl.resx">
+    <EmbeddedResource Include="ManagerTools\AdminControl.resx">
       <DependentUpon>AdminControl.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
@@ -250,16 +251,16 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="POS.resx">
+    <EmbeddedResource Include="ManagerTools\POS.resx">
       <DependentUpon>POS.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TestForm.resx">
+    <EmbeddedResource Include="ProgramStart\TestForm.resx">
       <DependentUpon>TestForm.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ValidateForm.resx">
+    <EmbeddedResource Include="ManagerTools\ValidateForm.resx">
       <DependentUpon>ValidateForm.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="WebOnly.resx">
+    <EmbeddedResource Include="ManagerTools\WebOnly.resx">
       <DependentUpon>WebOnly.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
