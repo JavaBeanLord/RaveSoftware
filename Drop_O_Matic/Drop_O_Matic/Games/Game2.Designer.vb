@@ -245,7 +245,7 @@ Partial Class Game2
         '
         'Timer4
         '
-        Me.Timer4.Interval = 3000
+        Me.Timer4.Interval = 6000
         '
         'TextBox1
         '

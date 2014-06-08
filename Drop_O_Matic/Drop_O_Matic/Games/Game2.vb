@@ -133,6 +133,8 @@ Public Class Game2
             TextBox2.Text = My.Settings.UserAmount.ToString
             VALUE_Timer()
         Else
+            My.Computer.Audio.Play(My.Resources.reel, AudioPlayMode.WaitToComplete)
+            My.Computer.Audio.Play(My.Resources.reels, AudioPlayMode.BackgroundLoop)
             Timer1.Enabled = True
             Timer4.Enabled = True
             Timer5.Enabled = False
@@ -200,7 +202,7 @@ Public Class Game2
             TextBox1.Text = ("GameWin Numbers: " & WOne.ToString & WTwo.ToString & WThree.ToString)
             Timer5.Enabled = True
             Timer4.Enabled = False
-            My.Settings.UserAmount = My.Settings.UserAmount + (100)
+            My.Settings.UserAmount = My.Settings.UserAmount + (100) * My.Settings.BetAmount
             TextBox2.Text = My.Settings.UserAmount.ToString
             VALUE_Timer()
         Else
@@ -216,6 +218,9 @@ Public Class Game2
             PictureBox8.Image = My.Resources.symbol_7
             TextBox1.Text = ("GameWin Numbers: " & WOne.ToString & WTwo.ToString & WThree.ToString)
             Timer4.Enabled = False
+            My.Settings.UserAmount = My.Settings.UserAmount + (100) * My.Settings.BetAmount
+            TextBox2.Text = My.Settings.UserAmount.ToString
+            VALUE_Timer()
         Else
             'Timer4.Enabled = False
             TextBox1.Text = ("GameOver Numbers: " & WOne.ToString & WTwo.ToString & WThree.ToString)
@@ -229,12 +234,15 @@ Public Class Game2
             PictureBox10.Image = My.Resources.symbol_7
             TextBox1.Text = ("GameWin Numbers: " & WOne.ToString & WTwo.ToString & WThree.ToString)
             Timer4.Enabled = False
+            My.Settings.UserAmount = My.Settings.UserAmount + (100) * My.Settings.BetAmount
+            TextBox2.Text = My.Settings.UserAmount.ToString
+            VALUE_Timer()
         Else
             'Timer4.Enabled = False
             TextBox1.Text = ("GameOver Numbers: " & WOne.ToString & WTwo.ToString & WThree.ToString)
             Timer4.Enabled = False
         End If
-
+        My.Computer.Audio.Stop()
         Jack_Pot()
         Timer4.Enabled = False
 
