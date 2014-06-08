@@ -192,7 +192,7 @@ Public Class Game2
         Timer1.Enabled = False
         Timer2.Enabled = False
         Timer3.Enabled = False
-
+        My.Computer.Audio.Stop()
 
         If WOne.ToString + WTwo.ToString + WThree.ToString = ("000") Then
             Timer4.Enabled = False
@@ -242,7 +242,7 @@ Public Class Game2
             TextBox1.Text = ("GameOver Numbers: " & WOne.ToString & WTwo.ToString & WThree.ToString)
             Timer4.Enabled = False
         End If
-        My.Computer.Audio.Stop()
+
         Jack_Pot()
         Timer4.Enabled = False
 

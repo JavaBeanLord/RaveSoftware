@@ -1,4 +1,23 @@
 ﻿Public Class POS
+    Dim ServerConnect As New OleDb.OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" & My.Settings.DataBasePath.ToString)
+    Dim ServerCommand As New OleDb.OleDbCommand()
+#Region "SERVERCONNECT"
+    Dim Builder As New OleDb.OleDbConnectionStringBuilder With
+       {
+           .Provider = "Microsoft.ACE.OLEDB.12.0",
+           .DataSource = IO.Path.Combine(My.Settings.DataBasePath)
+       }
+    Dim Names As New List(Of String)
+#End Region
+
+    Private Sub CusNumber_KeyPress(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles CustomerNumber.KeyPress
+
+        If Not Char.IsDigit(e.KeyChar) And Not Char.IsControl(e.KeyChar) Then
+            e.Handled = True
+            MessageBox.Show("You Can Only Insert Numbers!")
+        End If
+
+    End Sub
 
     Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click
 
@@ -63,16 +82,17 @@
         Me.StartPosition = FormStartPosition.CenterParent
         Me.StartPosition = FormStartPosition.CenterScreen
 
-      
+        CashOut.Text = ("Cash" & vbNewLine & "Out")
+        CashOut.TextAlign = ContentAlignment.MiddleCenter
 
         AddAmount.Enabled = False
         AddAmount.ReadOnly = True
         ''EmployeeName
         EmployeeName.Text = ("Dom")
         ''Test CustomerName
-        CustomerName.Text = ("Justin")
+
         ''Test Customer Id
-        CustomerNumber.Text = ("123456789")
+
 
         ''Hide MainForm 
         Me.Focus()
@@ -103,16 +123,15 @@
         ValidateForm.Label2.Text = ("Apply Credits to ")
         ValidateForm.Label3.Text = (Me.CustomerName.Text()) & "                   " & Me.AddAmount.Text.ToString
         ValidateForm.Label4.Text = ("ID:" & Me.CustomerNumber.Text())
-        If AddAmount.Text = Nothing Then
-            MessageBox.Show("Please Apply Credit")
+        If CustomerName.Text = Nothing Then
+            MessageBox.Show("Please Input Customer Name")
+        ElseIf CustomerNumber.Text = Nothing Then
+            MessageBox.Show("Please Input Customer ID Number")
+        ElseIf AddAmount.Text = Nothing Then
+            MessageBox.Show("Please Apply Customer Credit")
         Else
             ValidateForm.Show()
         End If
-
-
-
-
-
 
 
     End Sub
@@ -135,15 +154,70 @@
             MessageBox.Show("Please Insert Customer Number")
         Else
             ''Search data base for number & retrieve data to display on "Cash Out" Form
-            CashOutForm.Show()
-            CashOutForm.Label1.Text = (EmployeeName.Text())
-            CashOutForm.Label2.Text = (CustomerName.Text())
-            CashOutForm.Label3.Text = ("ID: " & CustomerNumber.Text())
-
-            CashOutForm.Label4.Text = ("Remaining Entries: ")
-            '' CashOutForm.Label5.Text=()
+            TESTCASHOUT()
         End If
     End Sub
+
+    Public Sub TESTCASHOUT()
+        Using cn As New OleDb.OleDbConnection With
+               {
+                   .ConnectionString = Builder.ConnectionString
+               }
+            Using cmd As New OleDb.OleDbCommand With {.Connection = cn}
+                cmd.CommandText = "SELECT CAmount FROM Table1 WHERE ID = " & CustomerNumber.Text & ";"
+                cn.Open()
+                Dim Reader As OleDb.OleDbDataReader = cmd.ExecuteReader
+                If Reader.HasRows Then
+                    CashOurCommand()
+                    CashOutForm.Show()
+                    CashOutForm.Label1.Text = (EmployeeName.Text())
+                    CashOutForm.Label2.Text = ("Cash Out For: " & CustomerName.Text())
+                    CashOutForm.Label3.Text = ("ID: " & CustomerNumber.Text())
+                    '' CashOutForm.Label5.Text=()
+                Else
+                    MessageBox.Show("Seems Party ID Is not Correct! " & vbNewLine & " Please Correct ID & Try Again!")
+                End If
+                Reader.Close()
+            End Using
+        End Using
+    End Sub
+
+    Public Sub CashOurCommand()
+        Using cn As New OleDb.OleDbConnection With
+                {
+                    .ConnectionString = Builder.ConnectionString
+                }
+            Using cmd As New OleDb.OleDbCommand With {.Connection = cn}
+                cmd.CommandText = "SELECT CAmount FROM Table1 WHERE ID = " & CustomerNumber.Text & ";"
+                cn.Open()
+                Dim Reader As OleDb.OleDbDataReader = cmd.ExecuteReader
+                If Reader.HasRows Then
+                    While Reader.Read
+                        Try
+                            'Names.Add(Reader.GetString(0))
+                            Dim makers As Double
+                            Dim mark As Integer
+                            Dim COutNow As Double
+                            Dim MilkCow As String
+                            makers = 0.01
+                            mark = (Reader.GetInt32(0))
+                            CashTrash = (Reader.GetInt32(0))
+                            COutNow = mark * makers
+                            MilkCow = FormatCurrency(COutNow, , )
+                            CashOutForm.Label4.Text = ("Cash Out Amount: " & MilkCow & " Dollars")
+                        Catch ex As Exception
+                            MessageBox.Show(ex.ToString)
+                        End Try
+                    End While
+                End If
+                Reader.Close()
+                Return
+            End Using
+        End Using
+    End Sub
+
+    Public CashTrash As Integer
+
 
     Private Sub CloseToolStripMenuItem_Click(sender As Object, e As EventArgs)
         Me.Close()
@@ -156,6 +230,66 @@
     End Sub
 
     Private Sub Button8_Click(sender As Object, e As EventArgs) Handles Button8.Click
+        If CustomerNumber.Text = Nothing Then
+            MessageBox.Show("Please Input Customer Number!")
+            CustomerName.Text = Nothing
+
+        Else
+            CustomerName.Text = Nothing
+
+            FindParty()
+        End If
+
+
+
+    End Sub
+
+    Public Sub FindParty()
+        CashOurCommand()
+
+        Dim convertmonies As Double
+        convertmonies = 0.01
+        Dim CutMonies As Double
+        CutMonies = CashTrash * convertmonies
+        Dim StringMonies As String
+        StringMonies = FormatCurrency(CutMonies, , )
+
+        Dim Builder As New OleDb.OleDbConnectionStringBuilder With
+           {
+               .Provider = "Microsoft.ACE.OLEDB.12.0",
+               .DataSource = IO.Path.Combine(My.Settings.DataBasePath)
+           }
+        Dim Names As New List(Of String)
+
+        Using cn As New OleDb.OleDbConnection With
+                {
+                    .ConnectionString = Builder.ConnectionString
+                }
+            Using cmd As New OleDb.OleDbCommand With {.Connection = cn}
+                cmd.CommandText = "SELECT CName FROM Table1 WHERE ID = " & CustomerNumber.Text & ";"
+                cn.Open()
+                Dim Reader As OleDb.OleDbDataReader = cmd.ExecuteReader
+                If Reader.HasRows Then
+                    While Reader.Read
+                        Try
+                            'Names.Add(Reader.GetString(0))
+                            CustomerName.Text = (Reader.GetString(0))
+                            MessageBox.Show("The Party Has: " & StringMonies & " On Account")
+                        Catch ex As Exception
+                            MessageBox.Show(ex.ToString)
+                        End Try
+                    End While
+                Else
+                    MessageBox.Show("The Party Does Not Have An Account" & vbNewLine & "Please Register Party")
+                End If
+                Reader.Close()
+                Return
+            End Using
+        End Using
+    End Sub
+
+    Private Sub Button9_Click_1(sender As Object, e As EventArgs) Handles Button9.Click
+        Clear_POS()
 
     End Sub
 End Class

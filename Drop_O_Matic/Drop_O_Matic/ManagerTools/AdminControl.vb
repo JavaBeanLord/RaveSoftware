@@ -237,4 +237,6 @@
         My.Settings.SmallJackPot = (999)
         MessageBox.Show("All Settings Have Been Reset!" & vbNewLine & " Thanks for Playing Fair!")
     End Sub
+
+ 
 End Class

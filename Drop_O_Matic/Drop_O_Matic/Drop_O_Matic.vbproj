@@ -93,6 +93,7 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ProgramMods\Clear_Data.vb" />
     <Compile Include="ProgramMods\DataBaseMod.vb" />
     <Compile Include="ProgramStart\AboutMe.Designer.vb">
       <DependentUpon>AboutMe.vb</DependentUpon>

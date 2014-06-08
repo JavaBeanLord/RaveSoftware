@@ -42,6 +42,7 @@ Partial Class POS
         Me.CashOut = New System.Windows.Forms.Button()
         Me.Entry = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
+        Me.Button9 = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'CustomerName
@@ -150,6 +151,7 @@ Partial Class POS
         '
         'Button7
         '
+        Me.Button7.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button7.Location = New System.Drawing.Point(391, 238)
         Me.Button7.Name = "Button7"
         Me.Button7.Size = New System.Drawing.Size(151, 51)
@@ -191,6 +193,7 @@ Partial Class POS
         '
         'ClearAddAmount
         '
+        Me.ClearAddAmount.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ClearAddAmount.Location = New System.Drawing.Point(260, 238)
         Me.ClearAddAmount.Name = "ClearAddAmount"
         Me.ClearAddAmount.Size = New System.Drawing.Size(125, 51)
@@ -200,20 +203,21 @@ Partial Class POS
         '
         'Button8
         '
+        Me.Button8.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button8.Location = New System.Drawing.Point(15, 213)
         Me.Button8.Name = "Button8"
-        Me.Button8.Size = New System.Drawing.Size(105, 76)
+        Me.Button8.Size = New System.Drawing.Size(105, 50)
         Me.Button8.TabIndex = 18
         Me.Button8.Text = "Search"
         Me.Button8.UseVisualStyleBackColor = True
         '
         'CashOut
         '
+        Me.CashOut.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CashOut.Location = New System.Drawing.Point(130, 213)
         Me.CashOut.Name = "CashOut"
-        Me.CashOut.Size = New System.Drawing.Size(105, 76)
+        Me.CashOut.Size = New System.Drawing.Size(105, 50)
         Me.CashOut.TabIndex = 19
-        Me.CashOut.Text = "Out"
         Me.CashOut.UseVisualStyleBackColor = True
         '
         'Entry
@@ -234,6 +238,16 @@ Partial Class POS
         Me.Label5.TabIndex = 22
         Me.Label5.Text = "Entries"
         '
+        'Button9
+        '
+        Me.Button9.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button9.Location = New System.Drawing.Point(15, 269)
+        Me.Button9.Name = "Button9"
+        Me.Button9.Size = New System.Drawing.Size(220, 20)
+        Me.Button9.TabIndex = 23
+        Me.Button9.Text = "Clear POS"
+        Me.Button9.UseVisualStyleBackColor = True
+        '
         'POS
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -242,6 +256,7 @@ Partial Class POS
         Me.BackgroundImage = Global.Drop_O_Matic.My.Resources.Resources.black_abstract_wood_clean_wallszone_1671501
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
         Me.ClientSize = New System.Drawing.Size(560, 301)
+        Me.Controls.Add(Me.Button9)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Entry)
         Me.Controls.Add(Me.CashOut)
@@ -292,4 +307,5 @@ Partial Class POS
     Friend WithEvents CashOut As System.Windows.Forms.Button
     Friend WithEvents Entry As System.Windows.Forms.TextBox
     Friend WithEvents Label5 As System.Windows.Forms.Label
+    Friend WithEvents Button9 As System.Windows.Forms.Button
 End Class
