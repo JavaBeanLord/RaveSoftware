@@ -357,6 +357,13 @@
     <None Include="Resources\LogoTest1.png" />
     <None Include="Images\Raven Software images\Log in Screen...Red...Blue...png" />
     <None Include="Resources\black-abstract-wood-clean-wallszone-1671501.jpg" />
+    <None Include="Resources\btn_lines_default.png" />
+    <None Include="Resources\btn_lines_down.png" />
+    <None Include="Images\Raven Software images\New folder\line.png" />
+    <None Include="Images\Raven Software images\New folder\aaLargeLine.png" />
+    <None Include="Images\Raven Software images\New folder\SmallLine.png" />
+    <None Include="Images\Raven Software images\New folder\LowerLeftN.png" />
+    <None Include="Images\Raven Software images\New folder\UpperLeftV.png" />
     <Content Include="Sounds\spin.wav" />
   </ItemGroup>
   <ItemGroup />

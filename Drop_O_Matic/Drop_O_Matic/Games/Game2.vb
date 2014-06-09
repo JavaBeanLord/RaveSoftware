@@ -19,15 +19,16 @@ Public Class Game2
         MainShow.ControlBox = False
         MainShow.MainMenuStrip.Visible = False
         MainShow.FormBorderStyle = Windows.Forms.FormBorderStyle.None
-        TextBox2.Text = My.Settings.UserAmount.ToString
+        Label4.Text = My.Settings.UserAmount.ToString
 
         GameLoginScreen.Load_User_Amount()
 
 
 
-        My.Settings.BetAmount = (50)
-        TextBox3.Text = My.Settings.BetAmount.ToString
-
+        My.Settings.BetAmount = (100)
+        Label2.Text = My.Settings.BetAmount.ToString
+        Label1.Text = My.Settings.LineAmount.ToString
+        PictureBox20.Visible = True
 
 
 
@@ -44,7 +45,7 @@ Public Class Game2
         PictureBox1.Image = My.Resources.btn_start_default
     End Sub
 
-
+#Region "Sipin Reel"
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
         'Slot Cluster One
         PictureBox2.Image = My.Resources.symbol_melon
@@ -122,16 +123,28 @@ Public Class Game2
         Timer3.Enabled = False
         Timer1.Enabled = True
     End Sub
+#End Region
+
 
     Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
 
 
 
         If My.Settings.UserAmount = 0 Then
-
-            MessageBox.Show("You Broke!")
-            TextBox2.Text = My.Settings.UserAmount.ToString
             VALUE_Timer()
+            Label4.Text = ("Please Buy More Entries!")
+            PictureBox19.Visible = False
+            Label1.Visible = False
+
+
+        ElseIf My.Settings.BetAmount * My.Settings.LineAmount > My.Settings.UserAmount Then
+            My.Settings.LineAmount = (1)
+            Me.Label1.Text = (My.Settings.LineAmount).ToString
+            My.Settings.BetAmount = (100)
+            Me.Label2.Text = (My.Settings.BetAmount).ToString
+            Label4.Text = My.Settings.UserAmount.ToString
+            VALUE_Timer()
+            ClearLineIMage()
         Else
             My.Computer.Audio.Play(My.Resources.reel, AudioPlayMode.WaitToComplete)
             My.Computer.Audio.Play(My.Resources.reels, AudioPlayMode.BackgroundLoop)
@@ -143,14 +156,16 @@ Public Class Game2
             PictureBox3.Visible = True
             PictureBox6.Visible = True
             PictureBox9.Visible = True
-            My.Settings.UserAmount = My.Settings.UserAmount - My.Settings.BetAmount
-            TextBox2.Text = My.Settings.UserAmount.ToString
+            My.Settings.UserAmount = My.Settings.UserAmount - My.Settings.BetAmount * My.Settings.LineAmount
+            Label4.Text = My.Settings.UserAmount.ToString
             VALUE_Timer()
+            Label4.Text = ("Good Luck!")
+            ClearLineIMage()
         End If
 
 
 
-        TextBox3.Enabled = False
+
 
 
     End Sub
@@ -194,7 +209,20 @@ Public Class Game2
         Timer3.Enabled = False
         My.Computer.Audio.Stop()
 
-        If WOne.ToString + WTwo.ToString + WThree.ToString = ("000") Then
+        Dim LineCount As String
+        LineCount = Label1.Text
+        Dim WinRow1 As String
+        WinRow1 = WOne.ToString + WTwo.ToString + WThree.ToString
+        Dim W1 As String
+        W1 = ("000")
+        ''Win Line 1
+        If WinRow1 = W1 And LineCount = 1.ToString Or _
+           WinRow1 = W1 And LineCount = 2.ToString Or _
+           WinRow1 = W1 And LineCount = 3.ToString Or _
+           WinRow1 = W1 And LineCount = 4.ToString Or _
+           WinRow1 = W1 And LineCount = 5.ToString Or _
+           WinRow1 = W1 And LineCount = 6.ToString Then
+
             Timer4.Enabled = False
             PictureBox3.Image = My.Resources.symbol_7
             PictureBox6.Image = My.Resources.symbol_7
@@ -202,41 +230,63 @@ Public Class Game2
             TextBox1.Text = ("GameWin Numbers: " & WOne.ToString & WTwo.ToString & WThree.ToString)
             Timer5.Enabled = True
             Timer4.Enabled = False
-            My.Settings.UserAmount = My.Settings.UserAmount + (100) * My.Settings.BetAmount
-            TextBox2.Text = My.Settings.UserAmount.ToString
+            My.Settings.UserAmount = My.Settings.UserAmount + (2) * My.Settings.BetAmount
+            Label4.Text = My.Settings.UserAmount.ToString
             VALUE_Timer()
+            PictureBox20.Visible = True
         Else
             'Timer4.Enabled = False
             TextBox1.Text = ("GameOver Numbers: " & WOne.ToString & WTwo.ToString & WThree.ToString)
             Timer4.Enabled = False
         End If
 
-        If WOne.ToString + WTwo.ToString + WThree.ToString = ("034") Then
+        ''Win Line 2
+        Dim WinRow2 As String
+        WinRow2 = (WOne + WTwo + WThree).ToString
+        Dim W2 As String
+        W2 = ("369")
+        If WinRow2 = W2 And LineCount = 2.ToString Or _
+           WinRow2 = W2 And LineCount = 3.ToString Or _
+           WinRow2 = W2 And LineCount = 4.ToString Or _
+           WinRow2 = W2 And LineCount = 5.ToString Or _
+           WinRow2 = W2 And LineCount = 6.ToString Then
+
             Timer4.Enabled = False
             PictureBox4.Image = My.Resources.symbol_7
             PictureBox6.Image = My.Resources.symbol_7
             PictureBox8.Image = My.Resources.symbol_7
             TextBox1.Text = ("GameWin Numbers: " & WOne.ToString & WTwo.ToString & WThree.ToString)
             Timer4.Enabled = False
-            My.Settings.UserAmount = My.Settings.UserAmount + (100) * My.Settings.BetAmount
-            TextBox2.Text = My.Settings.UserAmount.ToString
+            My.Settings.UserAmount = My.Settings.UserAmount + (2) * My.Settings.BetAmount
+            Label4.Text = My.Settings.UserAmount.ToString
             VALUE_Timer()
+            PictureBox21.Visible = True
         Else
             'Timer4.Enabled = False
             TextBox1.Text = ("GameOver Numbers: " & WOne.ToString & WTwo.ToString & WThree.ToString)
             Timer4.Enabled = False
         End If
 
-        If WOne.ToString + WTwo.ToString + WThree.ToString = ("123") Then
+        ''Win Line 3
+        Dim WinRow3 As String
+        WinRow3 = WOne.ToString + WTwo.ToString + WThree.ToString
+        Dim W3 As String
+        W3 = ("123")
+        If WinRow3 = W3 And LineCount = 3.ToString Or _
+           WinRow3 = W3 And LineCount = 4.ToString Or _
+           WinRow3 = W3 And LineCount = 5.ToString Or _
+           WinRow3 = W3 And LineCount = 6.ToString Then
+
             Timer4.Enabled = False
             PictureBox2.Image = My.Resources.symbol_7
             PictureBox6.Image = My.Resources.symbol_7
             PictureBox10.Image = My.Resources.symbol_7
             TextBox1.Text = ("GameWin Numbers: " & WOne.ToString & WTwo.ToString & WThree.ToString)
             Timer4.Enabled = False
-            My.Settings.UserAmount = My.Settings.UserAmount + (100) * My.Settings.BetAmount
-            TextBox2.Text = My.Settings.UserAmount.ToString
+            My.Settings.UserAmount = My.Settings.UserAmount + (2) * My.Settings.BetAmount
+            Label4.Text = My.Settings.UserAmount.ToString
             VALUE_Timer()
+            PictureBox22.Visible = True
         Else
             'Timer4.Enabled = False
             TextBox1.Text = ("GameOver Numbers: " & WOne.ToString & WTwo.ToString & WThree.ToString)
@@ -245,7 +295,7 @@ Public Class Game2
 
         Jack_Pot()
         Timer4.Enabled = False
-
+        Label4.Text = My.Settings.UserAmount.ToString
         PictureBox1.Enabled = True
 
     End Sub
@@ -266,6 +316,7 @@ Public Class Game2
         Timer5.Enabled = True
     End Sub
 
+#Region "JACKPOT"
     Private Sub Jack_Pot()
         Try
             ''SmallJackPot PayOut
@@ -292,27 +343,115 @@ Public Class Game2
         Catch ex As Exception
             MessageBox.Show("Big Big Error!!")
         End Try
-
     End Sub
+#End Region
+
+#Region "BETBUTTON"
 
     Private Sub PictureBox17_Click(sender As Object, e As EventArgs) Handles PictureBox17.Click
 
         If My.Settings.BetAmount < (500) Then
-            My.Settings.BetAmount = (My.Settings.BetAmount + (50))
+            My.Settings.BetAmount = (My.Settings.BetAmount + (100))
 
-
-
-        ElseIf My.Settings.BetAmount = (500) Then
-            My.Settings.BetAmount = (0)
+        ElseIf My.Settings.BetAmount > (400) Then
+            My.Settings.BetAmount = (100)
         End If
-        TextBox3.Text = My.Settings.BetAmount.ToString
+        Label2.Text = My.Settings.BetAmount.ToString
     End Sub
+    Private Sub PictureBox17_H(sender As Object, e As EventArgs) Handles PictureBox17.MouseHover
+        PictureBox17.Image = My.Resources.btn_bet_down
+    End Sub
+    Private Sub PictureBox17_L(sender As Object, e As EventArgs) Handles PictureBox17.MouseLeave
+        PictureBox17.Image = My.Resources.btn_bet_default
+    End Sub
+#End Region
 
+
+#Region "CLOSEBUTTON"
     Private Sub PictureBox18_Click(sender As Object, e As EventArgs) Handles PictureBox18.Click
         Me.Close()
         GameLoginScreen.Load_User_Amount()
         GameLoginScreen.TextBox1.Text = ("")
         GameLoginScreen.Show()
 
+    End Sub
+#End Region
+
+#Region "LineButton"
+    Private Sub PictureBox19_Click(sender As Object, e As EventArgs) Handles PictureBox19.Click
+        If My.Settings.LineAmount < (6) Then
+            My.Settings.LineAmount = (My.Settings.LineAmount + (1))
+
+        ElseIf My.Settings.LineAmount = (6) Then
+            My.Settings.LineAmount = (1)
+        End If
+        Label1.Text = My.Settings.LineAmount.ToString
+    End Sub
+
+
+
+    Private Sub PIC19_H(sender As Object, e As EventArgs) Handles PictureBox19.MouseHover
+        PictureBox19.Image = My.Resources.btn_lines_down
+    End Sub
+    Private Sub PIC19_L(sender As Object, e As EventArgs) Handles PictureBox19.MouseLeave
+        PictureBox19.Image = My.Resources.btn_lines_default
+    End Sub
+#End Region
+
+
+
+    Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.TextChanged
+        If Me.Label1.Text = (1).ToString Then
+            PictureBox20.Visible = True
+            PictureBox21.Visible = False
+            PictureBox22.Visible = False
+            PictureBox23.Visible = False
+            PictureBox24.Visible = False
+            PictureBox25.Visible = False
+        ElseIf Me.Label1.Text = (2).ToString Then
+            PictureBox20.Visible = True
+            PictureBox21.Visible = True
+            PictureBox22.Visible = False
+            PictureBox23.Visible = False
+            PictureBox24.Visible = False
+            PictureBox25.Visible = False
+        ElseIf Me.Label1.Text = (3).ToString Then
+            PictureBox20.Visible = True
+            PictureBox21.Visible = True
+            PictureBox22.Visible = True
+            PictureBox23.Visible = False
+            PictureBox24.Visible = False
+            PictureBox25.Visible = False
+        ElseIf Me.Label1.Text = (4).ToString Then
+            PictureBox20.Visible = True
+            PictureBox21.Visible = True
+            PictureBox22.Visible = True
+            PictureBox23.Visible = True
+            PictureBox24.Visible = False
+            PictureBox25.Visible = False
+        ElseIf Me.Label1.Text = (5).ToString Then
+            PictureBox20.Visible = True
+            PictureBox21.Visible = True
+            PictureBox22.Visible = True
+            PictureBox23.Visible = True
+            PictureBox24.Visible = True
+            PictureBox25.Visible = False
+        ElseIf Me.Label1.Text = (6).ToString Then
+            PictureBox20.Visible = True
+            PictureBox21.Visible = True
+            PictureBox22.Visible = True
+            PictureBox23.Visible = True
+            PictureBox24.Visible = True
+            PictureBox25.Visible = True
+        End If
+    End Sub
+
+    Private Sub ClearLineIMage()
+        PictureBox20.Visible = False
+        PictureBox21.Visible = False
+        PictureBox22.Visible = False
+        PictureBox23.Visible = False
+        PictureBox24.Visible = False
+        PictureBox25.Visible = False
     End Sub
 End Class
