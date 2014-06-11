@@ -1,38 +1,10 @@
 ﻿Public Class Login
 
 
-
-    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        TextBox1.Text = ("Admin User")
-        TextBox1.Enabled = False
-        ProgressBar1.Value = 100
-        LoginNow.Interval = My.Settings.HurryLogin
-        LoginNow.Enabled = True
-        AdminControlNow()
-    End Sub
-
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        '' Shortcut for testing DELETE
-        ''Delete
-        TextBox2.Text = ("password")
-        'AdminLogin.Show()
-        ' AdminLogin.ComboBox1.Text = ("DataBase")
-        'AdminLogin.ComboBox1.Items.Add("DataBase")
-        ' AdminLogin.TextBox1.Text = ("zonecomputers")
-        ' AdminLogin.Button1.PerformClick()
-        ''Delete
-        If TextBox2.Text = Nothing Then
-            MessageBox.Show("Please Type A PassWord!")
-        ElseIf TextBox2.Text = (My.Settings.UserPassword) Then
-            MainShow.Show()
-            TextBox2.Text = ("")
-            Me.Hide()
-            LoginNow.Enabled = False
-
-        Else
-            MessageBox.Show("Seems Your PassWord Or UserName is Wrong!" & vbNewLine & " Please Try Again...")
-            TextBox2.Text = ("")
-        End If
+    Public Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        'ModToPlay()
+        Me.Hide()
+        MainShow.Show()
 
     End Sub
 
@@ -76,5 +48,12 @@
 
 
     End Sub
+
+    Private Sub Login_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Button1.PerformClick()
+        Me.Hide()
+    End Sub
+
+
 
 End Class

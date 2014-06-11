@@ -60,6 +60,7 @@ Partial Class Game2
         Me.PictureBox23 = New System.Windows.Forms.PictureBox()
         Me.PictureBox24 = New System.Windows.Forms.PictureBox()
         Me.PictureBox25 = New System.Windows.Forms.PictureBox()
+        Me.Label5 = New System.Windows.Forms.Label()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -432,6 +433,20 @@ Partial Class Game2
         Me.PictureBox25.TabStop = False
         Me.PictureBox25.Visible = False
         '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.BackColor = System.Drawing.Color.Transparent
+        Me.Label5.Font = New System.Drawing.Font("Snap ITC", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.ForeColor = System.Drawing.Color.GreenYellow
+        Me.Label5.Location = New System.Drawing.Point(47, 255)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(914, 37)
+        Me.Label5.TabIndex = 33
+        Me.Label5.Text = "********JackPot Winner $25.00 Dollars Hero*********"
+        Me.Label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Label5.Visible = False
+        '
         'Game2
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -439,6 +454,7 @@ Partial Class Game2
         Me.BackgroundImage = Global.Drop_O_Matic.My.Resources.Resources.SandDunesBackground1
         Me.ClientSize = New System.Drawing.Size(1014, 706)
         Me.ControlBox = False
+        Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
@@ -540,4 +556,5 @@ Partial Class Game2
     Friend WithEvents PictureBox23 As System.Windows.Forms.PictureBox
     Friend WithEvents PictureBox24 As System.Windows.Forms.PictureBox
     Friend WithEvents PictureBox25 As System.Windows.Forms.PictureBox
+    Friend WithEvents Label5 As System.Windows.Forms.Label
 End Class

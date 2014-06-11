@@ -41,8 +41,8 @@ Public Class GameLoginScreen
     End Sub
 
     Private Sub PictureBox1_Click_1(sender As Object, e As EventArgs) Handles PictureBox1.Click
+        My.Settings.UserIDNumber = TextBox1.Text.ToString
         ID_Login()
-
     End Sub
 
 
@@ -52,13 +52,13 @@ Public Class GameLoginScreen
 
     End Sub
 
-    Private Sub ID_Login()
+    Public Sub ID_Login()
 
 
         Try
             ''SmallJackPot PayOut
             Dim USER_ID_NUMBER As String
-            USER_ID_NUMBER = TextBox1.Text
+            USER_ID_NUMBER = My.Settings.UserIDNumber
 
             Using cn As New OleDbConnection(Builder.ConnectionString)
                 Using cmd As New OleDbCommand("SELECT CAmount FROM Table1 WHERE ID = ? ", cn)
@@ -71,9 +71,9 @@ Public Class GameLoginScreen
                             MessageBox.Show("Wrong!")
                         Else
                             Load_User_Amount()
-                            Game2.Show()
-                            Game2.MdiParent = MainShow
-                          
+                            Games.Show()
+
+
 
                             Me.Hide()
 
@@ -103,11 +103,10 @@ Public Class GameLoginScreen
                 }
 
             Using cmd As New OleDb.OleDbCommand With {.Connection = cn}
-                cmd.CommandText = "SELECT CAmount FROM Table1 WHERE ID = " & TextBox1.Text & ";"
 
-
+                cmd.CommandText = "SELECT CAmount FROM Table1 WHERE ID = " & My.Settings.UserIDNumber & ";"
+            
                 cn.Open()
-
                 Dim Reader As OleDb.OleDbDataReader = cmd.ExecuteReader
 
                 If Reader.HasRows Then
@@ -115,7 +114,7 @@ Public Class GameLoginScreen
                         Try
                             'Names.Add(Reader.GetString(0))
                             My.Settings.UserAmount = (Reader.GetInt32(0))
-                            My.Settings.UserIDNumber = (TextBox1.Text)
+
                         Catch ex As Exception
                             MessageBox.Show(ex.ToString)
                         End Try
@@ -126,8 +125,11 @@ Public Class GameLoginScreen
 
                 Return
 
+
             End Using
+
         End Using
+
     End Sub
 
 

@@ -22,6 +22,7 @@ Partial Class MainShow
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.FileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CloseToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -37,6 +38,7 @@ Partial Class MainShow
         Me.DataBaseToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.TestSoftwareToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
+        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -135,6 +137,10 @@ Partial Class MainShow
         '
         Me.OpenFileDialog1.FileName = "OpenFileDialog1"
         '
+        'Timer1
+        '
+        Me.Timer1.Interval = 1000
+        '
         'MainShow
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -172,4 +178,5 @@ Partial Class MainShow
     Friend WithEvents DataBaseToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents OpenFileDialog1 As System.Windows.Forms.OpenFileDialog
     Friend WithEvents WebOnlyToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents Timer1 As System.Windows.Forms.Timer
 End Class

@@ -245,6 +245,18 @@ Namespace My
                 Me("LineAmount") = value
             End Set
         End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("25")>  _
+        Public Property SmallJackPotAmount() As Integer
+            Get
+                Return CType(Me("SmallJackPotAmount"),Integer)
+            End Get
+            Set
+                Me("SmallJackPotAmount") = value
+            End Set
+        End Property
     End Class
 End Namespace
 

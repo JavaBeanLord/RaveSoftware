@@ -13,8 +13,8 @@ Public Class Game2
 
     Private Sub Game2_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'My.Computer.Audio.Play(My.Resources.reels, AudioPlayMode.BackgroundLoop)
-        Me.StartPosition = FormStartPosition.CenterParent
-        Me.StartPosition = FormStartPosition.CenterScreen
+
+    
 
         MainShow.ControlBox = False
         MainShow.MainMenuStrip.Visible = False
@@ -127,6 +127,7 @@ Public Class Game2
 
 
     Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
+        Label5.Visible = False
 
 
 
@@ -332,7 +333,15 @@ Public Class Game2
                         If Not reader.HasRows Then
                             ''false you lose jackPot
                         Else
-                            MessageBox.Show(SmallJackPotNumber.ToString & "Winner!")
+                            Dim JackPotWinString As String
+                            Dim SmallJackPot As Integer
+                            SmallJackPot = My.Settings.SmallJackPotAmount
+                            JackPotWinString = FormatCurrency(SmallJackPot, , )
+                            Label5.Visible = True
+                            Label5.Text = ("********JackPot Winner " & JackPotWinString & " Dollars Hero*********")
+                            My.Settings.UserAmount = My.Settings.UserAmount + (My.Settings.SmallJackPotAmount / (0.01))
+                            Label4.Text = My.Settings.UserAmount.ToString
+                            VALUE_Timer()
                             JackPot.Timer1.Enabled = True
                         End If
                     Catch ex As Exception
@@ -372,7 +381,9 @@ Public Class Game2
         Me.Close()
         GameLoginScreen.Load_User_Amount()
         GameLoginScreen.TextBox1.Text = ("")
-        GameLoginScreen.Show()
+        ' GameLoginScreen.Show()
+        Games.Show()
+
 
     End Sub
 #End Region

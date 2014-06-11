@@ -93,6 +93,13 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Games\Game3.Designer.vb">
+      <DependentUpon>Game3.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Games\Game3.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProgramMods\AutoLoadGames.vb" />
     <Compile Include="ProgramMods\Clear_Data.vb" />
     <Compile Include="ProgramMods\DataBaseMod.vb" />
     <Compile Include="ProgramStart\AboutMe.Designer.vb">
@@ -210,6 +217,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Games\Game3.resx">
+      <DependentUpon>Game3.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ProgramStart\AboutMe.resx">
       <DependentUpon>AboutMe.vb</DependentUpon>
     </EmbeddedResource>
@@ -364,6 +374,19 @@
     <None Include="Images\Raven Software images\New folder\SmallLine.png" />
     <None Include="Images\Raven Software images\New folder\LowerLeftN.png" />
     <None Include="Images\Raven Software images\New folder\UpperLeftV.png" />
+    <None Include="Images\Raven Software images\Starwars\ShipBG.png" />
+    <None Include="Images\Raven Software images\Starwars\SmallDeathStar.png" />
+    <None Include="Images\Raven Software images\Starwars\13SmallR2D2.png" />
+    <None Include="Images\Raven Software images\Starwars\10SmallStormTrooper.png" />
+    <None Include="Images\Raven Software images\Starwars\SmallVader.png" />
+    <None Include="Images\Raven Software images\Starwars\4MediumDeathStar.png" />
+    <None Include="Images\Raven Software images\Starwars\8MediumVader.png" />
+    <None Include="Images\Raven Software images\Starwars\11MediumStormTrooper.png" />
+    <None Include="Images\Raven Software images\Starwars\14MediumR2D2.png" />
+    <None Include="Images\Raven Software images\Starwars\15BigR2D2.png" />
+    <None Include="Images\Raven Software images\Starwars\12BigStormTrooper.png" />
+    <None Include="Images\Raven Software images\Starwars\9BigVader.png" />
+    <None Include="Images\Raven Software images\Starwars\5LargeDeathStar.png" />
     <Content Include="Sounds\spin.wav" />
   </ItemGroup>
   <ItemGroup />

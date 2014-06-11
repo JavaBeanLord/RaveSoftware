@@ -113,7 +113,7 @@ Partial Class Login
         Me.PictureBox1.TabIndex = 1
         Me.PictureBox1.TabStop = False
         '
-        'Form1
+        'Login
         '
         Me.AcceptButton = Me.Button1
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -131,7 +131,7 @@ Partial Class Login
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
         Me.MaximumSize = New System.Drawing.Size(300, 156)
         Me.MinimumSize = New System.Drawing.Size(300, 156)
-        Me.Name = "Form1"
+        Me.Name = "Login"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Beta_Login"
         CType(Me.EventLog1, System.ComponentModel.ISupportInitialize).EndInit()

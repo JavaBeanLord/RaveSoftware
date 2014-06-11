@@ -16,6 +16,8 @@
         NEWS()
         Me.WindowState = FormWindowState.Maximized
         Me.FormBorderStyle = Windows.Forms.FormBorderStyle.None
+        Login.Hide()
+        Timer1.Enabled = True
 
 
     End Sub
@@ -138,5 +140,9 @@
     Private Sub WebOnlyToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles WebOnlyToolStripMenuItem.Click
         WebOnly.Show()
         WebOnly.MdiParent = Me
+    End Sub
+
+    Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
+        Login.Hide()
     End Sub
 End Class
