@@ -41,8 +41,9 @@ Public Class GameLoginScreen
     End Sub
 
     Private Sub PictureBox1_Click_1(sender As Object, e As EventArgs) Handles PictureBox1.Click
-        My.Settings.UserIDNumber = TextBox1.Text.ToString
-        ID_Login()
+        'My.Settings.UserIDNumber = TextBox1.Text.ToString
+        ' ID_Login()
+        MessageBox.Show("Downloading Games Please Wait...." & vbNewLine & "Installing Server Files...")
     End Sub
 
 

@@ -1,9 +1,9 @@
 ﻿Public Class MainShow
 
     Private Sub AdminControlToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AdminControlToolStripMenuItem.Click
-        AdminControl.Show()
-        AdminControl.MdiParent = Me
-
+        ' AdminControl.Show()
+        'AdminControl.MdiParent = Me
+        MessageBox.Show("Prgoram Updating...")
 
 
 
@@ -18,7 +18,13 @@
         Me.FormBorderStyle = Windows.Forms.FormBorderStyle.None
         Login.Hide()
         Timer1.Enabled = True
+        AdminLogin.Show()
+        AdminLogin.ComboBox1.Text = ("Games")
+        ' Game2.Show()
+        ' Game2.MdiParent = Me
 
+        GameLoginScreen.Show()
+        GameLoginScreen.MdiParent = Me
 
     End Sub
 
@@ -41,6 +47,10 @@
         Login.LoginNow.Enabled = True
         Login.ProgressBar1.Visible = True
         Login.AdminControlNow()
+
+
+
+
     End Sub
 
     Private Sub BetaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles BetaToolStripMenuItem.Click
@@ -55,17 +65,17 @@
     End Sub
 
     Private Sub POSToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles POSToolStripMenuItem.Click
-        AdminLogin.Show()
-        AdminLogin.MdiParent = Me
-        AdminLogin.ComboBox1.Text = ("POS")
-        AdminLogin.TextBox1.Text = ("zonecomputers")
-        AdminLogin.Button1.PerformClick()
-
+        ' AdminLogin.Show()
+        ' AdminLogin.MdiParent = Me
+        'AdminLogin.ComboBox1.Text = ("POS")
+        'AdminLogin.TextBox1.Text = ("zonecomputers")
+        'AdminLogin.Button1.PerformClick()
+        MessageBox.Show("Prgoram Updating...")
 
     End Sub
 
     Private Sub RemoteSupportToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RemoteSupportToolStripMenuItem.Click
-        Process.Start("chrome.exe", "zonecomputers.bomgar.com")
+        ''Process.Start("chrome.exe", "zonecomputers.bomgar.com")
     End Sub
 
     Private Sub AboutMeToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AboutMeToolStripMenuItem.Click
@@ -74,8 +84,7 @@
     End Sub
 
     Private Sub JackPotToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles JackPotToolStripMenuItem.Click
-        AdminLogin.Show()
-        AdminLogin.ComboBox1.Text = ("JackPot")
+       MessageBox.Show("Prgoram Updating...")
 
     End Sub
 
